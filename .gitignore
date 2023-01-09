@@ -1,0 +1,13 @@
+__pycache__
+.idea
+.rasa
+actions/__pycache__
+actions/database-test.py
+actions/prueba.db
+web/estilos
+web/icons
+web/js
+web/chat.html
+error.txt
+prueba.db
+testing-api.py
