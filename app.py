@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from rasa.core.agent import Agent
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,7 +18,11 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
-agent = Agent.load("models\\20230107-111015-yellow-deposition.tar")
+agent = Agent.load("rasa_bot\\models\\20230114-225027-resonnt-yaw.tar.gz")
+
+@app.get('/')
+async def root():
+    return FileResponse("web\index.html")
 
 @app.post("/webhooks/rest/webhook")
 async def chat(msg: Msg):

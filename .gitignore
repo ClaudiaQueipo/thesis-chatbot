@@ -1,13 +1,10 @@
 __pycache__
 .idea
-.rasa
-actions/__pycache__
-actions/database-test.py
-actions/prueba.db
+rasa_bot/.rasa
+rasa_bot/actions
+rasa_bot/models
 web/estilos
 web/icons
 web/js
 web/chat.html
-error.txt
-prueba.db
-testing-api.py
+iniciar VENV.bat
