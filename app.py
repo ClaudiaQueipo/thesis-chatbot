@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from rasa.model_training import train
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import Msg
+from schemas import Msg, RasaAgent
 from rasa.core.agent import Agent
 import os
 
@@ -46,11 +46,11 @@ def setAgent():
     agent = Agent.load(f"rasa_bot\\models\\{last_model}")
     return agent
 
-agent = setAgent()
+rasa = RasaAgent(setAgent())
 
 @app.post("/webhooks/rest/webhook")
 async def chat(msg: Msg):
-    responses = await agent.handle_text(msg.message)
+    responses = await rasa.agent.handle_text(msg.message)
     response_text = responses[0]["text"]
     return response_text  
 
@@ -66,5 +66,5 @@ async def train_bot():
                             "rasa_bot\\data\\rules.yml",
                             "rasa_bot\\data\\stories.yml"],
             output="rasa_bot\\models\\",)
-    
+    rasa.__setagent__(setAgent())
     return {"message": "ChatBot entrenado con exito!"}
