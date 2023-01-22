@@ -10,27 +10,12 @@ python pip install -r requirements.txt
 ```
 
 ## 🤖 Train the bot
-Run the command
-
-```bash
-rasa train
-```
+Open your browser in [localhost:5005/train](http://localhost:5005/train)
 
 ## 👩‍💻 Let´s test the bot
 To test the bot, you must run the command
 
 ```bash 
-uvicorn app:app --port 5005
+uvicorn app:app --port 5005 --reload
 ```
-
-Then we must deploy the web interface locally, so run the command
-
-```sh
-cd web
-```
-
-```bash 
-python -m http.server 8000
-```
-
-Then open your browser in [Localhost](http://localhost:8000)
+Then open your browser in [localhost:5005/](http://localhost:5005/)
