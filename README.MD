@@ -10,6 +10,10 @@ python pip install -r requirements.txt
 ```
 
 ## 🤖 Train the bot
+
+```bash 
+uvicorn app:app --port 5005 --reload
+```
 Open your browser in [localhost:5005/train](http://localhost:5005/train)
 
 ## 👩‍💻 Let´s test the bot
