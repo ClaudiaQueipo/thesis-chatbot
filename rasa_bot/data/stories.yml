@@ -1,31 +1,76 @@
-version: "3.1"
+version: "3.0"
 
 stories:
 
 - story: happy path
   steps:
-  - intent: greet
-  - action: action_test
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: pregunta_fitib
+  - action: utter_respuesta_fitib
 
-- story: sad path 1
+- story: fitib_info_carreras
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: pregunta_carreras
+  - action: utter_respuesta_carreras
+
+- story: ing informatica
+  steps:
+  - intent: pregunta_IngI
+  - action: utter_respuesta_IngI
+
+- story: licenciatura informatica
+  steps:
+  - intent: pregunta_LicI
+  - action: utter_respuesta_LicI
+
+- story: ingenieria tele
+  steps:
+  - intent: pregunta_IngTele
+  - action: utter_respuesta_IngTele
+
+- story: ing biomedica
+  steps:
+  - intent: pregunta_Biom
+  - action: utter_respuesta_Biom
+
+- story: pregunta decana
+  steps: 
+  - intent: pregunta_Decana
+  - action: utter_respuesta_Decana 
+
+- story: pregunta pdte FEU
+  steps: 
+  - intent: pregunta_pdteFeu
+  - action: utter_respuesta_PdteFeu
+
+- story: informacion sobre las preguntas
+  steps: 
+  - intent: pregunta_informacion
+  - action: utter_informacion
+
+- story: informacion sobre los proyectos investigativos
+  steps: 
+  - intent: pregunta_proyectos
+  - action: utter_proyectos
+
+- story: sad_path
+  steps:
   - intent: mood_unhappy
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
+  
+- story: informacion sobre los creadores del bot
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: pregunta_creadores
+  - action: utter_creadores
+
+- story: informacion sobre que hacen los ingenieros 
+  steps:
+  - intent: pregunta_ingenieros
+  - action: utter_ingenieros
+
+- story: informacion link del eva 
+  steps:
+  - intent: pregunta_eva
+  - action: utter_eva
+
+  
+  

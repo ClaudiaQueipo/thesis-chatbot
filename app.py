@@ -1,14 +1,17 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
-from rasa.core.agent import Agent
-from pydantic import BaseModel
+from rasa.model_training import train
 from fastapi.middleware.cors import CORSMiddleware
+from schemas import Msg
+from rasa.core.agent import Agent
+import os
 
 
-class Msg(BaseModel):
-    message: str
+app = FastAPI(
+    title="Thesis Chat/Voice Bot",
+    version="0.1.5"
+)
 
-app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -18,14 +21,50 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
-agent = Agent.load("rasa_bot\\models\\20230114-225027-resonnt-yaw.tar.gz")
 
 @app.get('/')
 async def root():
+    
     return FileResponse("web\index.html")
+
+
+def setAgent():
+    folder = f"rasa_bot\\models"
+    files = os.listdir(folder)
+
+    file_times = {}
+    
+    for file in files:
+        path = os.path.join(folder, file)
+        
+        if os.path.isfile(path):
+            file_times[file] = os.path.getmtime(path)
+        
+    sorted_files = sorted(file_times.items(), key=lambda x: x[1] )
+    last_model=sorted_files[-1][0]
+    
+    agent = Agent.load(f"rasa_bot\\models\\{last_model}")
+    return agent
+
+agent = setAgent()
 
 @app.post("/webhooks/rest/webhook")
 async def chat(msg: Msg):
     responses = await agent.handle_text(msg.message)
     response_text = responses[0]["text"]
-    return response_text       
+    return response_text  
+
+# @message.post("/whisper/audio")
+# async def recive_audio(file: UploadFile):
+    
+#     content = await file.read()
+
+@app.get("/train")
+async def train_bot():
+    train(domain="rasa_bot\\domain.yml", config="rasa_bot\\config.yml",
+            training_files=["rasa_bot\\data\\nlu.yml",
+                            "rasa_bot\\data\\rules.yml",
+                            "rasa_bot\\data\\stories.yml"],
+            output="rasa_bot\\models\\",)
+    
+    return {"message": "ChatBot entrenado con exito!"}

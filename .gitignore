@@ -1,5 +1,6 @@
 __pycache__
 .idea
+.rasa
 rasa_bot/.rasa
 rasa_bot/actions
 rasa_bot/models

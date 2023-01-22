@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.0"
 
 intents:
   - greet
@@ -8,30 +8,84 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - pregunta_fitib
+  - pregunta_carreras
+  - pregunta_IngI
+  - pregunta_LicI
+  - pregunta_IngTele
+  - pregunta_Biom
+  - pregunta_Decana
+  - fuera_contexto
+  - pregunta_pdteFeu
+  - pregunta_informacion
+  - pregunta_proyectos
+  - pregunta_creadores
+  - pregunta_ingenieros
+  - pregunta_eva
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hola, mi nombre es Shelby Bot, tu asistente universitario, puedes hacer las preguntas que desees, te responderé con gusto"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Aquí tienes algo que quizás mejore tu estado de ánimo, espero que te ayude"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "¿Te sirvió de ayuda?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Fantástico"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Adiós, espero volver a conversar pronto contigo"
+  
+  utter_fuera_contexto:
+  - text: Lo siento, no puedo entender o manejar lo que acabas de decir.
+
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Soy un bot, desarrollado con Python y el framework RASA."
 
-actions:
-  - action_test
+  utter_respuesta_fitib:
+  - text: "La FITIB es la facultad del Instituto Politecnico Superior Julio Antonio Mella en la cual se estudian carreras de informatica, biomedica e ingenieria en telecomunicaciones"
 
+  utter_respuesta_carreras:
+  - text: "Las carreras que se estudian en la FITIB son: Ingeniería Informática, Ingeniería en Telecomunicaciones, Licenciatura en Informática y Biomédica"
+
+  utter_respuesta_IngI:
+  - text: "La ingeniería informática o ingeniería en computación es la rama de la ingeniería que aplica los fundamentos de la ciencia de la computación, la ingeniería electrónica, la ingeniería de software y la ingeniería de telecomunicaciones, para el desarrollo de soluciones integrales de cómputo y comunicaciones, capaces de procesar información de manera automática"
+
+  utter_respuesta_LicI:
+  - text: "La carrera Licenciatura en Educacion informatica mantiene el proposito de formar profesores de informatica para las instituciones educativas de todos los subsistemas de educacion, ademas se concibe para el profesor de informatica de las escuelas de formacion de maestros primarios y educadores de circulos infantiles y etc"
+
+  utter_respuesta_IngTele:
+  - text: "La ingeniería en telecomunicación (también, ingeniería de telecomunicaciones, ingeniería en telecomunicación, ingeniería en telecomunicaciones) es una rama de la ingeniería que resuelve problemas de transmisión y recepción de señales e interconexión de redes. Es la disciplina de aplicación de la telecomunicación, término que se refiere a la comunicación a distancia, generalmente a través de la propagación de ondas electromagnéticas y ópticas. Esto incluye muchas tecnologías, como radio, televisión, teléfono, comunicaciones de datos y redes informáticas como Internet. La definición dada por la Unión Internacional de Telecomunicaciones (ITU, del inglés International Telecommunication Union) para telecomunicación es toda emisión, transmisión y recepción de signos, señales, escritos e imágenes, sonidos e informaciones de cualquier naturaleza, por hilo, radioelectricidad, medios ópticos u otros sistemas electromagnéticos."
+
+  utter_respuesta_Biom:
+  - text: "La ingeniería biomédica es el resultado de la aplicación de los principios y técnicas de la ingeniería al campo de la medicina. Se dedica fundamentalmente al diseño y construcción de productos sanitarios y tecnologías sanitarias tales como los equipos médicos, las prótesis, dispositivos médicos, dispositivos de diagnóstico (imagenología médica) y de terapia. También interviene en la gestión o administración de los recursos técnicos ligados a un sistema de hospitales. Combina la experiencia de la ingeniería con las necesidades médicas para obtener beneficios en el cuidado de la salud. El cultivo de tejidos, lo mismo que la producción de determinados fármacos, suelen considerarse parte de la bioingeniería."
+
+  utter_respuesta_Decana:
+  - text: "El nombre de la Decana de la FITIB es Miriam Marañon"
+
+  utter_respuesta_PdteFeu:
+  - text: "El nombre del Presidente de la FEU es Rafael Torres Caballero"
+
+  utter_informacion:
+  - text: "Te puedo brindar información sobre los siguientes temas: acerca de que es la fitib, quien es su decana, quien es el presidente de la FEU, que carreras se estudian y proyectos de investigación que tiene."
+  
+  utter_proyectos:
+  - text: "La FITIB cuenta con diversos proyectos investigativos, por ejemplo, tenemos el proyecto Soluciones informáticas para la gestión de los procesos universitarios a partir de plataformas de gobierno electrónico el cual tiene como areas de investigación Sistemas de Recomendacion, Sistemas para el análisis de grandes volúmenes de datos Big Data, Computación en la nube o Cloud Computing, Procesamiento del Lenguaje Natural, Procesamiento de imágenes, Procesamiento de audio"
+
+  utter_creadores:
+  - text: "Mis creadores son Luis Andrés Licea Berenguer y Claudia Queipo García, estudiantes de la carrera Ingeniería informática"
+
+  utter_ingenieros:
+  - text: "La ingeniería es el conjunto de conocimientos científicos y tecnológicos para la innovación, invención, desarrollo y mejora de técnicas y herramientas para satisfacer las necesidades y resolver los problemas de las empresas y la sociedad. El ingeniero se apoya en las matemáticas, la física, la química, la programación y otras ciencias tanto para el desarrollo de tecnologías, como para el manejo eficiente y productivo de recursos y fuerzas de la naturaleza en beneficio de la sociedad. La ingeniería es una actividad que transforma el conocimiento en algo práctico. La ingeniería aplica los conocimientos y métodos científicos a la invención o perfeccionamiento de tecnologías de manera pragmática y ágil, adecuándose a las limitaciones de tiempo, recursos, requisitos legales, requisitos de seguridad, ecológicos, etc. Su estudio como campo del conocimiento está directamente relacionado con el comienzo de la Revolución Industrial, constituyendo una de las actividades pilares en el desarrollo de las sociedades modernas."
+
+  utter_eva:
+  - text: "El enlace al sitio del EVA es https://eva.uo.edu.cu"
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
