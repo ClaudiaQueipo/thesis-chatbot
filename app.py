@@ -46,8 +46,19 @@ def setAgent():
     agent = Agent.load(f"rasa_bot\\models\\{last_model}")
     return agent
 
-rasa = RasaAgent(setAgent())
-
+try:
+    folder = f"rasa_bot\\models"
+    if(os.listdir(folder)==[]):
+        train(domain="rasa_bot\\domain.yml", config="rasa_bot\\config.yml",
+            training_files=["rasa_bot\\data\\nlu.yml",
+                            "rasa_bot\\data\\rules.yml",
+                            "rasa_bot\\data\\stories.yml"],
+            output="rasa_bot\\models\\",)
+    
+    rasa = RasaAgent(setAgent())
+except Exception as e:
+    print(f"Error {e}")
+    
 @app.post("/webhooks/rest/webhook")
 async def chat(msg: Msg):
     responses = await rasa.agent.handle_text(msg.message)
