@@ -32,6 +32,10 @@ for iAudio in audioList:
     #_, probs = model.detect_language(mel)
     #print(f"Detected language: {max(probs, key=probs.get)}")
 
+    # Internally, the  transcribe()  method   reads   the  entire
+    # file and processes the audio with a sliding 30-second window,
+    # performing autoregressive sequence-to-sequence predictions on each window.
+
     result = model.transcribe(address)
     #print(result)
     print(result["text"])
