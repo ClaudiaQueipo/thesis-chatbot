@@ -10,27 +10,30 @@ python pip install -r requirements.txt
 ```
 
 ## 🤖 Train the bot
-Run the command
 
-```bash
-rasa train
+```bash 
+uvicorn app:app --port 5005 --reload
 ```
+Open your browser in [localhost:5005/train](http://localhost:5005/train)
+
 
 ## 👩‍💻 Let´s test the bot
 To test the bot, you must run the command
 
 ```bash 
-uvicorn app:app --port 5005
+uvicorn app:app --port 5005 --reload
 ```
 
-Then we must deploy the web interface locally, so run the command
-
-```sh
-cd web
-```
+## Setup ReactJS UI
+To setup the interface, you must run the command 
 
 ```bash 
-python -m http.server 8000
+cd web
+npm install 
 ```
-
-Then open your browser in [Localhost](http://localhost:8000)
+Now to see the interface execute the command 
+```bash 
+npm run start
+```
+This command will open a connection with the localhost in port 3000
+[localhost:3000](http://localhost:3000)
