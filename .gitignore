@@ -6,6 +6,7 @@ rasa_bot/actions
 rasa_bot/models
 web/node_modules
 iniciar VENV.bat
-WHISPER/
-prueba.mp3
+request.py
 SpeechRecognition-3.9.0-py2.py3-none-any.whl
+prueba.mp3
+WHISPER/
