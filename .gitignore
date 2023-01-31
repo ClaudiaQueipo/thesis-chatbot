@@ -13,4 +13,4 @@ iniciar VENV.bat
 request.py
 SpeechRecognition-3.9.0-py2.py3-none-any.whl
 prueba.mp3
-WHISPER
+WHISPER/
