@@ -16,10 +16,24 @@ uvicorn app:app --port 5005 --reload
 ```
 Open your browser in [localhost:5005/train](http://localhost:5005/train)
 
+
 ## 👩‍💻 Let´s test the bot
 To test the bot, you must run the command
 
 ```bash 
 uvicorn app:app --port 5005 --reload
 ```
-Then open your browser in [localhost:5005/](http://localhost:5005/)
+
+## Setup ReactJS UI
+To setup the interface, you must run the command 
+
+```bash 
+cd web
+npm install 
+```
+Now to see the interface execute the command 
+```bash 
+npm run start
+```
+This command will open a connection with the localhost in port 3000
+[localhost:3000](http://localhost:3000)
