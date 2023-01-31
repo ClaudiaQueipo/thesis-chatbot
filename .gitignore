@@ -10,3 +10,7 @@ web/js
 web/chat.html
 iniciar VENV.bat
 .rasa
+request.py
+SpeechRecognition-3.9.0-py2.py3-none-any.whl
+prueba.mp3
+WHISPER
