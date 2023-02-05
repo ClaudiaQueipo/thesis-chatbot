@@ -1,10 +1,14 @@
-from fastapi import FastAPI
+import time
+
+from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import FileResponse
-from rasa.model_training import train
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import Msg, RasaAgent
 from rasa.core.agent import Agent
+from rasa.model_training import train
 import os
+import whisper
+model = whisper.load_model("WHISPER\\tiny.pt")
 
 
 app = FastAPI(
@@ -53,9 +57,9 @@ try:
             training_files=["rasa_bot\\data\\nlu.yml",
                             "rasa_bot\\data\\rules.yml",
                             "rasa_bot\\data\\stories.yml"],
-            output="rasa_bot\\models\\",)
-    
+            output="rasa_bot\\models\\")
     rasa = RasaAgent(setAgent())
+    
 except Exception as e:
     print(f"Error {e}")
     
@@ -65,11 +69,34 @@ async def chat(msg: Msg):
     response_text = responses[0]["text"]
     return response_text  
 
-# @message.post("/whisper/audio")
-# async def recive_audio(file: UploadFile):
-    
-#     content = await file.read()
+@app.post("/whisper/audio")
+async def recive_audio(file: UploadFile=File(...)):
 
+    audio_bytes = file.file.read()
+
+
+
+    with open("audio.mp3" , "wb") as f:
+        f.write(audio_bytes)
+    start = time.time()
+
+    audio = whisper.load_audio("audio.mp3")
+    audio = whisper.pad_or_trim(audio)
+
+    mel = whisper.log_mel_spectrogram(audio).to(model.device)
+
+    _, probs = model.detect_language(mel)
+    print(f"Idioma: {max(probs, key=probs.get)}")
+
+    options = whisper.DecodingOptions(fp16=False)
+    result  = whisper.decode(model,mel,options)
+
+    # result = model.transcribe(audio="audio.mp3",fp16=False)
+
+    os.remove("audio.mp3")
+    print(f"Tiempo {time.time()-start}")
+    return {"transcription": result.text}
+    
 @app.get("/train")
 async def train_bot():
     train(domain="rasa_bot\\domain.yml", config="rasa_bot\\config.yml",
