@@ -1,9 +1,10 @@
 import time
 
-from fastapi import FastAPI, File, UploadFile
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, File, UploadFile, status
+from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
-from schemas import Msg, RasaAgent
+from models.schemas import Msg, RasaAgent
+from utils import database
 from rasa.core.agent import Agent
 from rasa.model_training import train
 import os
@@ -28,9 +29,9 @@ app.add_middleware(
 
 @app.get('/')
 async def root():
-    
-    return FileResponse("web\index.html")
-
+    response = Response(status_code=status.HTTP_200_OK)
+    response.headers["location"]="http://localhost:3000"
+    return response
 
 def setAgent():
     folder = f"rasa_bot\\models"
@@ -65,13 +66,17 @@ except Exception as e:
     
 @app.post("/webhooks/rest/webhook")
 async def chat(msg: Msg):
+
     responses = await rasa.agent.handle_text(msg.message)
     response_text = responses[0]["text"]
+    if "Lo siento, no puedo entender o manejar lo que acabas de decir." in response_text:
+        database.insert_question(msg.message)
     return response_text  
+
 
 @app.post("/whisper/audio")
 async def recive_audio(file: UploadFile=File(...)):
-
+    
     audio_bytes = file.file.read()
 
 
@@ -85,17 +90,22 @@ async def recive_audio(file: UploadFile=File(...)):
 
     mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
-    _, probs = model.detect_language(mel)
-    print(f"Idioma: {max(probs, key=probs.get)}")
+    # _, probs = model.detect_language(mel)
+    # print(f"Idioma: {max(probs, key=probs.get)}")
 
-    options = whisper.DecodingOptions(fp16=False)
+    options = whisper.DecodingOptions(fp16=False,language="es")
     result  = whisper.decode(model,mel,options)
 
     # result = model.transcribe(audio="audio.mp3",fp16=False)
 
     os.remove("audio.mp3")
     print(f"Tiempo {time.time()-start}")
-    return {"transcription": result.text}
+    responses = await rasa.agent.handle_text(result.text)
+    response_text = responses[0]["text"]
+    if "Lo siento, no puedo entender o manejar lo que acabas de decir." in response_text:
+        database.insert_question(msg.message)
+    
+    return  response_text
     
 @app.get("/train")
 async def train_bot():
@@ -106,3 +116,10 @@ async def train_bot():
             output="rasa_bot\\models\\",)
     rasa.__setagent__(setAgent())
     return {"message": "ChatBot entrenado con exito!"}
+
+
+@app.get('/generate/report')
+def generate_report():
+    
+    reports = database.generate_report()
+    return reports
