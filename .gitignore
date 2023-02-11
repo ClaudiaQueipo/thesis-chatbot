@@ -4,12 +4,8 @@ __pycache__
 rasa_bot/.rasa
 rasa_bot/actions
 rasa_bot/models
-web/estilos
-web/icons
-web/js
-web/chat.html
+web/node_modules
 iniciar VENV.bat
-.rasa
 request.py
 SpeechRecognition-3.9.0-py2.py3-none-any.whl
 prueba.mp3
