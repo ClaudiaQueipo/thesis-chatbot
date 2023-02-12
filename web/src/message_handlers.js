@@ -21,5 +21,19 @@ async function utter(msg) {
     console.log(e);
   }
 }
+async function postAudio(audio) {
+  const formData = new FormData();
 
-export default utter;
+  formData.append("file", audio, "audio.mp3");
+  
+
+  const response = await fetch("http://localhost:5005/whisper/audio", {
+    method: "POST",
+    body: formData,
+  });
+
+  
+  return await response.json();
+}
+
+export { utter, postAudio };
