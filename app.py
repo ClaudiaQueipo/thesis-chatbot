@@ -7,10 +7,13 @@ from models.schemas import Msg, RasaAgent
 from utils import database
 from rasa.core.agent import Agent
 from rasa.model_training import train
+from rasa_sdk.endpoint import DEFAULT_SERVER_PORT
+
 import os
 import whisper
-model = whisper.load_model("WHISPER\\tiny.pt")
 
+model = whisper.load_model("WHISPER\\tiny.pt")
+DEFAULT_SERVER_PORT=5005
 
 app = FastAPI(
     title="Thesis Chat/Voice Bot",
@@ -48,7 +51,7 @@ def setAgent():
     sorted_files = sorted(file_times.items(), key=lambda x: x[1] )
     last_model=sorted_files[-1][0]
     
-    agent = Agent.load(f"rasa_bot\\models\\{last_model}")
+    agent = Agent.load(model_path="rasa_bot\\models\\{last_model}", action_endpoint="rasa_bot\endpoints.yml")
     return agent
 
 try:
@@ -76,10 +79,7 @@ async def chat(msg: Msg):
 
 @app.post("/whisper/audio")
 async def recive_audio(file: UploadFile=File(...)):
-    
     audio_bytes = file.file.read()
-
-
 
     with open("audio.mp3" , "wb") as f:
         f.write(audio_bytes)
@@ -90,20 +90,13 @@ async def recive_audio(file: UploadFile=File(...)):
 
     mel = whisper.log_mel_spectrogram(audio).to(model.device)
 
-    # _, probs = model.detect_language(mel)
-    # print(f"Idioma: {max(probs, key=probs.get)}")
-
     options = whisper.DecodingOptions(fp16=False,language="es")
     result  = whisper.decode(model,mel,options)
-
-    # result = model.transcribe(audio="audio.mp3",fp16=False)
 
     os.remove("audio.mp3")
     print(f"Tiempo {time.time()-start}")
     responses = await rasa.agent.handle_text(result.text)
     response_text = responses[0]["text"]
-    if "Lo siento, no puedo entender o manejar lo que acabas de decir." in response_text:
-        database.insert_question(msg.message)
     
     return  response_text
     

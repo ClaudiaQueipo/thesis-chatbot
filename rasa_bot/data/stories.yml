@@ -6,6 +6,7 @@ stories:
   steps:
   - intent: pregunta_fitib
   - action: utter_respuesta_fitib
+  - action: action_test
 
 - story: fitib_info_carreras
   steps:

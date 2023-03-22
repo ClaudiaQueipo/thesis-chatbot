@@ -313,3 +313,11 @@ body.ico .cubrirPantalla{
     height: 35%;
   }
 }
+/**=============CANVAS===================*/
+
+#canvas{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+

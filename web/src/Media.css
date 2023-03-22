@@ -1,3 +1,17 @@
+@media screen and (max-width: 2500px) {
+  .form{
+        
+    grid-template-columns: 90% 11%; 
+    
+  }
+  .button-audio{
+    
+    width: 9%;
+    
+  }
+
+}
+
 @media screen and (max-width: 1600px) {
   .form{
         

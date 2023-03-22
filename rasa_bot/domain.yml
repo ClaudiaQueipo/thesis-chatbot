@@ -86,6 +86,9 @@ responses:
   utter_eva:
   - text: "El enlace al sitio del EVA es https://eva.uo.edu.cu"
   
+actions:
+  - action_test
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
