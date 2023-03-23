@@ -11,16 +11,11 @@ from rasa_sdk.endpoint import DEFAULT_SERVER_PORT
 
 import os
 import whisper
-<<<<<<< HEAD
-=======
+
 WHISPER_MODEL_NAME = 'tiny.pt'
-WHISPER_MODEL_NAME = 'medium.pt'
 print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
 model = whisper.load_model('WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
->>>>>>> 3549437d057ec5d1011f5508b1f3d37eb031cba6
 
-model = whisper.load_model("WHISPER\\tiny.pt")
-DEFAULT_SERVER_PORT=5005
 
 app = FastAPI(
     title="Thesis Chat/Voice Bot",
@@ -58,11 +53,7 @@ def setAgent():
     sorted_files = sorted(file_times.items(), key=lambda x: x[1] )
     last_model=sorted_files[-1][0]
     
-<<<<<<< HEAD
-    agent = Agent.load(model_path="rasa_bot\\models\\{last_model}", action_endpoint="rasa_bot\endpoints.yml")
-=======
     agent = Agent.load(f"rasa_bot" + os.path.sep + "models" + os.path.sep + "{last_model}")
->>>>>>> 3549437d057ec5d1011f5508b1f3d37eb031cba6
     return agent
 
 try:

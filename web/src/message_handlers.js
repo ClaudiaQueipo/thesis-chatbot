@@ -13,7 +13,13 @@ async function utter(msg) {
         body: JSON.stringify(payload),
       }
     );
-    return await response.text();
+
+    // const res = await response.text();
+    const res = await response.json()
+    
+    for(let r of res){
+      return r.text
+    }
     // if (result) {
     //   return result;
     // }
