@@ -10,21 +10,30 @@ python pip install -r requirements.txt
 ```
 
 ## 🤖 Train the bot
-
-```bash 
-uvicorn app:app --port 5005 --reload
+To train the chatbot, open up your console and navigate to the folder where you have saved your project. Then, run the command 
+```bash
+cd rasa_bot
 ```
-Open your browser in [localhost:5005/train](http://localhost:5005/train)
+to navigate to your project directory. Once there, run
+```bash
+rasa train
+``` 
+to train your language model.
 
-
-## 👩‍💻 Let´s test the bot
-To test the bot, you must run the command
-
-```bash 
-uvicorn app:app --port 5005 --reload
+## ⚡️ Action Deployment:
+Once the model is trained, it is necessary to deploy the action server before running your bot. This can be done by running the command 
+```bash
+rasa run actions
 ```
 
-## Setup ReactJS UI
+## ⚡️🤖 Running the Bot:
+Finally, to run your bot, open another commandline in previous directory. Then, run the command 
+```bash
+rasa run --cors "*"
+``` 
+to run your bot in the production environment.
+
+## 🎨 Setup ReactJS UI
 To setup the interface, you must run the command 
 
 ```bash 
@@ -37,3 +46,4 @@ npm run start
 ```
 This command will open a connection with the localhost in port 3000
 [localhost:3000](http://localhost:3000)
+
