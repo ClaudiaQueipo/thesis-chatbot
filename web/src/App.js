@@ -123,6 +123,7 @@ class App extends Component {
       const valores = Object.fromEntries(data);
       const msm = valores.input;
       let botResponse = await utter(msm);
+      console.log(botResponse)
 
       this.setState({ mensaje: msm, numero: this.state.numero + 1 });
       if (msm) {

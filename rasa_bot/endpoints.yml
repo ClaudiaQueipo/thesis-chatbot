@@ -25,6 +25,14 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
+# tracker_store:
+#     type: SQL
+#     dialect: postgresql
+#     url: postgresql://localhost:5432/rasa
+#     db: rasa
+#     username: postgres
+#     password: 1234
+
 tracker_store:
     type: mongod
     url: mongodb://localhost:27017/rasa_track

@@ -13,7 +13,17 @@ async function utter(msg) {
         body: JSON.stringify(payload),
       }
     );
-    return await response.text();
+
+    // const res = await response.text();
+    const res = await response.json();
+
+    let responseList = [];
+    for (let r of res) {
+      responseList +=  r.text +  `. ` ;
+    }
+
+    return responseList;
+
     // if (result) {
     //   return result;
     // }
@@ -25,14 +35,12 @@ async function postAudio(audio) {
   const formData = new FormData();
 
   formData.append("file", audio, "audio.mp3");
-  
 
   const response = await fetch("http://localhost:5005/whisper/audio", {
     method: "POST",
     body: formData,
   });
 
-  
   return await response.json();
 }
 
