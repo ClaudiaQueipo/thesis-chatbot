@@ -31,56 +31,6 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
-
-@app.get('/')
-async def root():
-    response = Response(status_code=status.HTTP_200_OK)
-    response.headers["location"]="http://localhost:3000"
-    return response
-
-def setAgent():
-    folder = f"rasa_bot" + os.path.sep + "models"
-    files = os.listdir(folder)
-
-    file_times = {}
-    
-    for file in files:
-        path = os.path.join(folder, file)
-        
-        if os.path.isfile(path):
-            file_times[file] = os.path.getmtime(path)
-        
-    sorted_files = sorted(file_times.items(), key=lambda x: x[1] )
-    last_model=sorted_files[-1][0]
-    
-    agent = Agent.load(f"rasa_bot" + os.path.sep + "models" + os.path.sep + "{last_model}")
-    return agent
-
-try:
-    folder = f"rasa_bot" + os.path.sep + "models"
-    if(not os.path.exists(folder)):
-        os.mkdir(folder)
-    if(os.listdir(folder)==[]):
-        train(domain="rasa_bot" + os.path.sep + "domain.yml", config="rasa_bot" + os.path.sep + "config.yml",
-            training_files=["rasa_bot" + os.path.sep + "data" + os.path.sep + "nlu.yml",
-                            "rasa_bot" + os.path.sep + "data" + os.path.sep + "rules.yml",
-                            "rasa_bot" + os.path.sep + "data" + os.path.sep + "stories.yml"],
-            output="rasa_bot" + os.path.sep + "models" + os.path.sep + "")
-    rasa = RasaAgent(setAgent())
-    
-except Exception as e:
-    print(f"Error {e}")
-    
-@app.post("/webhooks/rest/webhook")
-async def chat(msg: Msg):
-
-    responses = await rasa.agent.handle_text(msg.message)
-    response_text = responses[0]["text"]
-    if "Lo siento, no puedo entender o manejar lo que acabas de decir." in response_text:
-        database.insert_question(msg.message)
-    return response_text  
-
-
 @app.post("/whisper/audio")
 async def recive_audio(file: UploadFile=File(...)):
     audio_bytes = file.file.read()
@@ -103,20 +53,4 @@ async def recive_audio(file: UploadFile=File(...)):
     response_text = responses[0]["text"]
     
     return  response_text
-    
-@app.get("/train")
-async def train_bot():
-    train(domain="rasa_bot\\domain.yml", config="rasa_bot\\config.yml",
-            training_files=["rasa_bot\\data\\nlu.yml",
-                            "rasa_bot\\data\\rules.yml",
-                            "rasa_bot\\data\\stories.yml"],
-            output="rasa_bot\\models\\",)
-    rasa.__setagent__(setAgent())
-    return {"message": "ChatBot entrenado con exito!"}
 
-
-@app.get('/generate/report')
-def generate_report():
-    
-    reports = database.generate_report()
-    return reports
