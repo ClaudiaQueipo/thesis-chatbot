@@ -27,11 +27,18 @@ rasa run actions
 ```
 
 ## ⚡️🤖 Running the Bot:
-Finally, to run your bot, open another commandline in previous directory. Then, run the command 
+Then, to run your bot, open another commandline in previous directory. Then, run the command 
 ```bash
 rasa run --cors "*"
 ``` 
 to run your bot in the production environment.
+
+## ⚡️🎤 Running Whisper 
+Finally, open another command terminal and type the command 
+```bash
+python run.py
+```
+and wait for the model to start. The Whisper service would then be enabled for use.
 
 ## 🎨 Setup ReactJS UI
 To setup the interface, you must run the command 
