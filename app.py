@@ -12,9 +12,24 @@ from rasa_sdk.endpoint import DEFAULT_SERVER_PORT
 import os
 import whisper
 
-WHISPER_MODEL_NAME = 'medium.pt'
-print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
-model = whisper.load_model('WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
+def findModel():
+    folder_path = 'WHISPER'
+
+    list_of_files = os.listdir(folder_path)
+
+    pt_files = []
+
+    for i in list_of_files:
+        if i.endswith('.pt'):
+            pt_files.append(i)
+
+    pt_file = pt_files[0]
+    
+    return pt_file
+
+model_name = findModel()
+print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + model_name)
+model = whisper.load_model('WHISPER' + os.path.sep + model_name)
 
 
 app = FastAPI(
@@ -48,9 +63,8 @@ async def recive_audio(file: UploadFile=File(...)):
     result  = whisper.decode(model,mel,options)
 
     os.remove("audio.mp3")
-    print(f"Tiempo {time.time()-start}")
-    responses = await rasa.agent.handle_text(result.text)
-    response_text = responses[0]["text"]
-    
-    return  response_text
+    print(result.text)
+    return  result.text
+
+
 

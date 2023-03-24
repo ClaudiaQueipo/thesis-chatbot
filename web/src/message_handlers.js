@@ -36,12 +36,14 @@ async function postAudio(audio) {
 
   formData.append("file", audio, "audio.mp3");
 
-  const response = await fetch("http://localhost:5005/whisper/audio", {
+  const response = await fetch("http://localhost:8000/whisper/audio", {
     method: "POST",
     body: formData,
   });
 
-  return await response.json();
+  const transcript = await response.json()
+  return await utter(transcript)
+  
 }
 
 export { utter, postAudio };
