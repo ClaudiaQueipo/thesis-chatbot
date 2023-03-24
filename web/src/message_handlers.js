@@ -4,7 +4,7 @@ async function utter(msg) {
   };
   try {
     const response = await fetch(
-      "http://localhost:5005/webhooks/rest/webhook",
+      "http://192.168.1.101:5005/webhooks/rest/webhook",
       {
         method: "POST",
         headers: {
@@ -36,7 +36,7 @@ async function postAudio(audio) {
 
   formData.append("file", audio, "audio.mp3");
 
-  const response = await fetch("http://localhost:8000/whisper/audio", {
+  const response = await fetch("http://192.168.1.101:8000/whisper/audio", {
     method: "POST",
     body: formData,
   });
