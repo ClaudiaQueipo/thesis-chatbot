@@ -12,7 +12,7 @@ from rasa_sdk.endpoint import DEFAULT_SERVER_PORT
 import os
 import whisper
 
-WHISPER_MODEL_NAME = 'tiny.pt'
+WHISPER_MODEL_NAME = 'medium.pt'
 print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
 model = whisper.load_model('WHISPER' + os.path.sep + WHISPER_MODEL_NAME)
 
