@@ -141,7 +141,25 @@ nlu:
     - enlace del eva
     - link del eva
 
+- intent: ask_me_anything
+  examples: |
+    - guarda mi nombre
+    - conserva mi nombre
+    - quiero que sepas mi nombre
     
+- intent: repite_nombre
+  examples: |
+    - Como me llamo
+    - Dime mi nombre 
+    - Sabes mi nombre?
+    - repite mi nombre
+- intent: dar_nombre
+  examples: |
+    - Mi name es [Clau](name) 
+    - Soy [Clau](name) 
+    - [Clau](name) es mi nombre
+    - Me llamo [Clau](name) 
+    - [Clau](name)   
     
 
 

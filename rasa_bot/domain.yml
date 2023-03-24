@@ -22,6 +22,20 @@ intents:
   - pregunta_creadores
   - pregunta_ingenieros
   - pregunta_eva
+  - repite_nombre 
+  - repeat_shirt_size
+  - ask_me_anything
+  - dar_nombre
+
+entities:
+- name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
 
 responses:
   utter_greet:
@@ -86,8 +100,17 @@ responses:
   utter_eva:
   - text: "El enlace al sitio del EVA es https://eva.uo.edu.cu"
   
+  utter_ask_name:
+  - text: Cual es tu nombre?
+ 
+  utter_remember:
+  - text: Gracias. Lo recordaré
+  
 actions:
   - action_test
+  - action_say_name
+  - utter_ask_name
+  - utter_remember
 
 session_config:
   session_expiration_time: 60

@@ -73,5 +73,29 @@ stories:
   - intent: pregunta_eva
   - action: utter_eva
 
-  
+- story: give name story 1
+  steps:
+  - intent: ask_me_anything
+  - action: utter_ask_name
+  - intent: dar_nombre
+    entities:
+    - name: Clau
+  - action: utter_remember
+  - intent: repite_nombre
+  - action: action_say_name
+
+- story: give name story 2
+  steps:
+  - intent: repite_nombre
+  - action: action_say_name
+  - intent: ask_me_anything
+  - action: utter_ask_name
+  - intent: dar_nombre
+    entities:
+    - name: name
+  - slot_was_set:
+    - name: name
+  - action: utter_remember
+  - intent: repite_nombre
+  - action: action_say_name  
   

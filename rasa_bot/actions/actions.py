@@ -86,6 +86,21 @@ class ExtractAction(Action):
 #         dispatcher.utter_message(text="Escribiste {}. Verdad? ".format(texto))
 #         return []
 
+class ActionSayName(Action):
+    
+    def name(self) -> Text:
+        return "action_say_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        name = tracker.get_slot("name")
+        if not name:
+            dispatcher.utter_message(text="No se tu nombre.")
+        else:
+            dispatcher.utter_message(text=f"Tu nombre es {name}!")
+        return []
 
 
 
