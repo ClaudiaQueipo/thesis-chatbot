@@ -33,17 +33,18 @@ rasa run --cors "*"
 ``` 
 to run your bot in the production environment.
 
-## 🎨 Setup ReactJS UI
-To setup the interface, you must run the command 
+## 🎨 Setup ReactJS Chat UI
+To setup the chat interface, you must run the command 
 
 ```bash 
 cd web
 npm install 
 ```
-Now to see the interface execute the command 
+Now to see the chat interface execute the command 
 ```bash 
 npm run start
 ```
+
 This command will open a connection with the localhost in port 3000
 [localhost:3000](http://localhost:3000)
 
