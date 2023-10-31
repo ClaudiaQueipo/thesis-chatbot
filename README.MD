@@ -1,7 +1,7 @@
 
-# RASA CHAT/VOICE BOT 
-This Chatbot allows users to comunicate with it through chat and
-voice channels. It was developed using the RASA framework and has a custom API developed with FAST-API. The Chatbot uses a Whisper model for audio synthesis.
+# RASA CHAT/VOICE BOT SYSTEM GENERATION
+This system allows users to create and comunicate with the chatbots through chat and
+voice and video channels. It was developed using the RASA framework and has a custom API developed with FAST-API. The created chatbots uses a Whisper model for audio synthesis.
 
 ## 👷‍ Installation
 The first thing we must do is run the command:
@@ -90,8 +90,8 @@ python run.py
 ```
 and wait for the model to start. The Whisper service would then be enabled for use.
 
-## 🎨 Setup ReactJS UI
-To setup the interface, you must run the command 
+## 🎨 Setup ReactJS Chat UI
+To setup the chat interface, you must run the command 
 
 ```bash 
 cd web
