@@ -3,7 +3,10 @@ __pycache__
 .rasa
 rasa_bot/.rasa
 rasa_bot/models
+rasa_env/
 web/node_modules
+sgav/node_modules
+whisperdev/
 iniciar VENV.bat
 request.py
 SpeechRecognition-3.9.0-py2.py3-none-any.whl
