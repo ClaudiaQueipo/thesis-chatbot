@@ -73,5 +73,21 @@ stories:
   - intent: pregunta_eva
   - action: utter_eva
 
-  
-  
+- story: give name story 1
+  steps:
+  - intent: ask_me_anything
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: vincent
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: vincent-mcvincent
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slots_values

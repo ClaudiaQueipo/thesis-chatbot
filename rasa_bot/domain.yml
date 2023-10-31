@@ -22,6 +22,33 @@ intents:
   - pregunta_creadores
   - pregunta_ingenieros
   - pregunta_eva
+  - repite_nombre 
+  - repeat_shirt_size
+  - ask_me_anything
+  - dar_nombre
+
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+slots:
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: last_name
 
 responses:
   utter_greet:
@@ -86,8 +113,19 @@ responses:
   utter_eva:
   - text: "El enlace al sitio del EVA es https://eva.uo.edu.cu"
   
+  utter_ask_first_name:
+  - text: Cual es tu nombre?
+  utter_ask_last_name:
+  - text: Entonces {first_name}, cual es tu apellido?
+  utter_submit:
+  - text: Ok. ¡Gracias!
+  utter_slots_values:
+  - text: ¡Vale, recordare tu nombre {first_name} {last_name}!
+  
 actions:
   - action_test
+  - utter_slots_values
+  - utter_submit
 
 session_config:
   session_expiration_time: 60
