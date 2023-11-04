@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Table,
   TableHeader,
@@ -20,17 +21,21 @@ import NavigationBar from "../../components/NavigationBar";
 import { PlusIcon } from "../../assets/Icons/PlusIcon";
 import { VerticalDotsIcon } from "../../assets/Icons/VerticalDotsIcon";
 import { SearchIcon } from "../../assets/Icons/SearchIcon";
-import { ChevronDownIcon } from "../../assets/Icons/ChevronDownIcon";
-import { columns, users, statusOptions } from "../../utils/data";
-import { capitalize } from "../../utils/utils";
+import { columns, assistants, statusOptions } from "../../utils/data";
+import { EditDoc } from "../../assets/Icons/EditDoc";
+import { DeleteDoc } from "../../assets/Icons/DeleteDoc";
 
-const statusColorMap = {
-  active: "success",
-  paused: "danger",
-  vacation: "warning",
-};
+const INITIAL_VISIBLE_COLUMNS = [
+  "name",
+  "description",
+  "knowledge",
+  "status",
+  "createdAt",
+  "actions",
+];
 
-const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
+const iconClasses =
+  "text-xl text-default-500 pointer-events-none flex-shrink-0";
 
 export default function App() {
   const [filterValue, setFilterValue] = React.useState("");
@@ -46,7 +51,7 @@ export default function App() {
   });
   const [page, setPage] = React.useState(1);
 
-  const pages = Math.ceil(users.length / rowsPerPage);
+  const pages = Math.ceil(assistants.length / rowsPerPage);
 
   const hasSearchFilter = Boolean(filterValue);
 
@@ -59,24 +64,28 @@ export default function App() {
   }, [visibleColumns]);
 
   const filteredItems = React.useMemo(() => {
-    let filteredUsers = [...users];
+    let filteredAssistants = [...assistants];
 
     if (hasSearchFilter) {
-      filteredUsers = filteredUsers.filter((user) =>
-        user.name.toLowerCase().includes(filterValue.toLowerCase())
+      filteredAssistants = filteredAssistants.filter((assistant) =>
+        Object.values(assistant)
+          .join(" ")
+          .toLowerCase()
+          .includes(filterValue.toLowerCase())
       );
     }
+
     if (
       statusFilter !== "all" &&
       Array.from(statusFilter).length !== statusOptions.length
     ) {
-      filteredUsers = filteredUsers.filter((user) =>
-        Array.from(statusFilter).includes(user.status)
+      filteredAssistants = filteredAssistants.filter((assistant) =>
+        Array.from(statusFilter).includes(assistant.status)
       );
     }
 
-    return filteredUsers;
-  }, [users, filterValue, statusFilter]);
+    return filteredAssistants;
+  }, [assistants, filterValue, statusFilter]);
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
@@ -95,41 +104,41 @@ export default function App() {
     });
   }, [sortDescriptor, items]);
 
-  const renderCell = React.useCallback((user, columnKey) => {
-    const cellValue = user[columnKey];
+  const renderCell = React.useCallback((assistant, columnKey) => {
+    const cellValue = assistant[columnKey];
 
     switch (columnKey) {
       case "name":
-        return (
-          <User
-            avatarProps={{ radius: "full", size: "sm", src: user.avatar }}
-            classNames={{
-              description: "text-default-500",
-            }}
-            description={user.email}
-            name={cellValue}
-          >
-            {user.email}
-          </User>
-        );
-      case "role":
+        return <p>{assistant.name}</p>;
+      case "description":
         return (
           <div className="flex flex-col">
             <p className="text-bold text-small capitalize">{cellValue}</p>
-            <p className="text-bold text-tiny capitalize text-default-500">
-              {user.team}
-            </p>
           </div>
         );
+
+      case "knowledge":
+        return (
+          <Chip color="warning" variant="faded">
+            {cellValue}
+          </Chip>
+        );
+
       case "status":
         return (
           <Chip
             className="capitalize border-none gap-1 text-default-600"
-            color={statusColorMap[user.status]}
+            color={
+              assistant.status === "Creado"
+                ? "success"
+                : assistant.status === "No creado"
+                ? "danger"
+                : "warning"
+            }
             size="sm"
             variant="dot"
           >
-            {cellValue}
+            {assistant.status}
           </Chip>
         );
       case "actions":
@@ -142,9 +151,21 @@ export default function App() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu>
-                <DropdownItem>View</DropdownItem>
-                <DropdownItem>Edit</DropdownItem>
-                <DropdownItem>Delete</DropdownItem>
+                <DropdownItem
+                  key="edit"
+                  color="default"
+                  startContent={<EditDoc className={iconClasses} />}
+                >
+                  Editar
+                </DropdownItem>
+
+                <DropdownItem
+                  key="delete"
+                  startContent={<DeleteDoc className={iconClasses} />}
+                >
+                  Eliminar
+                </DropdownItem>
+                {/* <DropdownItem>Delete</DropdownItem> */}
               </DropdownMenu>
             </Dropdown>
           </div>
@@ -187,7 +208,9 @@ export default function App() {
             </div>
             <div className="flex gap-3">
               <Button
-                className="bg-foreground text-background"
+                as={Link}
+                to="/create-assistant"
+                className="bg-secondary text-white"
                 endContent={<PlusIcon />}
                 size="md"
               >
@@ -198,7 +221,7 @@ export default function App() {
           <br />
           <div className="flex justify-between items-center">
             <span className="text-default-400 text-small">
-              Total {users.length} users
+              Total {assistants.length} assistants
             </span>
             <label className="flex items-center text-default-400 text-small">
               Rows per page:
@@ -221,7 +244,7 @@ export default function App() {
     visibleColumns,
     onSearchChange,
     onRowsPerPageChange,
-    users.length,
+    assistants.length,
     hasSearchFilter,
   ]);
 
@@ -304,7 +327,7 @@ export default function App() {
               </TableColumn>
             )}
           </TableHeader>
-          <TableBody emptyContent={"No users found"} items={sortedItems}>
+          <TableBody emptyContent={"No assistants found"} items={sortedItems}>
             {(item) => (
               <TableRow key={item.id}>
                 {(columnKey) => (

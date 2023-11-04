@@ -86,7 +86,7 @@ export default function NavigationBar() {
 
           <NavbarContent justify="end" style={{ maxWidth: "max-content" }}>
             <NavbarItem>
-              <Button as={Link} color="warning" href="#" variant="shadow">
+              <Button as={Link} color="warning" to="/login" variant="shadow">
                 Iniciar Sesión
               </Button>
             </NavbarItem>

@@ -1,49 +1,30 @@
 import NavigationBar from "../../components/NavigationBar";
-
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Divider,
-  Link,
-  Image,
-} from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function Home() {
+  const defaultContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div>
       <NavigationBar />
-      <div style={{width: "50%" , margin: "50px"}}>
-        <Card style={{maxWidth: "400px"}}>
-          <CardHeader className="flex gap-3">
-            <Image
-              alt="nextui logo"
-              height={40}
-              radius="sm"
-              src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-              width={40}
-            />
-            <div className="flex flex-col">
-              <p className="text-md">NextUI</p>
-              <p className="text-small text-default-500">nextui.org</p>
-            </div>
-          </CardHeader>
-          <Divider />
-          <CardBody>
-            <p>Make beautiful websites regardless of your design experience.</p>
-          </CardBody>
-          <Divider />
-          <CardFooter>
-            <Link
-              isExternal
-              showAnchorIcon
-              href="https://github.com/nextui-org/nextui"
-            >
-              Visit source code on GitHub.
-            </Link>
-          </CardFooter>
-        </Card>
+      <div style={{ margin: "50px" }}>
+        <Accordion>
+          <AccordionItem
+            key="1"
+            aria-label="Accordion 1"
+            title="¿Cómo crear un asistente?"
+          >
+            {defaultContent}
+          </AccordionItem>
+          <AccordionItem
+            key="2"
+            aria-label="Accordion 2"
+            title="¿Cómo funciona la plataforma?"
+          >
+            {defaultContent}
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
