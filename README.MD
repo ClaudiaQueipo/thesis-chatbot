@@ -3,6 +3,11 @@
 This system allows users to create and comunicate with the chatbots through chat and
 voice and video channels. It was developed using the RASA framework and has a custom API developed with FAST-API. The created chatbots uses a Whisper model for audio synthesis.
 
+## Project Structure considerations.
+1. In DOC folder is hosted my thesis and some helpful documents to this proyect.
+2. In sgav folder we have the frontend code of the Virtual Assistants Management System
+3. In Web folder we have the code of a chat interface, for users to prove the created asistants using text, voice and video channels
+
 ## 👷‍ Installation
 The first thing we must do is run the command:
 
@@ -33,6 +38,23 @@ Finally, to run your bot, open another commandline in previous directory. Then, 
 rasa run --cors "*"
 ``` 
 to run your bot in the production environment.
+
+## Setting Up the SGAV
+First of all we have to install the dependencies by executing the command 
+```bash
+npm install
+```
+in sgav folder
+
+Then to run the proyect we can run the following command
+if you are using npm:
+```bash
+npm run dev
+```
+with pnpm the command look like this:
+```bash
+pnpm run dev
+```
 
 ## 🎨 Setup ReactJS Chat UI
 To setup the chat interface, you must run the command 
