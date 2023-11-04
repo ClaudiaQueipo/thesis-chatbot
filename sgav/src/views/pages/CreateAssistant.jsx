@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   Card,
   CardBody,
@@ -59,7 +61,8 @@ export default function CreateAssistant() {
   };
 
   return (
-    <div style={{ margin: "0 100px" }}>
+    <div style={{ position: "relative", margin: "0 100px" }}>
+      <Link style={{ position: "absolute", top: 0, left: 0, marginTop: "30px" , color: "#f5a524"}} to="/gestion-asistentes">SGAV</Link>
       <section style={sectionStyle}>
         <Card style={cardStyle}>
           <CardBody style={{ gap: "10px" }}>
