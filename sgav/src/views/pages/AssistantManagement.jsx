@@ -19,7 +19,7 @@ import {
 } from "@nextui-org/react";
 import NavigationBar from "../../components/NavigationBar";
 import { PlusIcon } from "../../assets/Icons/PlusIcon";
-import { VerticalDotsIcon } from "../../assets/Icons/VerticalDotsIcon";
+import { BugIcon } from "../../assets/Icons/BugIcon";
 import { SearchIcon } from "../../assets/Icons/SearchIcon";
 import { columns, assistants, statusOptions } from "../../utils/data";
 import { EditDoc } from "../../assets/Icons/EditDoc";
@@ -119,7 +119,7 @@ export default function App() {
 
       case "knowledge":
         return (
-          <Chip color="warning" variant="faded">
+          <Chip variant="faded">
             {cellValue}
           </Chip>
         );
@@ -143,31 +143,10 @@ export default function App() {
         );
       case "actions":
         return (
-          <div className="flex justify-end items-center gap-2">
-            <Dropdown className="bg-background border-1 border-default-200">
-              <DropdownTrigger>
-                <Button isIconOnly radius="full" size="sm" variant="light">
-                  <VerticalDotsIcon className="text-default-400" />
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu>
-                <DropdownItem
-                  key="edit"
-                  color="default"
-                  startContent={<EditDoc className={iconClasses} />}
-                >
-                  Editar
-                </DropdownItem>
-
-                <DropdownItem
-                  key="delete"
-                  startContent={<DeleteDoc className={iconClasses} />}
-                >
-                  Eliminar
-                </DropdownItem>
-                {/* <DropdownItem>Delete</DropdownItem> */}
-              </DropdownMenu>
-            </Dropdown>
+          <div className="flex justify-start items-center gap-2">
+            <BugIcon className={iconClasses} />
+            <EditDoc className={iconClasses} />
+            <DeleteDoc className={iconClasses} />
           </div>
         );
       default:

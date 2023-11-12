@@ -24,6 +24,13 @@ export default function Home() {
           >
             {defaultContent}
           </AccordionItem>
+          <AccordionItem
+            key="3"
+            aria-label="Accordion 3"
+            title="¿Cómo usar un asistente que ya ha sido creado?"
+          >
+            {defaultContent}
+          </AccordionItem>
         </Accordion>
       </div>
     </div>

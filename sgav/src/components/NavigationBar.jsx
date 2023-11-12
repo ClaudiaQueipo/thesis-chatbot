@@ -55,7 +55,7 @@ export default function NavigationBar() {
           <NavbarContent className="sm:hidden pr-3" justify="center">
             <NavbarBrand>
               <MainLogo />
-              <p className="font-bold text-inherit">SGAV</p>
+              <p className="font-bold text-inherit">EvoAssist</p>
             </NavbarBrand>
           </NavbarContent>
         </>
@@ -67,7 +67,7 @@ export default function NavigationBar() {
           >
             <NavbarBrand>
               <MainLogo />
-              <p className="font-bold text-inherit">SGAV</p>
+              <p className="font-bold text-inherit">EvoAssist</p>
             </NavbarBrand>
           </NavbarContent>
 

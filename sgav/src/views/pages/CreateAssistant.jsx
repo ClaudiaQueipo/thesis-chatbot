@@ -62,7 +62,7 @@ export default function CreateAssistant() {
 
   return (
     <div style={{ position: "relative", margin: "0 100px" }}>
-      <Link style={{ position: "absolute", top: 0, left: 0, marginTop: "30px" , color: "#f5a524"}} to="/gestion-asistentes">SGAV</Link>
+      <Link style={{ position: "absolute", top: 0, left: 0, marginTop: "30px" , color: "#f5a524"}} to="/gestion-asistentes">EvoAssist</Link>
       <section style={sectionStyle}>
         <Card style={cardStyle}>
           <CardBody style={{ gap: "10px" }}>

@@ -13,7 +13,7 @@ export default function Login() {
           style={{ position: "absolute", top: 20, left: 20, color: "#f5a524" }}
           to="/"
         >
-          SGAV
+          EvoAssist
         </Link>
         <Card className="max-w-full w-[340px]" style={{ height: "450px" }}>
           <CardBody className="overflow-hidden">
