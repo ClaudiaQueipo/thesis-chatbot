@@ -118,11 +118,7 @@ export default function App() {
         );
 
       case "knowledge":
-        return (
-          <Chip variant="faded">
-            {cellValue}
-          </Chip>
-        );
+        return <Chip variant="faded">{cellValue}</Chip>;
 
       case "status":
         return (
@@ -188,7 +184,7 @@ export default function App() {
             <div className="flex gap-3">
               <Button
                 as={Link}
-                to="/create-assistant"
+                to="/gestion-asistentes/create-assistant"
                 className="bg-secondary text-white"
                 endContent={<PlusIcon />}
                 size="md"
