@@ -9,7 +9,7 @@ assistant = APIRouter(prefix="/assistants")
 collection = database["assistants"]
 
 
-@assistant.post("/")
+@assistant.post("/gen-questions")
 async def q_gen(
     # assistant: Assistant,
     file: UploadFile,
