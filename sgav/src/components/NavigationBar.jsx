@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import ThemeSwitcher from "./ThemeSwitcher";
 import { Link, useLocation } from "react-router-dom";
 import {
   Navbar,
@@ -91,6 +91,8 @@ export default function NavigationBar() {
               </Button>
             </NavbarItem>
           </NavbarContent>
+          <br />
+          <ThemeSwitcher />
         </>
       )}
 
@@ -107,6 +109,7 @@ export default function NavigationBar() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <ThemeSwitcher />
       </NavbarMenu>
     </Navbar>
   );

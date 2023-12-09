@@ -1,5 +1,13 @@
 import React from "react";
-import { Tabs, Tab, Input, Button, Card, CardBody, Link as LinkNext } from "@nextui-org/react";
+import {
+  Tabs,
+  Tab,
+  Input,
+  Button,
+  Card,
+  CardBody,
+  Link as LinkNext,
+} from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { GoogleIcon } from "../../assets/Icons/GoogleIcon";
 import { FacebookIcon } from "../../assets/Icons/FacebookIcon";
@@ -48,11 +56,11 @@ export default function Login() {
                       color="warning"
                       onPress={() => setSelected("sign-up")}
                     >
-                      Regístrate
+                      <strong>Regístrate</strong>
                     </LinkNext>
                   </p>
                   <div className="flex gap-2 justify-end">
-                    <Button fullWidth color="secondary">
+                    <Button fullWidth color="secondary" className="text-white">
                       Iniciar Sesión
                     </Button>
                   </div>
@@ -108,11 +116,11 @@ export default function Login() {
                       color="warning"
                       onPress={() => setSelected("login")}
                     >
-                      Login
+                      <strong>Login</strong>
                     </LinkNext>
                   </p>
                   <div className="flex gap-2 justify-end">
-                    <Button fullWidth color="secondary">
+                    <Button fullWidth color="secondary" className="text-white">
                       Registrarse
                     </Button>
                   </div>

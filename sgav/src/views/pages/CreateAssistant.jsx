@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import AssistantForm from "../../components/AssistantForm";
 import { Link } from "react-router-dom";
 
 import {
@@ -9,6 +9,7 @@ import {
   Button,
   Chip,
 } from "@nextui-org/react";
+import { useState } from "react";
 
 const flexRowStyle = {
   display: "flex",
@@ -21,7 +22,6 @@ const cardStyle = {
   width: "100%",
   maxWidth: "50%",
 };
-const pStyle = { fontSize: "0.75em", color: "#f5a524" };
 
 const sectionStyle = {
   display: "flex",
@@ -36,96 +36,28 @@ const sectionStyle = {
 };
 
 export default function CreateAssistant() {
-  const hiddenFileInput = useRef(null);
-  const [selectedFile, setSelectedFile] = useState("");
-
-  const handleChange = (event) => {
-    const fileUploaded = event.target.files[0];
-    setSelectedFile(fileUploaded.name);
-    const fileType = fileUploaded.type;
-    const allowedTypes = [
-      "application/pdf",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "text/plain",
-    ];
-
-    if (!allowedTypes.includes(fileType)) {
-      alert(
-        "Tipo de archivo no permitido. Solo se permiten archivos PDF, DOCX y TXT."
-      );
-      event.target.value = null; // Limpia el input de archivo
-      return;
-    }
-
-    // Aquí puedes manejar la carga del archivo
-  };
+  const [questions, setQuestions] = useState("");
 
   return (
     <div style={{ position: "relative", margin: "0 100px" }}>
-      <Link style={{ position: "absolute", top: 0, left: 0, marginTop: "30px" , color: "#f5a524"}} to="/gestion-asistentes">EvoAssist</Link>
+      <Link
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          marginTop: "30px",
+          color: "#f5a524",
+        }}
+        to="/gestion-asistentes"
+      >
+        EvoAssist
+      </Link>
       <section style={sectionStyle}>
-        <Card style={cardStyle}>
-          <CardBody style={{ gap: "10px" }}>
-            <p>Datos del asistente</p>
-
-            <Input
-              label="Nombre"
-              isRequired
-              isClearable
-              variant="flat"
-              size="lg"
-              type="text"
-              placeholder="Escribe el nombre de tu asistente"
-            />
-            <Textarea
-              label="Descripción"
-              placeholder="Escribe una descripción que te permita identificar a tu asistente"
-              size="lg"
-            />
-            <Textarea
-              label="Conocimiento del asistente"
-              placeholder="Escribe conocimiento para tu asistente o carga un archivo"
-              size="lg"
-            />
-            <div style={flexRowStyle}>
-              <div>
-                <input
-                  type="file"
-                  style={{ display: "none" }}
-                  ref={hiddenFileInput}
-                  onChange={handleChange}
-                  accept=".pdf,.docx,.txt"
-                />
-                <Button
-                  onClick={() => hiddenFileInput.current.click()}
-                  color="secondary"
-                  variant="shadow"
-                >
-                  Cargar Archivo
-                </Button>
-              </div>
-              {selectedFile && (
-                // <Chip onClose={() => setSelectedFile("")}>
-                //   <p style={pStyle}>
-                //     {selectedFile.length > 30
-                //       ? `${selectedFile.slice(0, 20)}...${
-                //           selectedFile.split(".")[1]
-                //         }`
-                //       : selectedFile}
-                //   </p>
-                // </Chip>
-                <Chip onClose={() => setSelectedFile("")}>
-                  <p style={pStyle}>{selectedFile}</p>
-                </Chip>
-              )}
-            </div>
-            <p style={pStyle}>Tipos de archivos permitidos: PDF, DOCX, TXT</p>
-            <Button color="secondary" variant="shadow">
-              Analizar
-            </Button>
-          </CardBody>
-        </Card>
-
+        <AssistantForm
+          cardStyle={cardStyle}
+          flexRowStyle={flexRowStyle}
+          setQuestions={setQuestions}
+        />
         <Card style={cardStyle}>
           <CardBody style={{ gap: "10px" }}>
             <p>Preguntas y Respuestas generadas</p>
@@ -134,6 +66,7 @@ export default function CreateAssistant() {
               placeholder="Podrás editar este contenido cuando se analice el conocimiento."
               size="lg"
               maxRows={6}
+              value={questions}
             />
             <Textarea
               label="Respuestas"
@@ -142,10 +75,10 @@ export default function CreateAssistant() {
               maxRows={6}
             />
             <div style={flexRowStyle}>
-              <Button color="secondary" variant="shadow">
+              <Button color="secondary" variant="shadow" className="text-white">
                 Generar Archivos
               </Button>
-              <Button color="warning" variant="shadow">
+              <Button color="warning" variant="shadow" className="text-white">
                 Guardar resultados
               </Button>
             </div>
