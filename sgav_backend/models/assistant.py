@@ -1,3 +1,8 @@
+<<<<<<< HEAD:sgav_backend/models/Assistent.py
+from typing import Annotated
+
+=======
+>>>>>>> 853c0c784a651355bec76fe4bb15bcbc3aab2fa8:sgav_backend/models/assistant.py
 from typing import Annotated, List
 from pydantic import BaseModel, Field
 from models.pydantic_oid import ObjectId, ObjectIdPydanticAnnotation
