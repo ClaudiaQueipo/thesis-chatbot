@@ -1,29 +1,62 @@
 import { lazy, Suspense } from "react";
 
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import Home from "../views/pages/Home";
 
 const LazyAssistantManagement = lazy(() =>
   import("../views/pages/AssistantManagement")
 );
 const LazyLogin = lazy(() => import("../views/pages/Login"));
-const LazyCreateAssistant = lazy(() => import("../views/pages/CreateAssistant"));
+const LazyCreateAssistant = lazy(() =>
+  import("../views/pages/CreateAssistant")
+);
+const NotFound = lazy(() => import("../views/pages/NotFound"));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Home />,
   },
   {
-    path: "/gestion-asistentes",
+    path: "gestion-asistentes",
     element: (
       <Suspense fallback={<h1>Loading...</h1>}>
-        <LazyAssistantManagement />
+        <Outlet />
       </Suspense>
     ),
+    children: [
+      {
+        path: "",
+        element: <LazyAssistantManagement />,
+      },
+      {
+        path: "create-assistant",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <LazyCreateAssistant />
+          </Suspense>
+        ),
+      },
+      {
+        path: "edit-assistant",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <LazyCreateAssistant />
+          </Suspense>
+        ),
+      },
+      {
+        path: "test-assistant",
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <LazyCreateAssistant />
+          </Suspense>
+        ),
+      },
+    ],
   },
   {
-    path: "/login",
+    path: "login",
     element: (
       <Suspense fallback={<h1>Loading...</h1>}>
         <LazyLogin />
@@ -31,10 +64,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/create-assistant",
+    path: "*",
     element: (
       <Suspense fallback={<h1>Loading...</h1>}>
-        <LazyCreateAssistant />
+        <NotFound />
       </Suspense>
     ),
   },
