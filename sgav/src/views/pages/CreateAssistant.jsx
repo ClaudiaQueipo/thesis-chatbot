@@ -1,4 +1,4 @@
-import AssistantForm from "../../components/AssistantForm";
+import AssistantForm from "../../components/assistant-form/AssistantForm";
 import { Link } from "react-router-dom";
 
 import {

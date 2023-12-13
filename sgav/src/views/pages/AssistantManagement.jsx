@@ -9,15 +9,10 @@ import {
   TableCell,
   Input,
   Button,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
   Chip,
-  User,
   Pagination,
 } from "@nextui-org/react";
-import NavigationBar from "../../components/NavigationBar";
+import NavigationBar from "../../components/navigation-bar/NavigationBar";
 import { PlusIcon } from "../../assets/Icons/PlusIcon";
 import { BugIcon } from "../../assets/Icons/BugIcon";
 import { SearchIcon } from "../../assets/Icons/SearchIcon";
