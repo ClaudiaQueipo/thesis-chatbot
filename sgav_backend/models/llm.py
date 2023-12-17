@@ -1,4 +1,5 @@
 from langchain.llms import LlamaCpp
+# from langchain.llms import OpenAI
 
 llm = LlamaCpp(
     model_path="./llama-2-7b-chat.Q3_K_L_2.gguf",
@@ -8,3 +9,9 @@ llm = LlamaCpp(
     verbose=True,
     n_ctx=4096,
 )
+
+
+# llm = OpenAI()
+
+
+

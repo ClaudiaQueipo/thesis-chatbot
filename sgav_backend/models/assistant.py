@@ -12,3 +12,7 @@ class Assistant(BaseModel):
     knowledge: str = Field(alias="knowledge", default="")
     questions: List[str] = Field(alias="questions", default=list())
     answers: List[str] = Field(alias="answers", default=list())
+
+
+class Questions(BaseModel):
+    questions: List[str] = Field(alias="questions", default=list())
