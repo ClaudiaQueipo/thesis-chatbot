@@ -1,4 +1,3 @@
-from typing import List
 from langchain.prompts import PromptTemplate
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -59,4 +58,4 @@ async def questions_generation(DATA_PATH: str):
 
     questions = question_gen_chain.run(docs_question_gen)
 
-    return questions
+    return questions, docs_question_gen

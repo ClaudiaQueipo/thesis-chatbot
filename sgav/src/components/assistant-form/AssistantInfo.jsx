@@ -1,45 +1,53 @@
 // AssistantInfo.js
 import React from "react";
 import { Input, Textarea } from "@nextui-org/react";
+import useAssistantStore from "../../store/assistantStore";
 
-export default function AssistantInfo({ assistantInput, setAssistantInput }) {
+export default function AssistantInfo() {
+  const assistantInput = useAssistantStore(state => state.assistant)
+  const setAssistantInput = useAssistantStore(state => state.setAssistant)
   return (
     <>
       <Input
         label="Nombre"
         isRequired
         isClearable
-        variant="flat"
+        variant="faded"
         size="lg"
         type="text"
         placeholder="Escribe el nombre de tu asistente"
         value={assistantInput.name}
         onChange={(event) => {
-          setAssistantInput((prev) => ({ ...prev, name: event.target.value }));
+          setAssistantInput({
+            ...assistantInput,
+            name: event.target.value
+          })
         }}
       />
       <Textarea
         label="Descripción"
         placeholder="Escribe una descripción que te permita identificar a tu asistente"
+        variant='faded'
         size="lg"
         value={assistantInput.description}
         onChange={(event) => {
-          setAssistantInput((prev) => ({
-            ...prev,
-            description: event.target.value,
-          }));
+          setAssistantInput({
+            ...assistantInput,
+            description: event.target.value
+          })
         }}
       />
       <Textarea
         label="Conocimiento del asistente"
         placeholder="Escribe conocimiento para tu asistente o carga un archivo"
+        variant='faded'
         size="lg"
         value={assistantInput.knowledge}
         onChange={(event) => {
-          setAssistantInput((prev) => ({
-            ...prev,
-            knowledge: event.target.value,
-          }));
+          setAssistantInput({
+            ...assistantInput,
+            knowledge: event.target.value
+          })
         }}
       />
     </>

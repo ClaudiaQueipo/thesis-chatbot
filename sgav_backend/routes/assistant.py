@@ -1,5 +1,6 @@
 from fastapi import APIRouter, UploadFile
-from models import Assistant
+from langchain_services.answers_gen import answers_generation
+from models import Assistant, Questions
 from utils import database
 from langchain_services import questions_generation
 import tempfile
@@ -21,8 +22,20 @@ async def q_gen(
 
         assistant.knowledge = file.filename
 
-        questions = await questions_generation(temp_path)
+        questions, docs = await questions_generation(temp_path)
+        assistant.docs = docs
         return questions
 
     finally:
         os.unlink(temp_path)
+
+
+@assistant.post("/gen-answers")
+async def a_gen(questions: Questions):
+    try:
+        answers = await answers_generation(
+            docs_question_gen=assistant.docs, questions=questions
+        )
+        return answers
+    except Exception as e:
+        print(e)
