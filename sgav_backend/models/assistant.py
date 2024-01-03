@@ -21,3 +21,13 @@ class Assistant(BaseModel):
 
 class Questions(BaseModel):
     questions: List[str] = Field(alias="questions", default=list())
+
+
+class Answers(BaseModel):
+    answers: List[str] = Field(alias="answers", default=list())
+
+
+class QA(BaseModel):
+    name: str = Field(alias="name", default="")
+    questions: List[str] = Field(alias="questions", default=list())
+    answers: List[str] = Field(alias="answers", default=list())

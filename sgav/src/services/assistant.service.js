@@ -52,6 +52,29 @@ class AssistantService {
       return data
     }
   }
+
+  async generateFiles(questions, answers) {
+    const data = {
+      questions: questions,
+      answers: answers
+    }
+    const payload = JSON.stringify(data)
+
+    const response = await fetch(this.base_path.concat("gen-files"),
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: payload
+      }
+    )
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    } else {
+      return "Correct"
+    }
+  }
 }
 
 
