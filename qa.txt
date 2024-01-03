@@ -1,0 +1,5 @@
+{
+ "name": "masabito",
+ "questions": ["¿Qué es la programación?", "¿Cómo se crea una aplicación web?", "¿Qué lenguaje de programación se usa comúnmente?", "¿Cuál es la diferencia entre JavaScript y Java?", "¿Qué es una función en programación?"],
+ "answers": ["La programación es el proceso de crear un conjunto de instrucciones para realizar una tarea específica.", "Crear una aplicación web implica diseñar la interfaz de usuario, escribir el código y probar la aplicación.", "El lenguaje de programación más comúnmente utilizado es JavaScript.", "JavaScript y Java son diferentes, aunque ambos comienzan con la letra J. JavaScript es un lenguaje de programación del lado del cliente, mientras que Java es un lenguaje de programación orientado a objetos.", "Una función en programación es un bloque de código diseñado para realizar una tarea específica."]
+}

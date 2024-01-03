@@ -34,7 +34,9 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
 
     }, [questions]);
 
-
+    const handleGenerateFiles = async () => {
+        const response 
+    }
 
     return (
         <Card style={cardStyle}>
@@ -71,7 +73,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                     }}
                 />
                 <div style={{ display: "flex", gap: "10px" }}>
-                    <Button color="secondary" variant="shadow" className="text-white" fullWidth>
+                    <Button onClick={handleGenerateFiles} color="secondary" variant="shadow" className="text-white" fullWidth>
                         Generar Archivos
                     </Button>
                     <Button color="warning" variant="solid" fullWidth>
