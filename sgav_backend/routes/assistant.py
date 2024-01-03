@@ -45,7 +45,6 @@ async def a_gen(questions: Questions):
 @assistant.post("/create")
 async def create_assistant(assistant: Assistant):
     try:
-        print(assistant)
         assistants_collection.insert_one(
             assistant.model_dump(
                 by_alias=True,
