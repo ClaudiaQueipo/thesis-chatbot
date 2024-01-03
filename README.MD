@@ -54,30 +54,67 @@ to run your bot in the production environment.
 ## Setting Up the SGAV System
 
 ### Backend
-
+---
 First of all you need a LLM alredy downloaded, when you have one, put it on sgav_backend folder and change model path in sgav_backend/models/llm.py
 
-Next we need to install the dependencies
+#### Database installation
+Then we have to install the database in this case MongoDB, you can use the docker-compose.yml 
 
-first: We have to change the current dir
+> [!IMPORTANT]
+
+> If you are using docker in a blocked country you should see this article for using it without any problems [docker a lo cubano](https://www.sysadminsdecuba.com/2020/04/docker-a-lo-cubano/)
+
+
+Starting the service in detached mode, this is useful for querying the db using mongosh
+```bash
+docker-compose up -d
+```
+
+> [!NOTE]
+Db credentials 
+Username: root
+Password: root
+
+note: You can change credentials config in docker-compose.yml
+
+If you want to down the docker container service you have to use this command
+```bash
+docker-compose down
+```
+
+Next we need to install the python deps
+
+1. We have to change the current dir
 
 ```bash
 cd sgav_backend/
 ```
 
-second: install deps (you can create an env or whatever if you want)
+2. install deps (you can create an env or whatever if you want)
 
 ```bash
 pip install -r requirements.txt
 ```
 
-third: run server with the following command
+3. Set up your env variables
+If you not change anything in docker compose your credentials have to look like this
+
+```js
+DB_USER="root"
+DB_PASSWORD="root"
+DB_HOST="localhost"
+DB_PORT="27017"
+DB_NAME="sgav"
+```
+
+4. run server with the following command
 
 ```bash
 python main.py
 ```
 
 ### Frontend
+---
 
 First of all we have to install the dependencies by executing the command
 
