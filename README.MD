@@ -61,7 +61,6 @@ First of all you need a LLM alredy downloaded, when you have one, put it on sgav
 Then we have to install the database in this case MongoDB, you can use the docker-compose.yml 
 
 > [!IMPORTANT]
-
 > If you are using docker in a blocked country you should see this article for using it without any problems [docker a lo cubano](https://www.sysadminsdecuba.com/2020/04/docker-a-lo-cubano/)
 
 
