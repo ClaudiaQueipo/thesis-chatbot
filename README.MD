@@ -70,6 +70,11 @@ Starting the service in detached mode, this is useful for querying the db using 
 docker-compose up -d
 ```
 
+Executing the container
+```bash
+sudo docker exec -it container_name bash
+```
+
 > [!NOTE]
 Db credentials 
 Username: root
