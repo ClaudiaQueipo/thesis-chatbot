@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Annotated, List
 from pydantic import BaseModel, Field
 from models.pydantic_oid import ObjectId, ObjectIdPydanticAnnotation
@@ -12,6 +13,7 @@ class Assistant(BaseModel):
     knowledge: str = Field(alias="knowledge", default="")
     questions: List[str] = Field(alias="questions", default=list())
     answers: List[str] = Field(alias="answers", default=list())
+    createdAt: datetime | None = Field(alias="created_at", default=None)
 
 
 class Questions(BaseModel):

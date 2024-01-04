@@ -1,3 +1,4 @@
+from datetime import datetime
 import shutil
 from fastapi import APIRouter, UploadFile
 from fastapi.responses import Response, FileResponse
@@ -47,12 +48,14 @@ async def a_gen(questions: Questions):
 @assistant.post("/create")
 async def create_assistant(assistant: Assistant):
     try:
-        assistants_collection.insert_one(
-            assistant.model_dump(
-                by_alias=True,
-                exclude={"ID"},
-            )
+        new_assistant = assistant.model_dump(
+            by_alias=True,
+            exclude={"ID"},  # Velar porque esto no de error con el created
         )
+
+        new_assistant["created_at"] = datetime.now()
+
+        assistants_collection.insert_one(new_assistant)
         return Response(status_code=200)
     except Exception as e:
         print(e)
@@ -60,12 +63,10 @@ async def create_assistant(assistant: Assistant):
 
 @assistant.post("/gen-files")
 async def generate_train_files(qa: QA):
-    print(qa.name)
     await gen_files.generarArchivos(qa.questions, qa.answers, qa.name)
     folder_name = qa.name
     base_dir = "./train_files_gen"
     zip_file_name = shutil.make_archive(folder_name, "zip", base_dir)
-    print(zip_file_name)
 
     # Mover el archivo zip a la carpeta 'bots'
     dest_dir = "./bots"
@@ -78,3 +79,14 @@ async def generate_train_files(qa: QA):
         filename=f"{zip_file_name}",
         media_type="application/x-zip-compressed",
     )
+
+
+@assistant.get("/fetch-assistants")
+async def fetch_assistants():
+    try:
+        assistants = assistants_collection.find()
+        return list(map(lambda a: Assistant(**a), assistants))
+
+    except Exception as e:
+        print(e)
+        return {"error": "Error al obtener asistentes"}

@@ -5,6 +5,7 @@ import AssistantInfo from "./AssistantInfo";
 import FileUpload from "./FileUpload";
 import assistantService from "../../services/assistant.service";
 import useQuestionsStore from "../../store/questionsStore";
+import useAssistantStore from "../../store/assistantStore";
 
 const pStyle = { fontSize: "0.75em", color: "#f5a524" };
 
@@ -15,7 +16,8 @@ export default function AssistantForm({
   const [loading, setLoading] = useState(false)
   const setQuestions = useQuestionsStore(state => state.setQuestions)
   const [selectedFile, setSelectedFile] = useState("");
-
+  const assistant = useAssistantStore(state => state.assistant)
+  const setAssistantInput = useAssistantStore(state => state.setAssistant)
   const hiddenFileInput = useRef(null);
 
 
@@ -28,6 +30,10 @@ export default function AssistantForm({
       setLoading(true)
       const data = await assistantService.generateQuestions(selectedFile);
       setQuestions(data);
+      setAssistantInput({
+        ...assistant,
+        questions: data.split('\n')
+      })
       setLoading(false)
 
     } catch (error) {
@@ -39,7 +45,7 @@ export default function AssistantForm({
     <Card style={cardStyle}>
       <CardBody style={{ gap: "10px" }}>
         <p>Datos del asistente</p>
-        <AssistantInfo/>
+        <AssistantInfo />
         <FileUpload
           flexRowStyle={flexRowStyle}
           hiddenFileInput={hiddenFileInput}
