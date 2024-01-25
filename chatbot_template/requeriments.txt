@@ -78,7 +78,7 @@ more-itertools==9.0.0
 msgpack==1.0.4
 multidict==5.2.0
 networkx==2.6.3
-numpy==1.21.6
+numpy==1.26.0
 oauthlib==3.2.2
 openai-whisper @ git+https://github.com/openai/whisper.git@5c1a8c10e762bf9c29fcf6b3e40f17bc8ab09864
 opt-einsum==3.3.0
