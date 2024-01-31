@@ -12,7 +12,7 @@ astunparse==1.6.3
 async-timeout==4.0.2
 attrs==22.1.0
 Babel==2.9.1
-backports.zoneinfo==0.2.1
+backports.zoneinfo[tzdata]
 bidict==0.22.0
 boto3==1.26.40
 botocore==1.29.40
@@ -30,7 +30,7 @@ colorhash==1.2.1
 confluent-kafka==1.9.2
 cryptography==38.0.4
 cycler==0.11.0
-dask==2022.2.0
+dask==2022.10.2
 db==0.1.1
 db-sqlite3==0.0.1
 dnspython==1.16.0
@@ -78,7 +78,7 @@ more-itertools==9.0.0
 msgpack==1.0.4
 multidict==5.2.0
 networkx==2.6.3
-numpy==1.26.0
+numpy==1.21.6
 oauthlib==3.2.2
 openai-whisper @ git+https://github.com/openai/whisper.git@5c1a8c10e762bf9c29fcf6b3e40f17bc8ab09864
 opt-einsum==3.3.0
