@@ -96,6 +96,12 @@ cd sgav_backend/
 
 2. install deps (you can create an env or whatever if you want)
 
+> [!NOTE]
+If you are using Windows comment this lines in the requirements.txt:
+uvloop==0.19.0 
+triton==2.1.0
+then execute the following command
+
 ```bash
 pip install -r requirements.txt
 ```
