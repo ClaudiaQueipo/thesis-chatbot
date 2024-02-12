@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from fastapi import FastAPI
 from routes import assistant
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,3 +16,6 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Server Working!"}
+=======
+from fastapi import 
+>>>>>>> 0332606 (merge files)
