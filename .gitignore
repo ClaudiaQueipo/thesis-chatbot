@@ -15,4 +15,7 @@ WHISPER/
 sgav_backend/sgav_env/
 sgav_backend/zephyr-7b-beta.Q4_K_M.gguf
 sgav_backend/llama-2-7b-chat.Q3_K_L_2.gguf
+
+sgav_backend/bots
+chatbot_template/env/
 test-bots-api/env/

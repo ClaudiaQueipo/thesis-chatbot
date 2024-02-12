@@ -31,7 +31,6 @@ class AssistantService {
     const data = {
       questions: questions
     }
-    console.log(data)
     const response = await fetch(
       this.base_path.concat("gen-answers"),
 
@@ -53,8 +52,33 @@ class AssistantService {
     }
   }
 
-  async generateFiles(questions, answers) {
+  async saveAssistant(assistant) {
+    const payload = JSON.stringify(assistant)
+
+    const response = await fetch(
+      this.base_path.concat("create"),
+
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: payload
+      }
+    )
+    
+    if (!response.ok) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+
+  async generateFiles(questions, answers, name) {
     const data = {
+      name: name,
       questions: questions,
       answers: answers
     }
@@ -72,10 +96,30 @@ class AssistantService {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     } else {
-      return "Correct"
+      return response.blob()
+    }
+  }
+
+  async getAssistants() {
+    const response = await fetch(this.base_path.concat("fetch-assistants"),
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    } else {
+      const data = await response.json()
+      console.log(data)
+      return data
     }
   }
 }
+
+
 
 
 const assistantService = new AssistantService()

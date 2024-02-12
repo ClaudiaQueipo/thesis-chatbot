@@ -16,15 +16,16 @@ import NavigationBar from "../../components/navigation-bar/NavigationBar";
 import { PlusIcon } from "../../assets/Icons/PlusIcon";
 import { BugIcon } from "../../assets/Icons/BugIcon";
 import { SearchIcon } from "../../assets/Icons/SearchIcon";
-import { columns, assistants, statusOptions } from "../../utils/data";
+import { columns, statusOptions } from "../../utils/data";
 import { EditDoc } from "../../assets/Icons/EditDoc";
 import { DeleteDoc } from "../../assets/Icons/DeleteDoc";
+import useAssistantsStore from "../../store/assistantsListStore";
+import useFetchAssistants from "../../hooks/useFetchAssistants";
 
 const INITIAL_VISIBLE_COLUMNS = [
   "name",
   "description",
   "knowledge",
-  "status",
   "createdAt",
   "actions",
 ];
@@ -32,7 +33,26 @@ const INITIAL_VISIBLE_COLUMNS = [
 const iconClasses =
   "text-xl text-default-500 pointer-events-none flex-shrink-0";
 
+function formatDate(dateString) {
+  const options = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+
+  const date = new Date(dateString);
+  return date.toLocaleString('es-ES', options).replace(/ de/g, '');
+}
+
+
 export default function App() {
+  useFetchAssistants()
+
+  const assistants = useAssistantsStore(state => state.assistants)
   const [filterValue, setFilterValue] = React.useState("");
   const [selectedKeys, setSelectedKeys] = React.useState(new Set([]));
   const [visibleColumns, setVisibleColumns] = React.useState(
@@ -104,34 +124,20 @@ export default function App() {
 
     switch (columnKey) {
       case "name":
-        return <p>{assistant.name}</p>;
+        return <p>{cellValue}</p>;
       case "description":
         return (
           <div className="flex flex-col">
             <p className="text-bold text-small capitalize">{cellValue}</p>
           </div>
         );
-
       case "knowledge":
         return <Chip variant="faded">{cellValue}</Chip>;
+      case "createdAt":
+        // Asumiendo que `createdAt` es una fecha
 
-      case "status":
-        return (
-          <Chip
-            className="capitalize border-none gap-1 text-default-600"
-            color={
-              assistant.status === "Creado"
-                ? "success"
-                : assistant.status === "No creado"
-                ? "danger"
-                : "warning"
-            }
-            size="sm"
-            variant="dot"
-          >
-            {assistant.status}
-          </Chip>
-        );
+        return <p>{assistant["created_at"] ? formatDate(assistant["created_at"]) : ""}</p>;
+
       case "actions":
         return (
           <div className="flex justify-start items-center gap-2">
@@ -299,13 +305,23 @@ export default function App() {
           </TableHeader>
           <TableBody emptyContent={"No assistants found"} items={sortedItems}>
             {(item) => (
-              <TableRow key={item.id}>
+              <TableRow key={item._id}>
                 {(columnKey) => (
-                  <TableCell>{renderCell(item, columnKey)}</TableCell>
+                  <TableCell key={columnKey}>
+                    {columnKey === "questions" || columnKey === "answers"
+                      ? item.questions.map((q, index) => (
+                        <div key={index}>
+                          <strong>{`Q${index + 1}: `}</strong>
+                          {q}
+                        </div>
+                      ))
+                      : renderCell(item, columnKey)}
+                  </TableCell>
                 )}
               </TableRow>
             )}
           </TableBody>
+
         </Table>
       </div>
     </div>
