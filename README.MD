@@ -4,7 +4,6 @@ This system allows users to create and comunicate with the chatbots through chat
 voice and video channels. It was developed using the RASA framework and has a custom API developed with FAST-API. The created chatbots uses a Whisper model for audio synthesis.
 
 ## Project Structure considerations.
-
 1. In DOC folder is hosted my thesis and some helpful documents to this proyect.
 2. In sgav folder we have the frontend code of the Virtual Assistants Management System
 3. In Web folder we have the code of a chat interface, for users to prove the created asistants using text, voice and video channels
