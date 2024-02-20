@@ -63,7 +63,10 @@ Next we need to install the python deps
 cd sgav_backend/
 ```
 
-2. install deps (you can create an env or whatever if you want)
+2. This is an optional step but is a good practice to create a virtual environment to this dependencies
+see pip or conda documentation to do this and then follow the steps
+
+3. install deps
 
 > [!NOTE]
 If you are using Windows comment this lines in the requirements.txt:
@@ -78,7 +81,7 @@ pip install -r requirements.txt
 3. Set up your env variables
 If you not change anything in docker compose your credentials have to look like this
 
-```js
+```python
 DB_USER="root"
 DB_PASSWORD="root"
 DB_HOST="localhost"
