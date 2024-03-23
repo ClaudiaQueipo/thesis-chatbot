@@ -1,7 +1,7 @@
 
 
 class AssistantService {
-  base_path = "http://0.0.0.0:8000/assistants/"
+  base_path = "http://0.0.0.0:8080/assistants/"
 
   async generateQuestions(file) {
     const formData = new FormData();
@@ -82,6 +82,7 @@ class AssistantService {
       questions: questions,
       answers: answers
     }
+    console.log(data)
     const payload = JSON.stringify(data)
 
     const response = await fetch(this.base_path.concat("gen-files"),

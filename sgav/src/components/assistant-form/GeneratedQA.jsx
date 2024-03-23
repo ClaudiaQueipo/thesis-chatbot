@@ -40,7 +40,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
 
     const handleGenerateFiles = async () => {
         const response = await assistantService.generateFiles(
-            questions,
+            questions.split("\n"),
             answers,
             assistant.name
         )
