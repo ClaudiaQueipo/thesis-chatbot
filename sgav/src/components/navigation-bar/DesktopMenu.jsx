@@ -1,16 +1,26 @@
 // DesktopMenu.js
-import React from "react";
+import { useEffect, useState } from "react";
 import {
   NavbarContent,
   NavbarBrand,
   NavbarItem,
   Button,
+  User
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { MainLogo } from "../../assets/Icons/Logo";
 import ThemeSwitcher from "../ThemeSwitcher";
+import { getUser } from "../../utils/auth";
+import authService from "../../services/auth.service";
 
 export default function DesktopMenu() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const u = getUser()
+    setUser(u)
+  }, [user]);
+
   return (
     <>
       <NavbarContent>
@@ -24,17 +34,28 @@ export default function DesktopMenu() {
         <NavbarItem>
           <Link to="/">Home</Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        {user && <NavbarItem isActive>
           <Link to="/gestion-asistentes">Gestión de asistentes</Link>
-        </NavbarItem>
+        </NavbarItem>}
       </NavbarContent>
 
       <NavbarContent justify="end" style={{ maxWidth: "max-content" }}>
-        <NavbarItem>
-          <Button as={Link} color="warning" to="/login" variant="shadow">
-            Iniciar Sesión
-          </Button>
-        </NavbarItem>
+        {user ? (
+          <>
+            <User name={user} />
+            <Button onClick={() => {
+              authService.logout()
+              setUser(null)
+            }
+            } color="secondary" style={{ color: "white" }}>Logout</Button>
+          </>
+        ) : (
+          <NavbarItem>
+            <Button as={Link} color="warning" to="/login" variant="shadow">
+              Iniciar Sesión
+            </Button>
+          </NavbarItem>
+        )}
       </NavbarContent>
       <br />
       <ThemeSwitcher />

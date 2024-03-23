@@ -134,7 +134,6 @@ export default function App() {
       case "knowledge":
         return <Chip variant="faded">{cellValue}</Chip>;
       case "createdAt":
-        // Asumiendo que `createdAt` es una fecha
 
         return <p>{assistant["created_at"] ? formatDate(assistant["created_at"]) : ""}</p>;
 
@@ -303,7 +302,7 @@ export default function App() {
               </TableColumn>
             )}
           </TableHeader>
-          <TableBody emptyContent={"No assistants found"} items={sortedItems}>
+          <TableBody emptyContent={"No tienes asistentes"} items={sortedItems}>
             {(item) => (
               <TableRow key={item._id}>
                 {(columnKey) => (
