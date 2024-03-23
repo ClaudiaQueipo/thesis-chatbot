@@ -1,10 +1,11 @@
 # from langchain.llms import LlamaCpp
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI
 from langchain_community.llms import LlamaCpp
+from core.config import settings
 
 llm = LlamaCpp(
     # model_path="./llama-2-7b-chat.Q3_K_L_2.gguf",
-    model_path="./zephyr-7b-beta.Q4_K_M.gguf",
+    model_path='zephyr-7b-beta.Q4_K_M.gguf',
     temperature=0.75,
     top_p=1,
     verbose=True,
@@ -12,7 +13,7 @@ llm = LlamaCpp(
 )
 
 
-# llm = OpenAI()
+# llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
 
 
 

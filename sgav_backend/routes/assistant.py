@@ -29,7 +29,8 @@ async def q_gen(
         questions, docs = await questions_generation(temp_path)
         assistant.docs = docs
         return questions
-
+    except Exception as e:
+        print(f"Error en q_gen: {e}")
     finally:
         os.unlink(temp_path)
 
@@ -50,7 +51,7 @@ async def create_assistant(assistant: Assistant):
     try:
         new_assistant = assistant.model_dump(
             by_alias=True,
-            exclude={"ID"},  # Velar porque esto no de error con el created
+            exclude={"ID"}, 
         )
 
         new_assistant["created_at"] = datetime.now()
