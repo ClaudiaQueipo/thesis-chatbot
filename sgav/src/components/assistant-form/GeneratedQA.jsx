@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Card,
     CardBody,
@@ -12,6 +12,8 @@ import useAnswersStore from '../../store/answersStore';
 import useAssistantStore from '../../store/assistantStore';
 import assistantService from '../../services/assistant.service';
 import { toast, Toaster } from "sonner"
+import { getUser } from '../../utils/auth';
+import { useNavigate } from "react-router-dom"
 
 export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const questions = useQuestionsStore(state => state.questions)
@@ -21,6 +23,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const assistant = useAssistantStore(state => state.assistant)
     const setAssistantInput = useAssistantStore(state => state.setAssistant)
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchAnswers = async () => {
@@ -50,8 +53,21 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
 
     const handleSaveResults = async () => {
         const status = await assistantService.saveAssistant(assistant)
+
         if (status) {
+            setAnswers([])
+            setQuestions([])
+            setAssistantInput({
+                name: "",
+                description: "",
+                knowledge: "",
+                questions: "",
+                answers: "",
+                username: getUser()
+            })
+            navigate('/gestion-asistentes')
             return toast.success("Tu asistente ha sido guardado")
+
         } else {
             return toast.error("Ha ocurrido un error, intenta de nuevo")
         }

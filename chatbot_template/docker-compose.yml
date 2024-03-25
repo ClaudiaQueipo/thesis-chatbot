@@ -1,0 +1,23 @@
+version: '3'
+services:
+ rasa_bot:
+    build: ./rasa_bot
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa_bot:/app
+    environment:
+      - UID=1000
+      - GID=1000
+
+ web:
+    build: ./web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - rasa_bot

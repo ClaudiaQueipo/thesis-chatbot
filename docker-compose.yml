@@ -1,6 +1,23 @@
-version: '3.7'
+version: '3'
 services:
-  mongodb_container:
+ backend:
+    build: ./sgav_backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb_container
+    environment:
+      MONGODB_HOST: mongodb_container
+      MONGODB_PORT: 27017
+      MONGODB_USER: root
+      MONGODB_PASSWORD: root
+      
+ frontend:
+    build: ./sgav
+    ports:
+      - "3000:3000"
+
+ mongodb_container:
     image: mongo:latest
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -11,4 +28,4 @@ services:
       - mongodb_data_container:/data/db
 
 volumes:
-  mongodb_data_container:
+ mongodb_data_container:

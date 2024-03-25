@@ -1,5 +1,6 @@
 from datetime import datetime
 import shutil
+import subprocess
 from fastapi import APIRouter, UploadFile
 from fastapi.responses import Response, FileResponse
 from langchain_services.answers_gen import answers_generation
@@ -12,6 +13,7 @@ import os
 
 assistant = APIRouter(prefix="/assistants")
 assistants_collection = database["assistants"]
+users_collection = database["users"]
 
 
 @assistant.post("/gen-questions")
@@ -49,9 +51,11 @@ async def a_gen(questions: Questions):
 @assistant.post("/create")
 async def create_assistant(assistant: Assistant):
     try:
+        user = users_collection.find_one({"email": assistant.user_id})
+        assistant.user_id = user["_id"]
         new_assistant = assistant.model_dump(
             by_alias=True,
-            exclude={"ID"}, 
+            exclude={"ID"},
         )
 
         new_assistant["created_at"] = datetime.now()
@@ -67,7 +71,17 @@ async def generate_train_files(qa: QA):
     await gen_files.generarArchivos(qa.questions, qa.answers, qa.name)
     folder_name = qa.name
     base_dir = "./train_files_gen"
-    zip_file_name = shutil.make_archive(folder_name, "zip", base_dir)
+    sub_dir = f"{base_dir}/{folder_name}"
+    data_dir = f"{sub_dir}/data"
+
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+
+    for fname in os.listdir(sub_dir):
+        if fname != "domain.yml" and os.path.isfile(os.path.join(sub_dir, fname)):
+            shutil.move(os.path.join(sub_dir, fname), os.path.join(data_dir, fname))
+
+    zip_file_name = shutil.make_archive(folder_name, "zip", sub_dir)
 
     # Mover el archivo zip a la carpeta 'bots'
     dest_dir = "./bots"
