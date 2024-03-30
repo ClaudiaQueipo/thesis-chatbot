@@ -18,4 +18,5 @@ sgav_backend/llama-2-7b-chat.Q3_K_L_2.gguf
 
 sgav_backend/bots
 chatbot_template/env
+chatbot_template/test1/models
 test-bots-api/env
