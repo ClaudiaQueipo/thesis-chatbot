@@ -1,11 +1,13 @@
-FROM node:21
+FROM node:18
 
 WORKDIR /app
 
 COPY package.json ./
-COPY package-lock.json ./
+# COPY package-lock.json ./
 
-RUN npm ci
+RUN npm config set registry https://nexus.uclv.edu.cu/repository/npm/
+
+RUN npm install --loglevel verbose
 
 COPY . .
 

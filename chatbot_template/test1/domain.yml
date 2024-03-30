@@ -1,0 +1,180 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - agregar_paciente
+
+forms:
+  form_paciente:
+    required_slots:
+      - nombre
+      - apellidos
+      - historia_clinica
+      - sexo
+      - fecha_nacimiento
+      - tarjeta_menor
+      - provincia
+      - municipio
+      - direccion
+      - raza
+      - area_salud
+      - hospital
+
+slots:
+  nombre:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: nombre
+  apellidos:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: apellidos
+  historia_clinica:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: historia_clinica
+  sexo:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: sexo
+  fecha_nacimiento:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: fecha_nacimiento
+  tarjeta_menor:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: tarjeta_menor
+  provincia:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: provincia
+  municipio:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: municipio
+  direccion:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: direccion
+  raza:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: raza
+  area_salud:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: area_salud
+  hospital:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_paciente
+            requested_slot: hospital
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_nombre:
+    - text: "Escribe a continuación solamente tu nombre, por ejemplo: Miguel"
+
+  utter_ask_apellidos:
+    - text: "Escribe a continuacion tus apellidos, por ejemplo: Perez García"
+    
+  utter_ask_historia_clinica:
+    - text: "Escribe a continuacion tu historia clínica, por ejemplo: DHA213HDAIE"
+  utter_ask_sexo:
+    - text: "¿Cuál es tu sexo? (m/f)"
+  utter_ask_fecha_nacimiento:
+    - text: "¿Cuál es tu fecha de nacimiento? (dd/mm/yyyy), por ejemplo: 24/12/2000"
+  utter_ask_tarjeta_menor:
+    - text: "¿Cuál es tu número de identidad?"
+  utter_ask_provincia:
+    - text: "¿En qué provincia vives?"
+  utter_ask_municipio:
+    - text: "¿En qué municipio vives?"
+  utter_ask_direccion:
+    - text: "¿Cuál es tu dirección?"
+  utter_ask_raza:
+    - text: "¿Cuál es tu raza? (blanco, negro, mestizo)"
+  utter_ask_area_salud:
+    - text: "¿En qué barrio o área de salud te encuentras?, por ejemplo: 30 de Noviembre"
+  utter_ask_hospital:
+    - text: "¿A qué hospital perteneces?"
+  utter_slots_values:
+    - text: "¡Vale, recordare tu nombre {nombre} {apellidos}!"
+
+actions:
+  - action_submit_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
