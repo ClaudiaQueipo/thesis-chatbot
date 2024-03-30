@@ -28,7 +28,7 @@ async def questions_generation(DATA_PATH: str):
 
         PROMPT_QUESTIONS = PromptTemplate(
             template=prompt_template_questions, input_variables=["text"]
-        )
+        )   
 
         REFINE_PROMPT_QUESTIONS = PromptTemplate(
             input_variables=["existing_answer", "text"],
@@ -53,14 +53,13 @@ async def questions_generation(DATA_PATH: str):
         docs_question_gen = [Document(page_content=t) for t in text_chunks_question_gen]
 
         question_gen_chain = load_summarize_chain(
-            # LlamaCpp(
-            #     model_path='./zephyr-7b-beta.Q4_K_M.gguf',
-            #     temperature=0.75,
-            #     top_p=1,
-            #     verbose=True,
-            #     n_ctx=4096,
-            # ),
-            llm,
+            LlamaCpp(
+                model_path="./zephyr-7b-beta.Q4_K_M.gguf",
+                temperature=0.75,
+                top_p=1,
+                verbose=True,
+                n_ctx=4096,
+            ),
             chain_type="refine",
             verbose=True,
             question_prompt=PROMPT_QUESTIONS,
