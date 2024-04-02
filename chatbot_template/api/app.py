@@ -1,13 +1,7 @@
 import time
 
-from fastapi import FastAPI, File, UploadFile, status
-from fastapi.responses import Response
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from models.schemas import Msg, RasaAgent
-from utils import database
-from rasa.core.agent import Agent
-from rasa.model_training import train
-from rasa_sdk.endpoint import DEFAULT_SERVER_PORT
 
 import os
 import whisper

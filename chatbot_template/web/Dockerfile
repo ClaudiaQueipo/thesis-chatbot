@@ -1,18 +1,23 @@
-FROM node:18
-
-RUN npm install -g serve
+FROM node:18 as build
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+# RUN npm config set registry https://nexus.uclv.edu.cu/repository/npm/
+# RUN npm install react react-router-dom react-chatbot-kit face-api
+RUN npm install --verbose
 
 COPY . .
 
 RUN npm run build
 
-EXPOSE 3000
+FROM nginx:alpine
 
-CMD ["serve", "-s", "build", "-l", "3000"]
+COPY --from=build /app/build /usr/share/nginx/html
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

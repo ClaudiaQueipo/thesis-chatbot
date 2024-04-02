@@ -82,4 +82,31 @@ stories:
       - slot_was_set:
           - hospital: null
       - active_loop: null
-      - action: action_submit_form
+      - action: action_submit_form_paciente
+
+  - story: Registro de una nueva consulta en el sistema
+    steps:
+      - intent: agregar_consulta
+      - action: form_consulta
+      - active_loop: form_consulta
+      - slot_was_set:
+          - requested_slot: motivo
+      - slot_was_set:
+          - motivo: null
+      - slot_was_set:
+          - requested_slot: examenes_pendientes
+      - slot_was_set:
+          - examenes_pendientes: null
+      - slot_was_set:
+          - requested_slot: resultado_examenes
+      - slot_was_set:
+          - resultado_examenes: null
+      - slot_was_set:
+          - requested_slot: examen_fisico
+      - slot_was_set:
+          - examen_fisico: null
+      - active_loop: null
+      - action: action_submit_form_consulta
+
+
+    

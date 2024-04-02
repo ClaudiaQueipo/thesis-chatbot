@@ -13,10 +13,10 @@ SpeechRecognition-3.9.0-py2.py3-none-any.whl
 prueba.mp3
 WHISPER/
 sgav_backend/sgav_env/
-sgav_backend/zephyr-7b-beta.Q4_K_M.gguf
-sgav_backend/llama-2-7b-chat.Q3_K_L_2.gguf
 
 sgav_backend/bots
 chatbot_template/env
-chatbot_template/test1/models
 test-bots-api/env
+*.tar.gz
+*.gguf
+*.pt

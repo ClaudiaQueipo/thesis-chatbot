@@ -3,7 +3,7 @@ import os
 
 
 
-def domYaml(ques, res, name):  # Recibe preguntas y respuestas
+def  domYaml(ques, res, name):  # Recibe preguntas y respuestas
     GENERATE_FILE = name
 
     try:

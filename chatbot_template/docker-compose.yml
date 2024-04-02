@@ -1,23 +1,40 @@
 version: '3'
 services:
- rasa_bot:
-    build: ./rasa_bot
+  backend:
+    restart: always
+    build:
+      context: ./api
+    command: python3 run.py
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+  rasa_bot:
+    build: 
+      context: ./test1
     ports:
       - "5005:5005"
+      - "5055:5055"
+    expose:
+      - 5005
+      - 5055
     volumes:
-      - ./rasa_bot:/app
+      - ./test1:/app
     environment:
       - UID=1000
       - GID=1000
+    networks:
+      - mynetwork
 
- web:
-    build: ./web
+  frontend:
+    restart: always
+    build:
+      context: ./web
+    # command: sh -c "npm install && npm run build && nginx -g 'daemon off;'"
     ports:
-      - "3000:3000"
-    volumes:
-      - ./web:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-    depends_on:
-      - rasa_bot
+      - "3000:80"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

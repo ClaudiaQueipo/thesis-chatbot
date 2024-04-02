@@ -4,7 +4,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.llms import LlamaCpp
-from models import llm
+from core.config import settings
 
 
 async def questions_generation(DATA_PATH: str):
@@ -28,7 +28,7 @@ async def questions_generation(DATA_PATH: str):
 
         PROMPT_QUESTIONS = PromptTemplate(
             template=prompt_template_questions, input_variables=["text"]
-        )   
+        )
 
         REFINE_PROMPT_QUESTIONS = PromptTemplate(
             input_variables=["existing_answer", "text"],
@@ -54,7 +54,7 @@ async def questions_generation(DATA_PATH: str):
 
         question_gen_chain = load_summarize_chain(
             LlamaCpp(
-                model_path="./zephyr-7b-beta.Q4_K_M.gguf",
+                model_path=settings.MODEL_PATH,
                 temperature=0.75,
                 top_p=1,
                 verbose=True,

@@ -91,3 +91,24 @@ nlu:
     - Voy a agregar un paciente
     - Voy a insertar un paciente
     - Insertar un nuevo paciente
+
+- intent: agregar_consulta
+  examples: |
+    - Quiero agregar una consulta
+    - Quiero insertar una consulta
+    - Quiero agregar una nueva consulta
+    - Agregar un nueva consulta
+    - Voy a agregar una consulta
+    - Voy a insertar una consulta
+    - Insertar un nueva consulta
+    - Quiero reservar una consulta
+
+
+- intent: revisar_consultas
+  examples: |
+    - Quiero ver las consultas que tengo
+    - ¿Qué consultas tengo reservadas?
+    - ¿Cuáles son las consultas que tengo?
+    - Dime que consultas tengo reservadas
+    - ¿Qué consultas tengo agregadas?
+    
