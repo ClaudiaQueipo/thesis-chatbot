@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - agregar_paciente
+  - agregar_consulta
 
 forms:
   form_paciente:
@@ -25,6 +26,13 @@ forms:
       - raza
       - area_salud
       - hospital
+
+  form_consulta:
+    required_slots:
+      - motivo
+      - examenes_pendientes
+      - resultado_examenes
+      - examen_fisico
 
 slots:
   nombre:
@@ -123,6 +131,43 @@ slots:
         conditions:
           - active_loop: form_paciente
             requested_slot: hospital
+
+    ## Formulario consulta
+  motivo:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_consulta
+            requested_slot: motivo
+  examenes_pendientes:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_consulta
+            requested_slot: examenes_pendientes
+
+  resultado_examenes:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_consulta
+            requested_slot: resultado_examenes
+
+  examen_fisico:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_consulta
+            requested_slot: examen_fisico
+
 responses:
   utter_greet:
     - text: "Hey! How are you?"
@@ -148,7 +193,7 @@ responses:
 
   utter_ask_apellidos:
     - text: "Escribe a continuacion tus apellidos, por ejemplo: Perez García"
-    
+
   utter_ask_historia_clinica:
     - text: "Escribe a continuacion tu historia clínica, por ejemplo: DHA213HDAIE"
   utter_ask_sexo:
@@ -169,11 +214,23 @@ responses:
     - text: "¿En qué barrio o área de salud te encuentras?, por ejemplo: 30 de Noviembre"
   utter_ask_hospital:
     - text: "¿A qué hospital perteneces?"
+
+  ## Utter consulta
+  utter_ask_motivo:
+    - text: "¿Cuál es el motivo de tu consulta?. Este es un campo requerido, debes escribir algo"
+  utter_ask_examenes_pendientes:
+    - text: "¿Cuáles son los examenes indicados pendientes de resultado?. Este es un campo requerido, debes escribir algo"
+  utter_ask_resultado_examenes:
+    - text: "¿Cuáles son los resultados de los examenes indicados?"
+  utter_ask_examen_fisico:
+    - text: "Ingresa la información del exámen físico"
+
   utter_slots_values:
     - text: "¡Vale, recordare tu nombre {nombre} {apellidos}!"
 
 actions:
-  - action_submit_form
+  - action_submit_form_paciente
+  - action_submit_form_consulta
 
 session_config:
   session_expiration_time: 60
