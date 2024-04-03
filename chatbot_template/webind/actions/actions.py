@@ -116,7 +116,7 @@ class ActionGetConsultasFromPaciente(Action):
     ) -> List[Dict[Text, Any]]:
         
         nombre_paciente = tracker.get_slot("nombre_paciente")
-
+        print(nombre_paciente)
         consultas = get_consultas_from_paciente(nombre_paciente)
 
         dispatcher.utter_message(

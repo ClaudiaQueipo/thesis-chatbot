@@ -51,10 +51,10 @@ async def questions_generation(DATA_PATH: str):
         )
 
         docs_question_gen = [Document(page_content=t) for t in text_chunks_question_gen]
-
+        print(settings.LLM_PATH)
         question_gen_chain = load_summarize_chain(
             LlamaCpp(
-                model_path=settings.MODEL_PATH,
+                model_path=settings.LLM_PATH,
                 temperature=0.75,
                 top_p=1,
                 verbose=True,

@@ -83,6 +83,20 @@ stories:
                 - hospital: null
           - active_loop: null
           - action: action_submit_form_paciente
+          - slot_was_set:
+            - nombre: null
+            - apellidos: null
+            - historia_clinica: null
+            - sexo: null
+            - fecha_nacimiento: null
+            - tarjeta_menor: null
+            - provincia: null
+            - municipio: null
+            - direccion: null
+            - raza: null
+            - area_salud: null
+            - hospital: null
+
 
     - story: Registro de una nueva consulta en el sistema
       steps:
@@ -131,6 +145,18 @@ stories:
                 - medico: null
           - active_loop: null
           - action: action_submit_form_consulta
+          - slot_was_set:
+            - paciente: null
+            - fecha: null
+            - impresion_diagnostica: null
+            - diagnostico_def: null
+            - tratamiento: null
+            - evolucion: null
+            - fecha_proxima_consulta: null
+            - positivo: null
+            - mnt: null
+            - medico: null
+    
 
     - story: Listado de consultas el sistema
       steps:
@@ -141,5 +167,7 @@ stories:
                 - requested_slot: nombre_paciente
           - slot_was_set:
                 - nombre_paciente: null
+          - active_loop: null
           - action: action_consultas_paciente
-      
+          - slot_was_set:
+             - nombre_paciente: null
