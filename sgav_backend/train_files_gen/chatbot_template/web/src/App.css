@@ -1,0 +1,323 @@
+:root{
+  --color-violet: #4A40A7;
+  --color-gray: rgba(224, 218, 218, 0.863);
+}
+
+body{
+  transition: all 600ms;
+}
+
+header{
+  width: 100% !important;
+  height: 40px !important;
+  background: var(--color-violet)  !important;
+  color: white !important;
+  border-radius: 0px 0px 0px 0px!important;
+  transition: all 600ms !important;
+  padding: 5px;
+  padding-left: 100px;
+}
+
+.message-area{
+  width: 100% !important;
+  height: 650px !important;
+  background: white;
+  transition: all 600ms !important;
+  /*min-height: 513px !important;*/
+  display: block;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}   
+/*************************************************/
+.form-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80% 10%;
+  transition: all 600ms;
+}
+
+.form{
+  width: 90% ;
+  
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  position: absolute;
+  bottom: 5px;
+  transition: all 600ms;
+}
+
+.input{
+  background: var(--color-gray);
+  border-radius: 20px ;
+  border: none;
+  box-shadow: 1px 1px 10px gray ;
+  color: #282829 ;
+  transition: all 600ms;
+  
+  font-size: 25px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 15px;
+}
+
+.button,
+.button-audio{
+  background: var(--color-violet);
+  border-radius: 20px ;
+  box-shadow: 1px 1px 10px gray ;
+  transition: all 600ms ;
+  width: 90%;
+  height: 50px;
+  border: none;
+  
+}
+
+.button-audio{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  width: 8%;
+  margin-bottom: 10px;
+}
+
+.button img,
+.button-audio img{
+  
+  width: 20px;
+  height: 20px;
+}
+/************************************/
+.MessageChatZone1{
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.MessageChatZone2{
+  width: 100%;
+  padding: 5px;
+}
+
+/****************Mensaje ENVIADO DEL CHAT************************/
+.Message-response{
+  margin: 10px;
+  margin-left: 5px!important;
+  background: var(--color-violet) !important;
+  color: white;
+  padding: 10px !important;
+  text-align: justify;
+  width: auto !important;
+  max-width: 70% !important;
+  border-radius: 0 20px 20px 20px!important;
+  transition: all 600ms !important;
+
+  
+}
+
+/********************Fin MSM BOT***********************/
+
+/********************Mensaje Envaido al CHat*********************************/
+.Message-Send{
+
+  margin-left: 5px!important;
+  margin-right: 10px;
+  background: var(--color-gray) !important;
+  color: black;
+  padding: 10px !important;
+  text-align: justify;
+  width: auto !important;
+  max-width: 70% !important;
+  border-radius: 20px 0 20px 20px !important;
+  transition: all 600ms !important;
+  float: right !important;
+}
+
+/************************************/
+.icono{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 5px;font-size: 20px;
+  background: var(--color-violet) !important;
+  transition: all 600ms !important;
+  color: white !important;
+}
+/**************************************/
+
+.switch {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+/*********************************/
+
+audio{
+  background:  transparent !important;
+  width: 250px !important;
+  border-radius: 20px !important;
+}
+
+.btnaudioResponses{
+  width: 40px;
+  height: 40px;
+}
+
+.clave{
+  height: 40px;
+}
+
+
+/*******************************************/
+
+.IcoBot{
+  width: 50px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 45%;
+  margin-right: 100px;
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  transition: all 3000ms;
+  z-index: 10;
+  
+}
+
+.eye1,
+.eye2{
+  /*width: 10px;*/
+  width: 20%;
+  /*height: 15px;*/
+  height: 35%;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 3000ms;
+  z-index: 10;
+  animation: animation 5s;
+  animation-iteration-count: infinite;
+  
+}
+
+.eye1{
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 10%;
+  background-color: #58FA8D;
+}
+
+.eye2{
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 10%;
+  background-color: #58FA8D;
+}
+
+body.ico .IcoBot{
+  background-color: #58FA8D;
+  top: 20%;
+  left: 5%;
+  width: 200px;
+  height: 150px;
+  /*width: 20%;
+  height: 150px;*/
+  border: transparent;
+  
+}
+
+body.ico .eye1,
+body.ico .eye2{
+  background-color: white;
+  animation: animation 5s;
+  animation-iteration-count: infinite;
+  
+}
+
+.msmOculto{
+  
+  visibility: hidden;
+  position: absolute;
+  margin-right: 20px;
+  margin-left: 20px;
+  max-width: 60%;
+}
+
+body.ico .msmOculto{
+  z-index: 8;
+  visibility: visible;
+  color: black;
+  /*width: 40%;
+  height: 30%;*/
+
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px;
+  top: 22%;
+  left: 20%;
+  transition-delay: 3000ms;
+  text-align: center;
+  font-size: 20px;
+}
+
+body.ico .cubrirPantalla{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes animation {
+  0%{
+    width: 20%;
+  
+    height: 35%;
+  }
+  2%{
+    margin-top: 12%;
+    width: 20%;
+    height: 2%;
+  }
+  4%{
+    width: 20%;
+  
+    height: 35%;
+  }
+  100%{
+    width: 20%;
+  
+    height: 35%;
+  }
+}
+/**=============CANVAS===================*/
+
+#canvas{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+

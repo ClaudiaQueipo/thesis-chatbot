@@ -1,7 +1,7 @@
 from . import domYaml, nluYaml, storiesYaml, rulesYaml
 
 
-async def generarArchivos(preguntas, respuestas, nombre) -> str | None:
+def generarArchivos(preguntas, respuestas, nombre) -> str | None:
     try:
         
         if (

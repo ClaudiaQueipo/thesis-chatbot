@@ -1,0 +1,53 @@
+/*********Modo Oscuro**************/
+body.dark header{
+    background: #D03F3D!important;
+  }
+  
+  body.dark .Message-response{
+    background: #1b1a18 !important;
+  }
+  
+  body.dark .Message-Send{
+    background: #D03F3D!important;
+    color: white !important;
+  }
+  
+  body.dark .react-chatbot-kit-user-chat-message-arrow{
+    border-left: 8px solid #D03F3D !important;
+   
+  }
+  
+  
+  body.dark .input{
+    background: #282829;
+    color: white;
+    box-shadow: none;
+    border: 1px solid white !important;
+  }
+  
+  body.dark .message-area{
+    background: #282829;
+  }
+  
+  body.dark {
+    background: #282829;
+  }
+  
+  body.dark .button,
+  body.dark .button-audio{
+    
+    background: #D03F3D !important;
+    box-shadow: none !important;
+  }
+
+  body.dark .icono{
+    background: #D03F3D !important;
+  }
+  body.dark .react-chatbot-kit-chat-bot-avatar-letter{
+    background: #D03F3D !important;
+    color: white !important;
+  }
+  
+  body.dark .react-chatbot-kit-user-avatar-container{
+    background: #D03F3D !important;
+  }
