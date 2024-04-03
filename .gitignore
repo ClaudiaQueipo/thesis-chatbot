@@ -12,7 +12,7 @@ request.py
 SpeechRecognition-3.9.0-py2.py3-none-any.whl
 prueba.mp3
 WHISPER/
-sgav_backend/sgav_env/
+sgav_backend/env/
 
 sgav_backend/bots
 chatbot_template/env

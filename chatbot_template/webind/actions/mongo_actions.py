@@ -23,3 +23,11 @@ def insert_consulta(consulta: dict):
     except Exception as error:
         print(f"Error {error}")
 
+def get_consultas_from_paciente(paciente: str): 
+    try: 
+        consultas = collection_consulta.find({"paciente", paciente})
+        print(consultas)
+        return ""
+    except Exception as e:
+        print(f"Error en get_consultas_from_paciente: {e}")
+

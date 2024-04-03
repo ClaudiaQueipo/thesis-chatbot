@@ -2,7 +2,7 @@ from typing import Dict, Any, Text, List, Union
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-from .mongo_actions import insert_consulta, insert_patient
+from .mongo_actions import get_consultas_from_paciente, insert_consulta, insert_patient
 
 
 class ActionSubmitFormPaciente(Action):
@@ -62,22 +62,67 @@ class ActionSubmitFormConsulta(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
+        
+        paciente = tracker.get_slot("paciente")
         motivo = tracker.get_slot("motivo")
         examenes_pendientes = tracker.get_slot("examenes_pendientes")
         resultado_examenes = tracker.get_slot("resultado_examenes")
         examen_fisico = tracker.get_slot("examen_fisico")
+        fecha = tracker.get_slot("fecha")
+        impresion_diagnostica = tracker.get_slot("impresion_diagnostica")
+        diagnostico_def = tracker.get_slot("diagnostico_def")
+        tratamiento = tracker.get_slot("tratamiento")
+        evolucion = tracker.get_slot("evolucion")
+        fecha_proxima_consulta = tracker.get_slot("fecha_proxima_consulta")
+        positivo = tracker.get_slot("positivo")
+        mnt = tracker.get_slot("mnt")
+        medico = tracker.get_slot("medico")
 
         dispatcher.utter_message(
-            text=f"Formulario completado:\nmotivo: {motivo}\nexamenes_pendientes: {examenes_pendientes}\nHistoria Clínica: {resultado_examenes}\nexamen_fisico: {examen_fisico}"
+            text=f"Formulario completado, su consulta ha sido agendada"
         )
 
         consulta = dict(
+            paciente=paciente,
             motivo=motivo,
             examenes_pendientes=examenes_pendientes,
             resultado_examenes=resultado_examenes,
             examen_fisico=examen_fisico,
+            fecha=fecha,
+            impresion_diagnostica=impresion_diagnostica,
+            diagnostico_def=diagnostico_def,
+            tratamiento=tratamiento,
+            evolucion=evolucion,
+            fecha_proxima_consulta=fecha_proxima_consulta,
+            positivo=positivo,
+            mnt=mnt,
+            medico=medico,
         )
 
         insert_consulta(consulta)
 
         return []
+
+
+class ActionGetConsultasFromPaciente(Action):
+    def name(self) -> Text:
+        return "action_consultas_paciente"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        
+        nombre_paciente = tracker.get_slot("nombre_paciente")
+
+        consultas = get_consultas_from_paciente(nombre_paciente)
+
+        dispatcher.utter_message(
+            text=consultas
+        )
+
+        return []
+
+
