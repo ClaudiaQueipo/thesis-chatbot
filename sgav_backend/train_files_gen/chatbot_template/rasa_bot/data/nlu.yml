@@ -1,0 +1,167 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hola
+    - hi
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - Holi
+    - oye
+
+- intent: goodbye
+  examples: |
+    - luego te veo
+    - hasta pronto
+    - adiós
+    - hasta luego
+    - ciao ciao
+    - hasta la vista
+    - más tarde hablamos    
+
+- intent: fuera_contexto
+  examples: |
+    - tengo hambre
+    - ¿Elon Musk va a dominar el mundo?
+    - ¿cuantos kilometros hay de aqui a la luna?
+    - WTF
+    - de que color es el bigote de hittler?
+    - porque un cuervo es igual a un escritorio?
+
+- intent: mood_unhappy
+  examples: |
+    - triste
+    - infeliz
+    - deprimido
+    - adolorido 
+    - obstinado
+    - ostinado
+    - furioso   
+
+- intent: bot_challenge
+  examples: |
+    - eres un bot?
+    - eres humano?
+    - quien eres?
+    - que eres?
+
+- intent: pregunta_informacion
+  examples: |
+    - informacion
+    - info
+    - que temas tratas
+    - que informacion me puedes brindar
+    - que informacion tienes
+    - que sabes
+
+- intent: pregunta_fitib
+  examples: |
+    - que es la fitib
+    - fitib
+    - que hace la fitib
+    - que es fitib
+    - afip
+    - lafitil
+    - fiti
+
+- intent: pregunta_pdteFeu
+  examples: |
+    - quien es el presidente de la feu
+    - presidente de la feu
+    - presidente feu
+    - feu    
+
+- intent: pregunta_carreras
+  examples: |
+    - que carreras se estudian en la fitib
+    - que se estudia en la fitib
+    - cuales carreras se estudian en la fitib
+
+- intent: pregunta_IngI
+  examples: |
+    - que es la ingenieria informatica
+    - ingenieria informatica
+
+- intent: pregunta_LicI
+  examples: |
+    - que es la licenciatura informatica
+    - licenciatura informatica
+    - licenciatura en informatica
+
+- intent: pregunta_IngTele
+  examples: |
+    - que es la ingenieria ingenieria en telecomunicaciones
+    - ingenieria en telecomunicaciones
+    - tele
+    - telecomunicaciones
+
+- intent: pregunta_Biom
+  examples: |
+    - que es la biomedica
+    - biomedica
+
+- intent: pregunta_Decana
+  examples: |
+    - quien es la decana 
+    - cual es el nombre de la decana 
+    - como se llama la decana 
+    - decana 
+
+- intent: pregunta_proyectos
+  examples: |
+    - proyectos investigativos
+    - proyecto investigativo
+    - que proyectos tiene ?
+    - proyectos
+    - proyecto
+
+- intent: pregunta_creadores
+  examples: |
+    - creadores
+    - autores
+    - quienes te crearon?
+    - quienes te hicieron?
+    - quien te creo?
+    - quen te hizo?
+
+- intent: pregunta_ingenieros
+  examples: |
+    - ingenieros
+    - que hacen los ingenieros?
+    - cual es el trabajo de un ingeniero
+    - ingeniero
+
+- intent: pregunta_eva
+  examples: |
+    - eva
+    - Entorno virtual de aprendizaje
+    - enlace del eva
+    - link del eva
+
+- intent: ask_me_anything
+  examples: |
+    - guarda mi nombre
+    - conserva mi nombre
+    - quiero que sepas mi nombre
+    
+- intent: repite_nombre
+  examples: |
+    - Como me llamo
+    - Dime mi nombre 
+    - Sabes mi nombre?
+    - repite mi nombre
+
+    
+
+
+
+
+
+
+
+
+
+

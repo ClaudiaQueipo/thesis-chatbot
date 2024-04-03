@@ -1,0 +1,56 @@
+@media screen and (max-width: 1200px) {
+    
+    body.ico .IcoBot{
+        
+        top: 20% !important;
+        left: 1% !important;
+        width: 175px!important;
+        height: 120px !important;
+        
+      }
+        
+  }
+
+
+
+@media screen and (max-width: 900px) {
+    
+    body.ico .IcoBot{
+        
+        top: 20% !important;
+        left: 2% !important;
+        width: 125px!important;
+        height: 90px !important;
+        
+      }
+        
+  }
+
+
+@media screen and (max-width: 600px) {
+    
+    body.ico .IcoBot{
+        
+        top: 20% !important;
+        left: 5% !important;
+        width: 75px!important;
+        height: 50px !important;
+        
+      }
+      body.ico .eye1,
+      body.ico .eye2{
+        width: 15px;
+         height: 20px;
+       }
+
+       body.ico .msmOculto{
+        padding: 20px !important;
+        top: 20% !important;
+        left: 20% !important;
+        
+        font-size: 20px !important;
+      }
+      
+  }
+
+  

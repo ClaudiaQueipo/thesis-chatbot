@@ -4,13 +4,14 @@ from pydantic import BaseModel, Field
 from models.pydantic_oid import ObjectId, ObjectIdPydanticAnnotation
 
 
-
 class Assistant(BaseModel):
     ID: Annotated[ObjectId, ObjectIdPydanticAnnotation] = Field(
         alias="_id", default=None
     )
     name: str = Field(alias="name", default="")
-    user_id: str = Field(alias="user_id", default=None)
+    user_id: Annotated[ObjectId, ObjectIdPydanticAnnotation] | str = Field(
+        alias="user_id", default=None
+    )
     description: str = Field(alias="description", default="")
     knowledge: str = Field(alias="knowledge", default="")
     questions: List[str] = Field(alias="questions", default=list())

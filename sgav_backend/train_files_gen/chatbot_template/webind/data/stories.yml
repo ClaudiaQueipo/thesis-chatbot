@@ -1,0 +1,173 @@
+version: "3.1"
+
+stories:
+    - story: happy path
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_great
+          - action: utter_happy
+
+    - story: sad path 1
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_unhappy
+          - action: utter_cheer_up
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+    - story: sad path 2
+      steps:
+          - intent: greet
+          - action: utter_greet
+          - intent: mood_unhappy
+          - action: utter_cheer_up
+          - action: utter_did_that_help
+          - intent: deny
+          - action: utter_goodbye
+
+    - story: Registro de un nuevo paciente en el sistema
+      steps:
+          - intent: agregar_paciente
+          - action: form_paciente
+          - active_loop: form_paciente
+          - slot_was_set:
+                - requested_slot: nombre
+          - slot_was_set:
+                - nombre: null
+          - slot_was_set:
+                - requested_slot: apellidos
+          - slot_was_set:
+                - apellidos: null
+          - slot_was_set:
+                - requested_slot: historia_clinica
+          - slot_was_set:
+                - historia_clinica: null
+          - slot_was_set:
+                - requested_slot: sexo
+          - slot_was_set:
+                - sexo: null
+          - slot_was_set:
+                - requested_slot: fecha_nacimiento
+          - slot_was_set:
+                - fecha_nacimiento: null
+          - slot_was_set:
+                - requested_slot: tarjeta_menor
+          - slot_was_set:
+                - tarjeta_menor: null
+          - slot_was_set:
+                - requested_slot: provincia
+          - slot_was_set:
+                - provincia: null
+          - slot_was_set:
+                - requested_slot: municipio
+          - slot_was_set:
+                - municipio: null
+          - slot_was_set:
+                - requested_slot: direccion
+          - slot_was_set:
+                - direccion: null
+          - slot_was_set:
+                - requested_slot: raza
+          - slot_was_set:
+                - raza: null
+          - slot_was_set:
+                - requested_slot: area_salud
+          - slot_was_set:
+                - area_salud: null
+          - slot_was_set:
+                - requested_slot: hospital
+          - slot_was_set:
+                - hospital: null
+          - active_loop: null
+          - action: action_submit_form_paciente
+          - slot_was_set:
+            - nombre: null
+            - apellidos: null
+            - historia_clinica: null
+            - sexo: null
+            - fecha_nacimiento: null
+            - tarjeta_menor: null
+            - provincia: null
+            - municipio: null
+            - direccion: null
+            - raza: null
+            - area_salud: null
+            - hospital: null
+
+
+    - story: Registro de una nueva consulta en el sistema
+      steps:
+          - intent: agregar_consulta
+          - action: form_consulta
+          - active_loop: form_consulta
+          - slot_was_set:
+                - requested_slot: paciente
+          - slot_was_set:
+                - paciente: null
+          - slot_was_set:
+                - requested_slot: fecha
+          - slot_was_set:
+                - fecha: null
+          - slot_was_set:
+                - requested_slot: impresion_diagnostica
+          - slot_was_set:
+                - impresion_diagnostica: null
+          - slot_was_set:
+                - requested_slot: diagnostico_def
+          - slot_was_set:
+                - diagnostico_def: null
+          - slot_was_set:
+                - requested_slot: tratamiento
+          - slot_was_set:
+                - tratamiento: null
+          - slot_was_set:
+                - requested_slot: evolucion
+          - slot_was_set:
+                - evolucion: null
+          - slot_was_set:
+                - requested_slot: fecha_proxima_consulta
+          - slot_was_set:
+                - fecha_proxima_consulta: null
+          - slot_was_set:
+                - requested_slot: positivo
+          - slot_was_set:
+                - positivo: null
+          - slot_was_set:
+                - requested_slot: mnt
+          - slot_was_set:
+                - mnt: null
+          - slot_was_set:
+                - requested_slot: medico
+          - slot_was_set:
+                - medico: null
+          - active_loop: null
+          - action: action_submit_form_consulta
+          - slot_was_set:
+            - paciente: null
+            - fecha: null
+            - impresion_diagnostica: null
+            - diagnostico_def: null
+            - tratamiento: null
+            - evolucion: null
+            - fecha_proxima_consulta: null
+            - positivo: null
+            - mnt: null
+            - medico: null
+    
+
+    - story: Listado de consultas el sistema
+      steps:
+          - intent: revisar_consultas
+          - action: form_get_consultas
+          - active_loop: form_get_consultas
+          - slot_was_set:
+                - requested_slot: nombre_paciente
+          - slot_was_set:
+                - nombre_paciente: null
+          - active_loop: null
+          - action: action_consultas_paciente
+          - slot_was_set:
+             - nombre_paciente: null

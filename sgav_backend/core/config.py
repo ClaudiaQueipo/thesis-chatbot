@@ -9,6 +9,7 @@ class Settings:
     SECRET_KEY: Optional[str] = None
     ALGORITHM: Optional[str] = None
     ACCESS_TOKEN_EXPIRE_MINUTES: Optional[int] = None
+    API_URL: Optional[str] = None
 
     def __init__(self) -> None:
 
@@ -19,6 +20,7 @@ class Settings:
         self.ACCESS_TOKEN_EXPIRE_MINUTES = int(
             os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES")
         )
+        self.API_URL = os.environ.get("API_URL")
 
 
 settings = Settings()

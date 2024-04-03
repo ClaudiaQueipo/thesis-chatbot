@@ -1,8 +1,9 @@
 from datetime import datetime
 import shutil
-import subprocess
+import uuid
+from core.config import settings
 from fastapi import APIRouter, UploadFile
-from fastapi.responses import Response, FileResponse
+from fastapi.responses import JSONResponse, Response, FileResponse
 from langchain_services.answers_gen import answers_generation
 from models import Assistant, Questions, QA
 from train_files_gen import gen_files
@@ -67,33 +68,34 @@ async def create_assistant(assistant: Assistant):
 
 
 @assistant.post("/gen-files")
-async def generate_train_files(qa: QA):
-    await gen_files.generarArchivos(qa.questions, qa.answers, qa.name)
-    folder_name = qa.name
-    base_dir = "./train_files_gen"
-    sub_dir = f"{base_dir}/{folder_name}"
-    data_dir = f"{sub_dir}/data"
+def generate_train_files(qa: QA):
+    
+    folder_name = f"{qa.name}-{uuid.uuid4()}"
 
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
+    bot_folder_path = f"./train_files_gen/{folder_name}"
 
-    for fname in os.listdir(sub_dir):
-        if fname != "domain.yml" and os.path.isfile(os.path.join(sub_dir, fname)):
-            shutil.move(os.path.join(sub_dir, fname), os.path.join(data_dir, fname))
+    shutil.copytree("./train_files_gen/chatbot_template", bot_folder_path)
 
-    zip_file_name = shutil.make_archive(folder_name, "zip", sub_dir)
+    data_dir = f"./{folder_name}/rasa_bot/data"
 
-    # Mover el archivo zip a la carpeta 'bots'
+    gen_files.generarArchivos(qa.questions, qa.answers, data_dir)
+
+    zip_file_name = shutil.make_archive(folder_name, "zip", bot_folder_path)
     dest_dir = "./bots"
-    if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
-    shutil.move(zip_file_name, os.path.join(dest_dir, os.path.basename(zip_file_name)))
-    shutil.rmtree(f"./train_files_gen/{folder_name}")
-    return FileResponse(
-        f"./{dest_dir}/{folder_name}.zip",
-        filename=f"{zip_file_name}",
-        media_type="application/x-zip-compressed",
+
+    zip_file_path = os.path.join(dest_dir, f'./{folder_name}.zip')
+    shutil.move(zip_file_name, zip_file_path)
+
+    shutil.rmtree(bot_folder_path)
+
+    return JSONResponse(
+        content={"download_link": f"{settings.API_URL}/bots/{folder_name}.zip"}
     )
+    # return FileResponse(
+    #     f"{dest_dir}/{qa.name}.zip",
+    #     filename=f"{qa.name}.zip",
+    #     media_type="application/x-zip-compressed",
+    # )
 
 
 @assistant.get("/fetch-assistants")

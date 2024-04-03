@@ -67,7 +67,7 @@ class AssistantService {
         body: payload
       }
     )
-    
+
     if (!response.ok) {
       return false
     } else {
@@ -82,7 +82,6 @@ class AssistantService {
       questions: questions,
       answers: answers
     }
-    console.log(data)
     const payload = JSON.stringify(data)
 
     const response = await fetch(this.base_path.concat("gen-files"),
@@ -97,7 +96,7 @@ class AssistantService {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     } else {
-      return response.blob()
+      return await response.json()
     }
   }
 

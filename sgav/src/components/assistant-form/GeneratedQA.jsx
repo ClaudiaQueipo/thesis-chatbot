@@ -23,6 +23,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const assistant = useAssistantStore(state => state.assistant)
     const setAssistantInput = useAssistantStore(state => state.setAssistant)
     const [loading, setLoading] = useState(false)
+    const [loadingGenerate, setLoadingGenerate] = useState(false)
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -42,13 +43,27 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     }, [questions]);
 
     const handleGenerateFiles = async () => {
+        setLoadingGenerate(true)
         const response = await assistantService.generateFiles(
             questions.split("\n"),
             answers,
             assistant.name
         )
-        const blob = new Blob([response], { type: 'application/zip' });
-        saveAs(blob, `${assistant.name !== "" ? assistant.name : "bot"}.zip`);
+        if (response && response.download_link) {
+            const downloadLink = response.download_link;
+
+            const fetchResponse = await fetch(downloadLink);
+            const blob = await fetchResponse.blob();
+
+            const url = window.URL.createObjectURL(blob);
+
+            window.open(url, '_blank', 'download');
+
+        } else {
+            toast.error("Error al generar el archivo. Intente nuevamente.");
+        }
+        setLoadingGenerate(false)
+
     }
 
     const handleSaveResults = async () => {
@@ -124,7 +139,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                     )}
                 </div>
                 <div style={{ display: "flex", gap: "10px" }}>
-                    <Button onClick={handleGenerateFiles} color="secondary" variant="shadow" className="text-white" fullWidth>
+                    <Button onClick={handleGenerateFiles} color="secondary" variant="shadow" isLoading={loadingGenerate} className="text-white" fullWidth>
                         Generar Archivos
                     </Button>
                     <Button onClick={handleSaveResults} color="warning" variant="solid" fullWidth>

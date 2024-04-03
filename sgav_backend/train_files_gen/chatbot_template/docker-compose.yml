@@ -1,0 +1,76 @@
+version: '3'
+services:
+  backend:
+    restart: always
+    build:
+      context: ./api
+    command: python3 run.py
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+ 
+  rasa_bot:
+    build: 
+      context: ./webind
+    command: rasa run --enable-api --cors "*" --debug
+    ports:
+      - "5005:5005"
+    expose:
+      - 5005
+    volumes:
+      - ./webind:/app
+    environment:
+      - UID=1000
+      - GID=1000
+    networks:
+      - mynetwork
+
+  rasa_actions:
+    build: 
+      context: ./webind
+    command: rasa run actions
+    ports:
+      - "5055:5055"
+    expose:
+      - 5055
+    volumes:
+      - ./webind:/app
+    depends_on:
+      - mongodb_container
+    environment:
+      # - UID=1000
+      # - GID=1000
+      MONGODB_HOST: mongodb_container
+      MONGODB_PORT: 27017
+      MONGODB_USER: root
+      MONGODB_PASSWORD: root
+    networks:
+      - mynetwork
+
+  frontend:
+    restart: always
+    build:
+      context: ./web
+    # command: sh -c "npm install && npm run build && nginx -g 'daemon off;'"
+    ports:
+      - "3000:80"
+    networks:
+      - mynetwork
+
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+volumes:
+  mongodb_data_container:
