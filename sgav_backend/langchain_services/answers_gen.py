@@ -19,7 +19,7 @@ async def answers_generation(docs_question_gen, questions):
 
     answer_gen_chain = RetrievalQA.from_chain_type(
         llm=LlamaCpp(
-            model_path=settings.MODEL_PATH,
+            model_path=settings.LLM_PATH,
             temperature=0.75,
             top_p=1,
             verbose=True,
