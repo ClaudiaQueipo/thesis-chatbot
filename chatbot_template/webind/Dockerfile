@@ -18,4 +18,6 @@ COPY . .
 EXPOSE 5005
 EXPOSE 5055
 
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
+RUN rasa train
+
+# CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]

@@ -1,9 +1,11 @@
 version: '3'
 services:
- backend:
+ backend_sgav:
     build: ./sgav_backend
     ports:
       - "8000:8000"
+    env_file:
+      - ./sgav_backend/.env
     depends_on:
       - mongodb_container
     environment:
@@ -11,11 +13,19 @@ services:
       MONGODB_PORT: 27017
       MONGODB_USER: root
       MONGODB_PASSWORD: root
-      
- frontend:
-    build: ./sgav
+    networks:
+      - mynetwork
+
+ sgav:
+    restart: always
+    build:
+      context: ./sgav
+    env_file:
+      - ./sgav/.env    
     ports:
-      - "3000:3000"
+      - "3000:80"
+    networks:
+      - mynetwork
 
  mongodb_container:
     image: mongo:latest
@@ -29,3 +39,6 @@ services:
 
 volumes:
  mongodb_data_container:
+
+networks:
+  mynetwork:

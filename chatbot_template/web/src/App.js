@@ -16,6 +16,7 @@ const recorder = new vmsg.Recorder({
   wasmURL: wasmurl,
 });
 
+
 /*############## Procesar el audio con Whisper ################# */
 async function processAudio(blob) {
   const audioEnviado = URL.createObjectURL(blob);
