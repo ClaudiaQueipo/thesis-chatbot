@@ -125,5 +125,21 @@ stories:
                 - requested_slot: mnt
           - slot_was_set:
                 - mnt: null
+          - slot_was_set:
+                - requested_slot: medico
+          - slot_was_set:
+                - medico: null
           - active_loop: null
           - action: action_submit_form_consulta
+
+    - story: Listado de consultas el sistema
+      steps:
+          - intent: revisar_consultas
+          - action: form_get_consultas
+          - active_loop: form_get_consultas
+          - slot_was_set:
+                - requested_slot: nombre_paciente
+          - slot_was_set:
+                - nombre_paciente: null
+          - action: action_consultas_paciente
+      

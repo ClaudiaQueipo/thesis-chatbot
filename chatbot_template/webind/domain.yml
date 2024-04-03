@@ -45,6 +45,10 @@ forms:
       - examen_fisico
       - medico
 
+  form_get_consultas:
+    required_slots:
+      - nombre_paciente
+
 slots:
   nombre:
     type: text
@@ -258,6 +262,16 @@ slots:
         conditions:
           - active_loop: form_consulta
             requested_slot: medico
+
+  nombre_paciente:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: form_get_consultas
+            requested_slot: nombre_paciente
+
 responses:
   utter_greet:
     - text: "Hey! How are you?"
@@ -280,6 +294,9 @@ responses:
 
   utter_ask_nombre:
     - text: "Escribe a continuación solamente tu nombre, por ejemplo: Miguel"
+  
+  utter_ask_nombre_paciente:
+    - text: "Escribe a continuación tu nombre completo, por ejemplo: Claudia Pérez Hernández"
 
   utter_ask_apellidos:
     - text: "Escribe a continuacion tus apellidos, por ejemplo: Perez García"
@@ -338,6 +355,7 @@ responses:
 actions:
   - action_submit_form_paciente
   - action_submit_form_consulta
+  - action_consultas_paciente
 
 session_config:
   session_expiration_time: 60

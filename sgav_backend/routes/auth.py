@@ -8,7 +8,6 @@ from fastapi.security import OAuth2PasswordRequestForm
 from models.user import User
 from service.auth import create_access_token, get_password_hash, verify_password
 from utils import database
-from starlette import status
 
 users_collection = database["users"]
 

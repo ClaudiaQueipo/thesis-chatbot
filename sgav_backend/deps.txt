@@ -1,0 +1,1 @@
+pip install fastapi uvicorn langchain llama-cpp-python python-jose huggingface_hub tiktoken Chromadb pypdf sentence-transformers docx2txt ruamel.yaml pymongo python-multipart passlib --index-url http://nexus.prod.uci.cu/repository/pypi-proxy/simple --trusted-host nexus.prod.uci.cu
