@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# RUN npm config set registry https://nexus.uclv.edu.cu/repository/npm/
-# RUN npm install react react-router-dom react-chatbot-kit face-api
+RUN npm config set registry https://nexus.uclv.edu.cu/repository/npm/
 RUN npm install --verbose
 
+RUN rm -rf /app/node_modules
 COPY . .
 
 RUN npm run build
