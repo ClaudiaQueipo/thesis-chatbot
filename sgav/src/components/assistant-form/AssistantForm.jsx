@@ -19,6 +19,7 @@ export default function AssistantForm({
   const assistant = useAssistantStore(state => state.assistant)
   const setAssistantInput = useAssistantStore(state => state.setAssistant)
   const hiddenFileInput = useRef(null);
+  const [isEdit, setIsEdit] = useState(location.pathname.split("/").pop() === "edit-assistant")
 
 
   const handleFileChange = (file) => {
@@ -46,27 +47,29 @@ export default function AssistantForm({
       <CardBody style={{ gap: "10px" }}>
         <p>Datos del asistente</p>
         <AssistantInfo />
-        <FileUpload
-          flexRowStyle={flexRowStyle}
-          hiddenFileInput={hiddenFileInput}
-          handleFileChange={handleFileChange}
-          selectedFile={selectedFile}
-          setSelectedFile={setSelectedFile}
-        />
-        <p style={pStyle}>Tipos de archivos permitidos: PDF, DOCX, TXT</p>
-        <Button
+        {!isEdit && <>
+          <FileUpload
+            flexRowStyle={flexRowStyle}
+            hiddenFileInput={hiddenFileInput}
+            handleFileChange={handleFileChange}
+            selectedFile={selectedFile}
+            setSelectedFile={setSelectedFile}
+          />
+          <p style={pStyle}>Tipos de archivos permitidos: PDF, DOCX, TXT</p>
+          <Button
 
-          color="secondary"
-          variant="shadow"
-          className="text-white "
-          onClick={sendFileKnowledge}
-          isDisabled={loading}
-        >
-          {loading ? <><Spinner color="white" size="sm" />
-            Analizando...</>
-            : "Analizar"}
+            color="secondary"
+            variant="shadow"
+            className="text-white "
+            onClick={sendFileKnowledge}
+            isDisabled={loading}
+          >
+            {loading ? <><Spinner color="white" size="sm" />
+              Analizando...</>
+              : "Analizar"}
 
-        </Button>
+          </Button>
+        </>}
       </CardBody>
     </Card>
   );

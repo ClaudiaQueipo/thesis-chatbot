@@ -6,7 +6,6 @@ import {
     Spinner,
     Button,
 } from "@nextui-org/react";
-import { saveAs } from 'file-saver';
 import useQuestionsStore from '../../store/questionsStore';
 import useAnswersStore from '../../store/answersStore';
 import useAssistantStore from '../../store/assistantStore';
@@ -14,6 +13,8 @@ import assistantService from '../../services/assistant.service';
 import { toast, Toaster } from "sonner"
 import { getUser } from '../../utils/auth';
 import { useNavigate } from "react-router-dom"
+import authService from '../../services/auth.service';
+import logService from '../../services/logs.service';
 
 export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const questions = useQuestionsStore(state => state.questions)
@@ -25,6 +26,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const [loading, setLoading] = useState(false)
     const [loadingGenerate, setLoadingGenerate] = useState(false)
     const navigate = useNavigate()
+    const [isEdit, setIsEdit] = useState(location.pathname.split("/").pop() === "edit-assistant")
 
     useEffect(() => {
         const fetchAnswers = async () => {
@@ -38,7 +40,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
             setLoading(false)
 
         }
-        if (questions.length > 0) fetchAnswers()
+        if (questions.length > 0 && !isEdit) fetchAnswers()
 
     }, [questions]);
 
@@ -67,25 +69,44 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     }
 
     const handleSaveResults = async () => {
-        const status = await assistantService.saveAssistant(assistant)
 
-        if (status) {
-            setAnswers([])
-            setQuestions([])
-            setAssistantInput({
-                name: "",
-                description: "",
-                knowledge: "",
-                questions: "",
-                answers: "",
-                username: getUser()
-            })
-            navigate('/gestion-asistentes')
-            return toast.success("Tu asistente ha sido guardado")
-
+        let status;
+        let reason;
+        if (isEdit) {
+            status = await assistantService.updateAssistant(assistant._id, assistant)
+            reason = `${getUser()} HA ACTUALIZADO ${assistant.toString()}`
         } else {
+            status = await assistantService.saveAssistant(assistant)
+            reason = `${getUser()} HA INSERTADO ${assistant.toString()}`
+        }
+        const user_id = authService.getUserIdByEmail(getUser())
+        
+        const log = {
+            "user_id": getUser(),
+            "username": user_id,
+            "reason": reason
+        }
+
+        await logService.createLog(log)
+
+        if (!status) {
             return toast.error("Ha ocurrido un error, intenta de nuevo")
         }
+
+        setAnswers([])
+        setQuestions([])
+        setAssistantInput({
+            _id: null,
+            name: "",
+            description: "",
+            knowledge: "",
+            questions: "",
+            answers: "",
+            username: getUser()
+        })
+
+        toast.success("Tu asistente ha sido guardado")
+        setTimeout(() => navigate('/gestion-asistentes'), 2000);
     }
 
     return (
@@ -106,7 +127,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                             questions: event.target.value.split("\n")
                         });
                     }}
-                    disabled={loading} // Deshabilita el Textarea cuando está en carga
+                    disabled={loading}
                 />
                 <div style={{ position: 'relative' }}>
                     <Textarea

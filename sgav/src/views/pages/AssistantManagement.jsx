@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Table,
@@ -11,6 +11,7 @@ import {
   Button,
   Chip,
   Pagination,
+  useDisclosure
 } from "@nextui-org/react";
 import NavigationBar from "../../components/navigation-bar/NavigationBar";
 import { PlusIcon } from "../../assets/Icons/PlusIcon";
@@ -21,6 +22,11 @@ import { EditDoc } from "../../assets/Icons/EditDoc";
 import { DeleteDoc } from "../../assets/Icons/DeleteDoc";
 import useAssistantsStore from "../../store/assistantsListStore";
 import useFetchAssistants from "../../hooks/useFetchAssistants";
+import useAssistantStore from "../../store/assistantStore";
+import { getUser } from "../../utils/auth";
+import useAnswersStore from "../../store/answersStore";
+import useQuestionsStore from "../../store/questionsStore";
+import DeleteModal from "../../components/DeleteModal";
 
 const INITIAL_VISIBLE_COLUMNS = [
   "name",
@@ -51,13 +57,18 @@ function formatDate(dateString) {
 
 export default function App() {
   useFetchAssistants()
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const assistants = useAssistantsStore(state => state.assistants)
   const [filterValue, setFilterValue] = React.useState("");
+  const [assistantToDelete, setAssistantToDelete] = React.useState(null);
   const [selectedKeys, setSelectedKeys] = React.useState(new Set([]));
   const [visibleColumns, setVisibleColumns] = React.useState(
     new Set(INITIAL_VISIBLE_COLUMNS)
   );
+  const setAnswers = useAnswersStore(state => state.setAnswers)
+  const setQuestions = useQuestionsStore(state => state.setQuestions)
+
   const [statusFilter, setStatusFilter] = React.useState("all");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [sortDescriptor, setSortDescriptor] = React.useState({
@@ -100,7 +111,7 @@ export default function App() {
     }
 
     return filteredAssistants;
-  }, [assistants, filterValue, statusFilter]);
+  }, [assistants.length > 0, filterValue, statusFilter]);
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
@@ -140,9 +151,15 @@ export default function App() {
       case "actions":
         return (
           <div className="flex justify-start items-center gap-2">
-            <BugIcon className={iconClasses} />
-            <EditDoc className={iconClasses} />
-            <DeleteDoc className={iconClasses} />
+            <Button size="sm">
+              <BugIcon className={iconClasses} />
+            </Button>
+            <Button as={Link} size="sm" to="/gestion-asistentes/edit-assistant">
+              <EditDoc className={iconClasses} />
+            </Button>
+            <Button size="sm" onClick={() => onOpen()} >
+              <DeleteDoc className={iconClasses} />
+            </Button>
           </div>
         );
       default:
@@ -223,6 +240,7 @@ export default function App() {
     hasSearchFilter,
   ]);
 
+
   const bottomContent = React.useMemo(() => {
     return (
       <div className="py-2 px-2 flex justify-between items-center">
@@ -246,6 +264,32 @@ export default function App() {
       </div>
     );
   }, [selectedKeys, items.length, page, pages, hasSearchFilter]);
+
+  const setAssistantInput = useAssistantStore(state => state.setAssistant)
+  
+  useEffect(() => {
+    const findAssistantById = (id) => {
+      return assistants.find((assistant) => assistant._id === id);
+    };
+
+    if (selectedKeys.size > 0) {
+      const selectedKeysArray = Array.from(selectedKeys);
+      const firstSelectedKey = selectedKeysArray[0];
+      const selectedAssistant = findAssistantById(firstSelectedKey);
+      setAssistantInput({
+        _id: selectedAssistant._id,
+        name: selectedAssistant.name,
+        description: selectedAssistant.description,
+        knowledge: selectedAssistant.knowledge,
+        questions: selectedAssistant.questions,
+        answers: selectedAssistant.answers,
+        username: getUser()
+      })
+      setAnswers(selectedAssistant.answers)
+      setQuestions(selectedAssistant.questions)
+      setAssistantToDelete(selectedAssistant)
+    }
+  }, [selectedKeys]);
 
   const classNames = React.useMemo(
     () => ({
@@ -284,7 +328,7 @@ export default function App() {
           }}
           //   classNames={classNames}
           selectedKeys={selectedKeys}
-          selectionMode="multiple"
+          selectionMode="single"
           sortDescriptor={sortDescriptor}
           topContent={topContent}
           topContentPlacement="outside"
@@ -323,6 +367,7 @@ export default function App() {
 
         </Table>
       </div>
+      <DeleteModal isOpen={isOpen} onOpenChange={onOpenChange} />
     </div>
   );
 }

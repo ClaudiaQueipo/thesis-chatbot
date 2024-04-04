@@ -5,8 +5,8 @@ from langchain_community.llms import LlamaCpp
 from core.config import settings
 
 
-from langchain_openai import OpenAI
-llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
+# from langchain_openai import OpenAI
+# llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
 
 
 async def answers_generation(docs_question_gen, questions):
@@ -18,14 +18,14 @@ async def answers_generation(docs_question_gen, questions):
     vector_store = Chroma.from_documents(docs_question_gen, embeddings)
 
     answer_gen_chain = RetrievalQA.from_chain_type(
-        # llm=LlamaCpp(
-        #     model_path=settings.LLM_PATH,
-        #     temperature=0.75,
-        #     top_p=1,
-        #     verbose=True,
-        #     n_ctx=4096,
-        # ),
-        llm=llm,
+        llm=LlamaCpp(
+            model_path=settings.LLM_PATH,
+            temperature=0.75,
+            top_p=1,
+            verbose=True,
+            n_ctx=4096,
+        ),
+        # llm=llm,
         chain_type="stuff",
         retriever=vector_store.as_retriever(k=2),
     )

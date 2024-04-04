@@ -5,13 +5,14 @@ from datetime import timedelta
 from http.client import HTTPException
 from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordRequestForm
+from models.assistant import UserEmail
 from models.user import User
 from service.auth import create_access_token, get_password_hash, verify_password
 from utils import database
 
 users_collection = database["users"]
 
-auth_router = APIRouter(prefix="/auth")
+auth_router = APIRouter(prefix="/auth", tags=["AUTH"])
 
 
 @auth_router.post("/register")
@@ -61,3 +62,12 @@ async def get_user_by_id(user_id: str):
     print(f"Nombre: {user['first_name']}, Apellido: {user['last_name']}")
 
     return {"message": "Información del usuario mostrada por consola"}
+
+
+@auth_router.get("/user-id/")
+async def get_user_id_by_email(user: UserEmail):
+    user = users_collection.find_one({"email": user.email})
+    if user is None:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+    user_id = str(user["_id"])
+    return {"user_id": user_id}

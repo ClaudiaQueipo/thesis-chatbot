@@ -10,6 +10,9 @@ const LazyLogin = lazy(() => import("../views/pages/Login"));
 const LazyCreateAssistant = lazy(() =>
   import("../views/pages/CreateAssistant")
 );
+const LazyEditAssistant = lazy(() =>
+  import("../views/pages/EditAssistant")
+);
 const NotFound = lazy(() => import("../views/pages/NotFound"));
 
 const router = createBrowserRouter([
@@ -41,7 +44,7 @@ const router = createBrowserRouter([
         path: "edit-assistant",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
-            <LazyCreateAssistant />
+            <LazyEditAssistant />
           </Suspense>
         ),
       },

@@ -3,6 +3,7 @@ import { getUser } from "../utils/auth";
 
 const useAssistantStore = create((set) => ({
     assistant: {
+        _id: null,
         name: "",
         description: "",
         knowledge: "",

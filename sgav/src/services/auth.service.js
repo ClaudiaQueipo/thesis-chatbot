@@ -31,9 +31,20 @@ class AuthService {
         }
     }
 
+    async getUserIdByEmail(email) {
+        try {
+            const response = await axios.get(`${API_URL}/auth/user-id/?email=${email}`);
+            return response.data;
+        } catch (error) {
+            console.error("Error al obtener el ID del usuario por correo electrónico: ", error);
+            throw error;
+        }
+    }
+
     logout() {
         removeUser()
     }
+
 }
 
 const authService = new AuthService();
