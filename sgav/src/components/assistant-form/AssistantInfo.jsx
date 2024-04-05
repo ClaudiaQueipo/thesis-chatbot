@@ -1,11 +1,13 @@
 // AssistantInfo.js
-import React from "react";
+import { useState } from "react";
 import { Input, Textarea } from "@nextui-org/react";
 import useAssistantStore from "../../store/assistantStore";
 
 export default function AssistantInfo() {
   const assistantInput = useAssistantStore(state => state.assistant)
   const setAssistantInput = useAssistantStore(state => state.setAssistant)
+  const [isEdit, setIsEdit] = useState(location.pathname.split("/").pop() === "edit-assistant")
+
   return (
     <>
       <Input
@@ -37,7 +39,7 @@ export default function AssistantInfo() {
           })
         }}
       />
-      <Textarea
+      {!isEdit && <Textarea
         label="Conocimiento del asistente"
         placeholder="Escribe conocimiento para tu asistente o carga un archivo"
         variant='faded'
@@ -49,7 +51,7 @@ export default function AssistantInfo() {
             knowledge: event.target.value
           })
         }}
-      />
+      />}
     </>
   );
 }

@@ -1,18 +1,20 @@
 from datetime import datetime
 import shutil
 import uuid
+from bson import ObjectId
 from core.config import settings
-from fastapi import APIRouter, UploadFile
-from fastapi.responses import JSONResponse, Response, FileResponse
+from fastapi import APIRouter, HTTPException, UploadFile
+from fastapi.responses import JSONResponse, Response
 from langchain_services.answers_gen import answers_generation
 from models import Assistant, Questions, QA
+from models.assistant import UserEmail
 from train_files_gen import gen_files
 from utils import database
 from langchain_services import questions_generation
 import tempfile
 import os
 
-assistant = APIRouter(prefix="/assistants")
+assistant = APIRouter(prefix="/assistants", tags=["ASSISTANTS"])
 assistants_collection = database["assistants"]
 users_collection = database["users"]
 
@@ -64,12 +66,49 @@ async def create_assistant(assistant: Assistant):
         assistants_collection.insert_one(new_assistant)
         return Response(status_code=200)
     except Exception as e:
+        print(f"Error en create_assistant: {e}")
+
+
+@assistant.put("/edit/{assistant_id}")
+async def edit_assistant(assistant_id: str, updated_assistant: Assistant):
+    try:
+        updated_assistant_data = updated_assistant.model_dump(
+            by_alias=True,
+            exclude={"ID"},
+        )
+
+        updated_assistant_data["updated_at"] = datetime.now()
+
+        result = assistants_collection.update_one(
+            {"_id": ObjectId(assistant_id)}, {"$set": updated_assistant_data}
+        )
+
+        if result.modified_count == 0:
+            raise HTTPException(status_code=404, detail="Assistant not found")
+
+        return Response(status_code=200)
+    except Exception as e:
         print(e)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@assistant.delete("/delete/{assistant_id}")
+async def delete_assistant(assistant_id: str):
+    try:
+        result = assistants_collection.delete_one({"_id": ObjectId(assistant_id)})
+
+        if result.deleted_count == 0:
+            raise HTTPException(status_code=404, detail="Assistant not found")
+
+        return Response(status_code=200)
+    except Exception as e:
+        print(e)
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @assistant.post("/gen-files")
 def generate_train_files(qa: QA):
-    
+
     folder_name = f"{qa.name}-{uuid.uuid4()}"
 
     bot_folder_path = f"./train_files_gen/{folder_name}"
@@ -83,7 +122,7 @@ def generate_train_files(qa: QA):
     zip_file_name = shutil.make_archive(folder_name, "zip", bot_folder_path)
     dest_dir = "./bots"
 
-    zip_file_path = os.path.join(dest_dir, f'./{folder_name}.zip')
+    zip_file_path = os.path.join(dest_dir, f"./{folder_name}.zip")
     shutil.move(zip_file_name, zip_file_path)
 
     shutil.rmtree(bot_folder_path)
@@ -91,17 +130,16 @@ def generate_train_files(qa: QA):
     return JSONResponse(
         content={"download_link": f"{settings.API_URL}/bots/{folder_name}.zip"}
     )
-    # return FileResponse(
-    #     f"{dest_dir}/{qa.name}.zip",
-    #     filename=f"{qa.name}.zip",
-    #     media_type="application/x-zip-compressed",
-    # )
 
 
-@assistant.get("/fetch-assistants")
-async def fetch_assistants():
+@assistant.post("/fetch-assistants")
+async def fetch_assistants(user_email: UserEmail):
     try:
-        assistants = assistants_collection.find()
+        user = users_collection.find_one({"email": user_email.email})
+        user_id = user["_id"]
+
+        assistants = assistants_collection.find({"user_id": user_id})
+
         return list(map(lambda a: Assistant(**a), assistants))
 
     except Exception as e:

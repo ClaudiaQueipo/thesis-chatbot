@@ -30,7 +30,7 @@ export default function DesktopMenu() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent justify="center">
+      <NavbarContent justify="start">
         <NavbarItem>
           <Link to="/">Home</Link>
         </NavbarItem>
@@ -47,7 +47,7 @@ export default function DesktopMenu() {
               authService.logout()
               setUser(null)
             }
-            } color="secondary" style={{ color: "white" }}>Logout</Button>
+            } color="secondary" style={{ color: "white" }}>Cerrar sesión</Button>
           </>
         ) : (
           <NavbarItem>

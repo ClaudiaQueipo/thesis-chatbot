@@ -1,0 +1,2988 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:Document rdf:about="https://www.grandmetric.com/python-rest-frameworks-performance-comparison/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Grandmetric</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Buczkowski</foaf:surname>
+                        <foaf:givenName>Mateusz</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2"/>
+        <dc:title>Python REST frameworks performance comparison</dc:title>
+        <dcterms:abstract>Python REST Frameworks comparison provides an overview of 11 popular python libraries that can be used for REST API. Check which one has best performance.</dcterms:abstract>
+        <dc:date>2020-08-10T08:49:11+00:00</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.grandmetric.com/python-rest-frameworks-performance-comparison/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 21:52:50</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_2">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2/python-rest-frameworks-performance-comparison.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.grandmetric.com/python-rest-frameworks-performance-comparison/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 21:53:31</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=ph&amp;test=fortune&amp;l=zijzen-sf">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>www.techempower.com</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_4"/>
+        <dc:title>TechEmpower Web Framework Performance Comparison</dc:title>
+        <dcterms:abstract>Performance comparison of a wide spectrum of web application frameworks and platforms using community-contributed test implementations.</dcterms:abstract>
+        <dc:date>2023-02-01 22:03:28</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=ph&amp;test=fortune&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:03:28</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_4">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/4/benchmarks.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=ph&amp;test=fortune&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:03:34</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://codigofacilito.com/articulos/elegir-framework-backend">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>CódigoFacilito</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hernández</foaf:surname>
+                        <foaf:givenName>Uriel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_6"/>
+        <dc:title>Cómo elegir un framework para el backend</dc:title>
+        <dcterms:abstract>Una de las decisiones más complicadas que enfrentan los nuevos desarrolladores web, es ¿con qué tecnologías voy a trabajar?
+
+A diferencia del Frontend en donde existe al menos un estándar base de...</dcterms:abstract>
+        <dc:date>2023-02-01 22:18:30</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://codigofacilito.com/articulos/elegir-framework-backend</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:18:30</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_6">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/6/elegir-framework-backend.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://codigofacilito.com/articulos/elegir-framework-backend</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:19:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Medium</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Blog</foaf:surname>
+                        <foaf:givenName>Netflix Technology</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_8"/>
+        <dc:title>Introducing Dispatch</dc:title>
+        <dcterms:abstract>Netflix is pleased to announce the open-source release of our crisis management orchestration framework: Dispatch!</dcterms:abstract>
+        <dc:date>2020-02-24T21:43:28.574Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:20:24</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_8">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/8/introducing-dispatch-da4b8a2a8072.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:21:00</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://blog.back4app.com/backend-frameworks/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog></z:Blog>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_10"/>
+        <dc:title>Top 10 backend frameworks | Which is the best option for you?</dc:title>
+        <dcterms:abstract>Finding the right backend framework can be quite crucial for developers to ensure optimal performance and scalability.</dcterms:abstract>
+        <dc:date>2020-09-07T14:47:02+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.back4app.com/backend-frameworks/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:45:58</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_10">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/10/backend-frameworks.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.back4app.com/backend-frameworks/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:46:14</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://platzi.com/blog/django-flask-fastapi/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Platzi</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_12"/>
+        <dc:title>¿Qué sigue después de aprender Python? Django vs. Flask vs. FastAPI</dc:title>
+        <dcterms:abstract>Si ya te convertiste en todo un cinturón negro de Python, conoces sus estructuras de datos y hasta los tópicos más avanzados como List Comprehensions y Dec</dcterms:abstract>
+        <dc:date>2023-02-01 22:49:53</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>¿Qué sigue después de aprender Python?</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://platzi.com/blog/django-flask-fastapi/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:49:53</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_12">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/12/django-flask-fastapi.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://platzi.com/blog/django-flask-fastapi/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-01 22:50:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.researchgate.net/publication/291410724_Comportamiento_Adaptable_de_Chatbots_Dependiente_del_Contexto">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rodríguez</foaf:surname>
+                        <foaf:givenName>Juan Manuel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Merlino</foaf:surname>
+                        <foaf:givenName>Hernán</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fernández</foaf:surname>
+                        <foaf:givenName>Enrique</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_14"/>
+        <dc:title>(PDF) Comportamiento Adaptable de Chatbots Dependiente del Contexto</dc:title>
+        <dc:date>2014</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/291410724_Comportamiento_Adaptable_de_Chatbots_Dependiente_del_Contexto</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-03 19:30:03</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_14">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/14/291410724_Comportamiento_Adaptable_de_Chatbots_Dependiente_del_Contexto.html"/>
+        <dc:title>(PDF) Comportamiento Adaptable de Chatbots Dependiente del Contexto</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/291410724_Comportamiento_Adaptable_de_Chatbots_Dependiente_del_Contexto</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-03 19:30:49</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://medium.com/soldai/c%C3%B3mo-funciona-el-reconocimiento-autom%C3%A1tico-del-habla-eb038ecfe72e">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>SoldAI</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sobrino</foaf:surname>
+                        <foaf:givenName>Diego Campos</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_16"/>
+        <dc:title>¿Cómo funciona el reconocimiento automático del habla?</dc:title>
+        <dcterms:abstract>Conociendo la primera fase de la interacción verbal entre humanos y máquinas</dcterms:abstract>
+        <dc:date>2020-05-15T21:23:10.328Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/soldai/c%C3%B3mo-funciona-el-reconocimiento-autom%C3%A1tico-del-habla-eb038ecfe72e</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:01:48</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_16">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/16/cómo-funciona-el-reconocimiento-automático-del-habla-eb038ecfe72e.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/soldai/c%C3%B3mo-funciona-el-reconocimiento-autom%C3%A1tico-del-habla-eb038ecfe72e</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:02:08</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.analyticsinsight.net/top-10-leading-language-models-for-nlp-in-2023/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Analytics Insight</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>PM</foaf:surname>
+                        <foaf:givenName>Aiswarya</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_18"/>
+        <dc:title>Top 10 Leading Language Models for NLP in 2023</dc:title>
+        <dcterms:abstract>The top leading language models for NLP in 2023 are trained to understand data in text or audio format. The technology is used widely across industries.</dcterms:abstract>
+        <dc:date>2023-01-20T06:30:26+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.analyticsinsight.net/top-10-leading-language-models-for-nlp-in-2023/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:21:46</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_18">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/18/top-10-leading-language-models-for-nlp-in-2023.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.analyticsinsight.net/top-10-leading-language-models-for-nlp-in-2023/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:23:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/d41586-023-00340-6">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>614</prism:volume>
+                <dc:title>Nature</dc:title>
+                <dc:identifier>DOI 10.1038/d41586-023-00340-6</dc:identifier>
+                <prism:number>7947</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stokel-Walker</foaf:surname>
+                        <foaf:givenName>Chris</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Van Noorden</foaf:surname>
+                        <foaf:givenName>Richard</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_20"/>
+        <link:link rdf:resource="#item_21"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Machine learning</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Mathematics and computing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Publishing</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>What ChatGPT and generative AI mean for science</dc:title>
+        <dcterms:abstract>Researchers are excited but apprehensive about the latest advances in artificial intelligence.</dcterms:abstract>
+        <dc:date>2023-02-06</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.nature.com</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/d41586-023-00340-6</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:23:34</dcterms:dateSubmitted>
+        <dc:rights>2023 Springer Nature Limited</dc:rights>
+        <dc:description>Bandiera_abtest: a
+Cg_type: News Feature
+Number: 7947
+Publisher: Nature Publishing Group
+Subject_term: Publishing, Machine learning, Mathematics and computing</dc:description>
+        <bib:pages>214-216</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_20">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/20/Stokel-Walker y Van Noorden - 2023 - What ChatGPT and generative AI mean for science.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/d41586-023-00340-6.pdf?pdf=button%20sticky</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:23:42</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_21">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/21/d41586-023-00340-6.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/d41586-023-00340-6</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:24:26</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://dealerai.com/domain-specific-bots-vs-generic-bots/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>DealerAI</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Xu</foaf:surname>
+                        <foaf:givenName>Bryan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_23"/>
+        <dc:title>Domain-Specific Bots vs. Generic Bots</dc:title>
+        <dcterms:abstract>In this technological era, a new tool has made the interaction between computers and humans simpler: Chatbots. These bots are</dcterms:abstract>
+        <dc:date>2020-06-09T19:29:05+00:00</dc:date>
+        <z:language>en-CA</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dealerai.com/domain-specific-bots-vs-generic-bots/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:26:10</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_23">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/23/domain-specific-bots-vs-generic-bots.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dealerai.com/domain-specific-bots-vs-generic-bots/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:27:18</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://cobusgreyling.medium.com/chatbots-are-domain-specific-need-to-detect-irrelevance-9f2c060ec2e7">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Medium</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Greyling</foaf:surname>
+                        <foaf:givenName>Cobus</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_25"/>
+        <dc:title>Chatbots Are Domain Specific &amp; Need To Detect Irrelevance</dc:title>
+        <dcterms:abstract>How To Handle User Conversations Which Are Out-Of-Domain</dcterms:abstract>
+        <dc:date>2020-11-05T20:21:31.044Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cobusgreyling.medium.com/chatbots-are-domain-specific-need-to-detect-irrelevance-9f2c060ec2e7</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:27:09</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_25">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/25/chatbots-are-domain-specific-need-to-detect-irrelevance-9f2c060ec2e7.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cobusgreyling.medium.com/chatbots-are-domain-specific-need-to-detect-irrelevance-9f2c060ec2e7</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-02-28 03:27:59</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://towardsdatascience.com/ai-chatbots-made-easy-courtesy-rasa-8ecdc2853e66">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Medium</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ajay</foaf:surname>
+                        <foaf:givenName>Lakshmi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_27"/>
+        <link:link rdf:resource="#item_28"/>
+        <dc:title>AI chatbots made easy — courtesy RASA</dc:title>
+        <dcterms:abstract>A step-by-step guide to building a cricket chatbot using RASA &amp; Python</dcterms:abstract>
+        <dc:date>2022-11-09T12:00:01.213Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://towardsdatascience.com/ai-chatbots-made-easy-courtesy-rasa-8ecdc2853e66</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:29:54</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Memo rdf:about="#item_27">
+        <rdf:value>&lt;blockquote&gt;RASA is an open-source tool that uses natural language understanding to develop AI-based chatbots. It provides a framework that can be used to create chatbots with minimal coding skills. RASA allows the users to train &amp; tune the model through various configurations.&lt;/blockquote&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_28">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/28/ai-chatbots-made-easy-courtesy-rasa-8ecdc2853e66.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://towardsdatascience.com/ai-chatbots-made-easy-courtesy-rasa-8ecdc2853e66</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:30:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://planetachatbot.com/dialogflow-google-cambia-modelo-pricing/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog></z:Blog>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_30"/>
+        <dc:title>Dialogflow de Google cambia su modelo de pricing: ¿cuánto cuesta la IA / NLU? - Planeta Chatbot</dc:title>
+        <dcterms:abstract>El sistema de procesamiento de lenguaje natural (o entendimiento NLU) de Google, no sólo cambia de nombre de API.AI a Dialogflow sino que estrena modelo de pricing a mitad de noviembre, pasa de ser completamente gratuito a tener una versión de pago dentro del entorno del Google Cloud Platform (la versión de pago está actualmente</dcterms:abstract>
+        <dc:date>2017-12-12T09:00:57+00:00</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>Dialogflow de Google cambia su modelo de pricing</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://planetachatbot.com/dialogflow-google-cambia-modelo-pricing/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:45:55</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_30">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/30/dialogflow-google-cambia-modelo-pricing.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://planetachatbot.com/dialogflow-google-cambia-modelo-pricing/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:46:14</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.geeksforgeeks.org/chatbots-using-python-and-rasa/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>GeeksforGeeks</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_32"/>
+        <dc:title>Chatbots Using Python and Rasa</dc:title>
+        <dcterms:abstract>A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/competitive programming/company interview Questions.</dcterms:abstract>
+        <dc:date>2020-08-10T07:33:41+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.geeksforgeeks.org/chatbots-using-python-and-rasa/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:57:30</dcterms:dateSubmitted>
+        <dc:description>Section: Machine Learning</dc:description>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_32">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/32/chatbots-using-python-and-rasa.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.geeksforgeeks.org/chatbots-using-python-and-rasa/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:57:44</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://medium.com/data-science-community-srm/developing-chatbots-with-rasa-intuition-to-implementation-39c1dd34274c">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>DataX Journal</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sharma</foaf:surname>
+                        <foaf:givenName>Harsh</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_34"/>
+        <dc:title>Developing Chatbots with RASA- Intuition to Implementation</dc:title>
+        <dcterms:abstract>“To the user, chatbots seem to be “intelligent” due to their informative skills. However, chatbots are only as intelligent as the…</dcterms:abstract>
+        <dc:date>2020-10-08T15:39:16.233Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/data-science-community-srm/developing-chatbots-with-rasa-intuition-to-implementation-39c1dd34274c</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:59:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_34">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/34/developing-chatbots-with-rasa-intuition-to-implementation-39c1dd34274c.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/data-science-community-srm/developing-chatbots-with-rasa-intuition-to-implementation-39c1dd34274c</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 11:59:48</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.xataka.com/aplicaciones/he-usado-whisper-para-transcribir-entrevista-herramienta-que-llevaba-esperando-hace-anos">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>He usado Whisper para transcribir una entrevista: es la herramienta que llevaba esperando desde hace años</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.xataka.com/aplicaciones/he-usado-whisper-para-transcribir-entrevista-herramienta-que-llevaba-esperando-hace-anos</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:12:30</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://codigoespagueti.com/noticias/tecnologia/que-es-como-funciona-whisper/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>¿Qué es y cómo funciona Whisper? | Código Espagueti</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://codigoespagueti.com/noticias/tecnologia/que-es-como-funciona-whisper/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:13:19</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://blogthinkbig.com/whisper-transcribir">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Blogthinkbig.com</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Terol</foaf:surname>
+                        <foaf:givenName>Moncho</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_42"/>
+        <dc:title>Whisper: optimiza el tiempo a la hora de hacer una transcripción</dc:title>
+        <dcterms:abstract>Whisper ha llegado a darte una mano a la hora de pasar audio a texto. Transcribe desde acentos hasta signos de puntuación. Te contamos más.</dcterms:abstract>
+        <dc:date>2023-03-27T08:00:00+00:00</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>Whisper</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://blogthinkbig.com/whisper-transcribir</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:15:28</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_42">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/42/whisper-transcribir.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://blogthinkbig.com/whisper-transcribir</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:15:35</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_43">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>CódigoFacilito</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Cómo elegir un framework para el backend</dc:title>
+        <dcterms:abstract>Una de las decisiones más complicadas que enfrentan los nuevos desarrolladores web, es ¿con qué tecnologías voy a trabajar?
+
+A diferencia del Frontend en donde existe al menos un estándar base de...</dcterms:abstract>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://codigofacilito.com/articulos/elegir-framework-backend</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:25:42</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_45">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>www.techempower.com</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_46"/>
+        <dc:title>TechEmpower Web Framework Performance Comparison</dc:title>
+        <dcterms:abstract>Performance comparison of a wide spectrum of web application frameworks and platforms using community-contributed test implementations.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=ph&amp;test=fortune&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:26:13</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_46">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/46/benchmarks.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=ph&amp;test=fortune&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:26:19</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://openwebinars.net/blog/que-es-django-y-por-que-usarlo/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>OpenWebinars.net</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_49"/>
+        <dc:title>Qué es Django y por qué usarlo</dc:title>
+        <dcterms:abstract>Si quieres conocer qué es Django y por qué deberías utilizarlo, en este artículo profundizamos en el framework de Python más usado.</dcterms:abstract>
+        <dc:date>2018-08-03T12:00:00+02:00</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openwebinars.net/blog/que-es-django-y-por-que-usarlo/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:35:52</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_49">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/49/que-es-django-y-por-que-usarlo.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openwebinars.net/blog/que-es-django-y-por-que-usarlo/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 12:36:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://fastapi.tiangolo.com/es/features/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_58"/>
+        <dc:title>Características - FastAPI</dc:title>
+        <dcterms:abstract>FastAPI framework, high performance, easy to learn, fast to code, ready for production</dcterms:abstract>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://fastapi.tiangolo.com/es/features/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:21:58</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_58">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/58/features.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://fastapi.tiangolo.com/es/features/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:22:13</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://geekflare.com/es/fastapi-explained/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_61"/>
+        <dc:title>Explicación de FastAPI en 5 minutos o menos - Geekflare</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://geekflare.com/es/fastapi-explained/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:24:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_61">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/61/fastapi-explained.html"/>
+        <dc:title>Explicación de FastAPI en 5 minutos o menos - Geekflare</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://geekflare.com/es/fastapi-explained/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:25:09</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://geekflare.com/es/fastapi-vs-flask/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_62"/>
+        <dc:title>FastAPI vs. Flask: ¿Cuál de los dos es el adecuado para usted? - Geekflare</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://geekflare.com/es/fastapi-vs-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:24:37</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_62">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/62/fastapi-vs-flask.html"/>
+        <dc:title>FastAPI vs. Flask: ¿Cuál de los dos es el adecuado para usted? - Geekflare</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://geekflare.com/es/fastapi-vs-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:25:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.techempower.com/benchmarks/#section=data-r21&amp;hw=ph&amp;test=query&amp;l=zijzen-sf">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>www.techempower.com</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_64"/>
+        <dc:title>TechEmpower Web Framework Performance Comparison</dc:title>
+        <dcterms:abstract>Performance comparison of a wide spectrum of web application frameworks and platforms using community-contributed test implementations.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r21&amp;hw=ph&amp;test=query&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:39:16</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_64">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/64/benchmarks.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.techempower.com/benchmarks/#section=data-r21&amp;hw=ph&amp;test=query&amp;l=zijzen-sf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 17:39:25</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://ichi.pro/es/face-api-js-una-forma-de-crear-un-sistema-de-reconocimiento-facial-en-el-navegador-213256611440215">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_68"/>
+        <dc:title>face-api.js: una forma de crear un sistema de reconocimiento facial en el navegador.</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ichi.pro/es/face-api-js-una-forma-de-crear-un-sistema-de-reconocimiento-facial-en-el-navegador-213256611440215</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:00:35</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_68">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/68/face-api-js-una-forma-de-crear-un-sistema-de-reconocimiento-facial-en-el-navegador-213256611440.html"/>
+        <dc:title>face-api.js: una forma de crear un sistema de reconocimiento facial en el navegador.</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ichi.pro/es/face-api-js-una-forma-de-crear-un-sistema-de-reconocimiento-facial-en-el-navegador-213256611440215</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:01:21</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.infoteknico.com/principales-api-de-reconocimiento-facial/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog></z:Blog>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_67"/>
+        <dc:title>10 principales API de Reconocimiento Facial - Infoteknico</dc:title>
+        <dcterms:abstract>Descubre las mejores API de reconocimiento facial para aplicaciones de seguridad y control de acceso. Aprovecha esta tecnología accesible y eficiente.</dcterms:abstract>
+        <dc:date>2023-10-06T21:27:41-05:00</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.infoteknico.com/principales-api-de-reconocimiento-facial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:00:38</dcterms:dateSubmitted>
+        <dc:description>Section: Videovigilancia</dc:description>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_67">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/67/principales-api-de-reconocimiento-facial.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.infoteknico.com/principales-api-de-reconocimiento-facial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:01:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.nationalgeographic.com.es/ciencia/chatgtp-esta-boca-todos-nadie-sabe-que-es_19461">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+            <z:Website>
+               <dc:title>www.nationalgeographic.com.es</dc:title>
+            </z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_70"/>
+        <dc:title>Preguntas y respuestas sobre ChatGPT la inteligencia artificial de moda</dc:title>
+        <dcterms:abstract>¿Qué es y cómo funciona ChatGTP? ¿De dónde obtiene la información ?¿Puede equivocarse? ¿Cómo usar CHATGTP y para qué sirve? Respondemos a estas y otras preguntas sobre la IA del momento.</dcterms:abstract>
+        <dc:date>2023-02-08</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nationalgeographic.com.es/ciencia/chatgtp-esta-boca-todos-nadie-sabe-que-es_19461</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:15:46</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_70">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/70/chatgtp-esta-boca-todos-nadie-sabe-que-es_19461.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nationalgeographic.com.es/ciencia/chatgtp-esta-boca-todos-nadie-sabe-que-es_19461</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:16:26</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://textcortex.com/es/post/what-is-llama-2-used-for">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_72"/>
+        <dc:title>¿Para qué se utiliza el LLaMa-2?</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://textcortex.com/es/post/what-is-llama-2-used-for</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:19:34</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_72">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/72/what-is-llama-2-used-for.html"/>
+        <dc:title>¿Para qué se utiliza el LLaMa-2?</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://textcortex.com/es/post/what-is-llama-2-used-for</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-10-07 18:20:09</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://nextui.org">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>NextUI</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>jrgarciadev</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_92"/>
+        <dc:title>NextUI - Beautiful, fast and modern React UI Library</dc:title>
+        <dcterms:abstract>Beautiful, fast and modern React UI Library</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+           <dcterms:URI><rdf:value>https://nextui.org</rdf:value></dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-01 21:58:03</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_92">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/92/nextui.org.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+           <dcterms:URI><rdf:value>https://nextui.org/</rdf:value></dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-01 21:58:25</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://vectara.com/top-large-language-models-llms-gpt-4-llama-gato-bloom-and-when-to-choose-one-over-the-other/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Vectara</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kazi</foaf:surname>
+                        <foaf:givenName>Suleman</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_94"/>
+        <dc:title>Top Large Language Models (LLMs): GPT-4, LLaMA 2, Mistral 7B, ChatGPT, and More</dc:title>
+        <dcterms:abstract>The top large language models along with recommendations for when to use each based upon needs like API, tunable, or fully hosted. Updated regularly.</dcterms:abstract>
+        <dc:date>2023-10-17T11:00:00+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Top Large Language Models (LLMs)</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://vectara.com/top-large-language-models-llms-gpt-4-llama-gato-bloom-and-when-to-choose-one-over-the-other/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 00:59:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_94">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/94/top-large-language-models-llms-gpt-4-llama-gato-bloom-and-when-to-choose-one-over-the-other.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://vectara.com/top-large-language-models-llms-gpt-4-llama-gato-bloom-and-when-to-choose-one-over-the-other/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 00:59:33</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://medium.com/@datadrifters/mistral-7b-beats-llama-v2-13b-overview-and-fine-tuning-c608374b5c82">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Medium</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Datadrifters</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_96"/>
+        <dc:title>Mistral 7B Beats Llama v2 13B on All Benchmarks: Overview and Fine-tuning</dc:title>
+        <dcterms:abstract>A few days ago, the Mistral AI team released Mistral 7B, which beats Llama 2 13B on all benchmarks and Llama 1 34B on many benchmarks, and is almost on par with CodeLlama 7B. If you are running macOS…</dcterms:abstract>
+        <dc:date>2023-10-05T06:14:05.399Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Mistral 7B Beats Llama v2 13B on All Benchmarks</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/@datadrifters/mistral-7b-beats-llama-v2-13b-overview-and-fine-tuning-c608374b5c82</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 01:03:52</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_96">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/96/mistral-7b-beats-llama-v2-13b-overview-and-fine-tuning-c608374b5c82.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/@datadrifters/mistral-7b-beats-llama-v2-13b-overview-and-fine-tuning-c608374b5c82</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 01:04:28</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://botpress.com/es/blog/getting-started-with-botpress">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_98"/>
+        <dc:title>Primeros pasos con Botpress | Botpress Blog</dc:title>
+        <dcterms:abstract>Empezar con Botpress para crea su primer chatbot es más fácil de lo que piensa. Botpress elimina la complejidad de construir una experiencia conversacional que los clientes adorarán.</dcterms:abstract>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://botpress.com/es/blog/getting-started-with-botpress</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:36:03</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_98">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/98/getting-started-with-botpress.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://botpress.com/es/blog/getting-started-with-botpress</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:36:12</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.researchgate.net/publication/317601698_Redes_Neuronales_Artificiales_Conceptos_basicos_y_algunas_aplicaciones_en_Energia">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_100"/>
+        <dc:title>Redes Neuronales Artificiales. Conceptos básicos y algunas aplicaciones en Energía | Request PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/317601698_Redes_Neuronales_Artificiales_Conceptos_basicos_y_algunas_aplicaciones_en_Energia</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:41:47</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_100">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/100/317601698_Redes_Neuronales_Artificiales_Conceptos_basicos_y_algunas_aplicaciones_en_Energia.html"/>
+        <dc:title>Redes Neuronales Artificiales. Conceptos básicos y algunas aplicaciones en Energía | Request PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/317601698_Redes_Neuronales_Artificiales_Conceptos_basicos_y_algunas_aplicaciones_en_Energia</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:41:51</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.academia.edu/72166314/Redes_Neurais_Aplicadas_No_Desenvolvimento_De_Chatbots_Uma_An%C3%A1lise_Bibliom%C3%A9trica">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Oliveira</foaf:surname>
+                        <foaf:givenName>Graceline de</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_102"/>
+        <dc:title>Redes Neurais Aplicadas No Desenvolvimento De Chatbots: Uma Análise Bibliométrica</dc:title>
+        <dcterms:abstract>Os chatbots atualmente se configuram como uma tecnologia aplicavel em diversas areas em diferentes empresas e setores, que em conjunto com outras tecnicas computacionais, especialmente a inteligencia artificial, realiza atividades muitas vezes</dcterms:abstract>
+        <dc:date>2018/01/01</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Redes Neurais Aplicadas No Desenvolvimento De Chatbots</z:shortTitle>
+        <z:libraryCatalog>www.academia.edu</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.academia.edu/72166314/Redes_Neurais_Aplicadas_No_Desenvolvimento_De_Chatbots_Uma_An%C3%A1lise_Bibliom%C3%A9trica</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:46:30</dcterms:dateSubmitted>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_102">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/102/Redes_Neurais_Aplicadas_No_Desenvolvimento_De_Chatbots_Uma_Análise_Bibliométrica.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.academia.edu/72166314/Redes_Neurais_Aplicadas_No_Desenvolvimento_De_Chatbots_Uma_An%C3%A1lise_Bibliom%C3%A9trica</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:46:47</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://chatbotsjournal.com/5-learnings-from-our-chatbot-survey-2017-72a6a4fc209c?gi=21ae27bf4d12">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>5 learnings from our ‘Chatbot Survey — 2017’ | by Mindbowser | Chatbots Journal</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://chatbotsjournal.com/5-learnings-from-our-chatbot-survey-2017-72a6a4fc209c?gi=21ae27bf4d12</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:50:59</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://rcci.uci.cu/?journal=rcci&amp;page=article&amp;op=view&amp;path%5B%5D=2289">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_105"/>
+        <dc:title>Chatbot: una propuesta viable para la atención al cliente en el centro de soporte de la UCI. | Caballero Ramírez | Revista Cubana de Ciencias Informáticas</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://rcci.uci.cu/?journal=rcci&amp;page=article&amp;op=view&amp;path%5B%5D=2289</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:54:15</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_105">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/105/rcci.uci.cu.html"/>
+        <dc:title>Chatbot: una propuesta viable para la atención al cliente en el centro de soporte de la UCI. | Caballero Ramírez | Revista Cubana de Ciencias Informáticas</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://rcci.uci.cu/?journal=rcci&amp;page=article&amp;op=view&amp;path%5B%5D=2289</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:55:01</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_106">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_107"/>
+        <dc:title>Domain-Specific Bots vs. Generic Bots - DealerAI</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dealerai.com/domain-specific-bots-vs-generic-bots/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:55:50</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_107">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/107/domain-specific-bots-vs-generic-bots.html"/>
+        <dc:title>Domain-Specific Bots vs. Generic Bots - DealerAI</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dealerai.com/domain-specific-bots-vs-generic-bots/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 12:56:22</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://doi.org/10.1007/s11042-022-13428-4">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1573-7721"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Khurana</foaf:surname>
+                        <foaf:givenName>Diksha</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Koli</foaf:surname>
+                        <foaf:givenName>Aditya</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Khatter</foaf:surname>
+                        <foaf:givenName>Kiran</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singh</foaf:surname>
+                        <foaf:givenName>Sukhdev</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_109"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Natural language generation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Natural language processing</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Natural language understanding</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>NLP applications</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>NLP evaluation metrics</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Natural language processing: state of the art, current trends and challenges</dc:title>
+        <dcterms:abstract>Natural language processing (NLP) has recently gained much attention for representing and analyzing human language computationally. It has spread its applications in various fields such as machine translation, email spam detection, information extraction, summarization, medical, and question answering etc. In this paper, we first distinguish four phases by discussing different levels of NLP and components of Natural Language Generation followed by presenting the history and evolution of NLP. We then discuss in detail the state of the art presenting the various applications of NLP, current trends, and challenges. Finally, we present a discussion on some available datasets, models, and evaluation metrics in NLP.</dcterms:abstract>
+        <dc:date>2023-01-01</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Natural language processing</z:shortTitle>
+        <z:libraryCatalog>Springer Link</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1007/s11042-022-13428-4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:03:51</dcterms:dateSubmitted>
+        <bib:pages>3713-3744</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1573-7721">
+        <prism:volume>82</prism:volume>
+        <dc:title>Multimedia Tools and Applications</dc:title>
+        <dc:identifier>DOI 10.1007/s11042-022-13428-4</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Multimed Tools Appl</dcterms:alternative>
+        <dc:identifier>ISSN 1573-7721</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_109">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/109/Khurana et al. - 2023 - Natural language processing state of the art, cur.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/content/pdf/10.1007%2Fs11042-022-13428-4.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:03:58</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.tableau.com/data-insights/ai/ai-virtual-assistant">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_111"/>
+        <dc:title>Asistente virtual: retos y posibilidades para la inteligencia artificial | Tableau</dc:title>
+        <dcterms:abstract>Un asistente virtual con inteligencia artificial desarrolla las funciones de un asistente humano. Vemos sus ventajas y los retos que plantea.</dcterms:abstract>
+        <z:language>en-US</z:language>
+        <z:shortTitle>Asistente virtual</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.tableau.com/data-insights/ai/ai-virtual-assistant</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:10:19</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_111">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/111/ai-virtual-assistant.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.tableau.com/data-insights/ai/ai-virtual-assistant</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:10:25</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_112">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>SoldAI</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sobrino</foaf:surname>
+                        <foaf:givenName>Diego Campos</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_113"/>
+        <dc:title>¿Cómo funciona el reconocimiento automático del habla?</dc:title>
+        <dcterms:abstract>Conociendo la primera fase de la interacción verbal entre humanos y máquinas</dcterms:abstract>
+        <dc:date>2020-05-15T21:23:10.328Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/soldai/c%C3%B3mo-funciona-el-reconocimiento-autom%C3%A1tico-del-habla-eb038ecfe72e</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:12:12</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_113">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/113/cómo-funciona-el-reconocimiento-automático-del-habla-eb038ecfe72e.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/soldai/c%C3%B3mo-funciona-el-reconocimiento-autom%C3%A1tico-del-habla-eb038ecfe72e</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:12:26</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://docs.aws.amazon.com/es_es/lex/latest/dg/how-it-works.html">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_115"/>
+        <dc:title>Cómo Amazon Lex cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento - Amazon Lex V1</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://docs.aws.amazon.com/es_es/lex/latest/dg/how-it-works.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:16:04</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_115">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/115/how-it-works.html"/>
+        <dc:title>Cómo Amazon Lex cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento cionamiento - Amazon Lex V1</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://docs.aws.amazon.com/es_es/lex/latest/dg/how-it-works.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:16:10</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.ibm.com/products/watsonx-assistant">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>IBM watsonx Assistant Virtual Agent</dc:title>
+        <dcterms:abstract>IBM watsonx Assistant provides customers with fast, consistent and accurate answers across any application, device or channel.</dcterms:abstract>
+        <z:language>en-us</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ibm.com/products/watsonx-assistant</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:28:12</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://medium.com/@asklua/what-is-rasa-the-open-source-ai-for-building-conversational-chatbots-8a86bef47ec4">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Medium</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>AskLua</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_118"/>
+        <dc:title>What is RASA? — the open-source AI for building conversational chatbots.</dc:title>
+        <dcterms:abstract>As machine learning and artificial intelligence continue to develop amazing products which seemed impossible, machines gain consciousness…</dcterms:abstract>
+        <dc:date>2020-11-06T09:15:16.604Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>What is RASA?</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/@asklua/what-is-rasa-the-open-source-ai-for-building-conversational-chatbots-8a86bef47ec4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:28:35</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_118">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/118/what-is-rasa-the-open-source-ai-for-building-conversational-chatbots-8a86bef47ec4.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/@asklua/what-is-rasa-the-open-source-ai-for-building-conversational-chatbots-8a86bef47ec4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 13:29:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://aws.amazon.com/es/what-is/python/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Amazon Web Services, Inc.</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_120"/>
+        <dc:title>¿Qué es Python? - Explicación del lenguaje Python - AWS</dc:title>
+        <dcterms:abstract>Descubra más acerca del lenguaje de programación sencillo Python, de sus beneficios y de los recursos para utilizarlo.</dcterms:abstract>
+        <z:language>es-ES</z:language>
+        <z:shortTitle>¿Qué es Python?</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://aws.amazon.com/es/what-is/python/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:39:34</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_120">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/120/python.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://aws.amazon.com/es/what-is/python/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:39:55</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://blog.hubspot.es/website/que-es-python">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Londoño</foaf:surname>
+                        <foaf:givenName>Pablo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_122"/>
+        <dc:title>Qué es Python, para qué sirve y cómo se usa (+ recursos para aprender)</dc:title>
+        <dcterms:abstract>Conoce qué es Python, por qué es tan popular este lenguaje de programación, para qué se utiliza y qué recursos pueden ayudarte a dominarlo.</dcterms:abstract>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.hubspot.es/website/que-es-python</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:40:59</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_122">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/122/que-es-python.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.hubspot.es/website/que-es-python</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:41:17</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_124"/>
+        <dc:title>Learn Web Development Basics – HTML, CSS, and JavaScript Explained for Beginners</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:47:33</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_124">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/124/html-css-and-javascript-explained-for-beginners.html"/>
+        <dc:title>Learn Web Development Basics – HTML, CSS, and JavaScript Explained for Beginners</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:47:53</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://dev.to/hb/react-vs-vue-vs-angular-vs-svelte-1fdm">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>DEV Community</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_126"/>
+        <dc:title>React vs Vue vs Angular vs Svelte</dc:title>
+        <dcterms:abstract>In this article, I'm going to cover which of the top Javascript frontend frameworks: React, Vue, Angu...</dcterms:abstract>
+        <dc:date>2020-11-29</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dev.to/hb/react-vs-vue-vs-angular-vs-svelte-1fdm</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:58:35</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_126">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/126/react-vs-vue-vs-angular-vs-svelte-1fdm.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dev.to/hb/react-vs-vue-vs-angular-vs-svelte-1fdm</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 14:58:58</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://medium.com/somoswigou/angular-vs-react-vs-vue-cu%C3%A1l-es-la-mejor-opci%C3%B3n-941a207951c7">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>SomosWigou</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Abraham</foaf:surname>
+                        <foaf:givenName>WIGOU | Andrés</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Angular vs React vs Vue: ¿Cuál es la mejor opción?</dc:title>
+        <dcterms:abstract>Hoy en día no es práctico imaginar el desarrollo web sin HTML, CSS y Javascript, esta última es el alma del desarrollo front-end de…</dcterms:abstract>
+        <dc:date>2019-11-11T18:44:10.557Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Angular vs React vs Vue</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/somoswigou/angular-vs-react-vs-vue-cu%C3%A1l-es-la-mejor-opci%C3%B3n-941a207951c7</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:00:56</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.accelebrate.com/blog/react-angular-vue-svelte-comparison">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Comparing React, Angular, Vue, and Svelte - Accelebrate</dc:title>
+        <dcterms:abstract>This article discusses what React, Angular, Vue, and Svelte have in common and what makes each different from the others.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.accelebrate.com/blog/react-angular-vue-svelte-comparison</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:01:22</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://pythongeeks.org/advantages-disadvantages-of-django/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Python Geeks</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Team</foaf:surname>
+                        <foaf:givenName>PythonGeeks</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_130"/>
+        <dc:title>Advantages of Django | Disadvantages of Django</dc:title>
+        <dcterms:abstract>Learn the Advantages and Disadvantages of Django Framework. See where to use it and where it is not best to use it.</dcterms:abstract>
+        <dc:date>2022-01-14T03:30:08+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pythongeeks.org/advantages-disadvantages-of-django/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:17:42</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_130">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/130/advantages-disadvantages-of-django.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pythongeeks.org/advantages-disadvantages-of-django/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:18:14</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://careerkarma.com/blog/companies-that-use-flask/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Companies That Use Flask</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:20:39</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_132">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Companies That Use Flask</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:20:43</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_133">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_135"/>
+        <dc:title>Companies That Use Flask</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:21:12</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_135">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/135/companies-that-use-flask.html"/>
+        <dc:title>Companies That Use Flask</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:21:41</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_134">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Companies That Use Flask</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:21:26</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_136">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Career Karma</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Condez</foaf:surname>
+                        <foaf:givenName>A. J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_137"/>
+        <dc:title>Top 10 Big Companies Using Flask</dc:title>
+        <dcterms:abstract>This guide will examine the top companies that use Flask and help you learn more about what Flask is.</dcterms:abstract>
+        <dc:date>2022-02-13T15:00:12+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:22:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_137">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/137/companies-that-use-flask.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://careerkarma.com/blog/companies-that-use-flask/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:22:39</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://dev.to/detimo/python-flask-pros-and-cons-1mlo">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_139"/>
+        <dc:title>Python Flask: pros and cons - DEV Community</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dev.to/detimo/python-flask-pros-and-cons-1mlo</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:25:26</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_139">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/139/python-flask-pros-and-cons-1mlo.html"/>
+        <dc:title>Python Flask: pros and cons - DEV Community</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dev.to/detimo/python-flask-pros-and-cons-1mlo</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:26:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_140">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Django vs. Flask vs. FastAPI</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://platzi.com/blog/django-flask-fastapi/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:28:47</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://towardsdatascience.com/build-and-host-fast-data-science-applications-using-fastapi-823be8a1d6a0">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_142"/>
+        <dc:title>Build And Host Fast Data Science Applications Using FastAPI | by Farhad Malik | Towards Data Science</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://towardsdatascience.com/build-and-host-fast-data-science-applications-using-fastapi-823be8a1d6a0</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:38:18</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_142">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/142/build-and-host-fast-data-science-applications-using-fastapi-823be8a1d6a0.html"/>
+        <dc:title>Build And Host Fast Data Science Applications Using FastAPI | by Farhad Malik | Towards Data Science</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://towardsdatascience.com/build-and-host-fast-data-science-applications-using-fastapi-823be8a1d6a0</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:38:39</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://neoteric.eu/blog/6-main-differences-between-llama2-gpt35-and-gpt4/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Neoteric</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Luzniak</foaf:surname>
+                        <foaf:givenName>Karolina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>6 main differences between Llama 2, GPT-3.5 &amp; GPT-4</dc:title>
+        <dcterms:abstract>Is Llama 2 better than GPT-4 or GPT-3.5? Or maybe it’s not even anywhere near? Check the most comprehensive comparison: Llama 2 vs. GPT-3.5 vs. GPT-4.</dcterms:abstract>
+        <dc:date>2023-08-02T17:07:21+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://neoteric.eu/blog/6-main-differences-between-llama2-gpt35-and-gpt4/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:50:11</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.labellerr.com/blog/llama2-vs-gpt-3-5-vs-gpt-4/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Labellerr</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Llama 2 Vs GPT-3.5 Vs GPT-4: What, When &amp; How To Chose</dc:title>
+        <dcterms:abstract>In this article we'll discuss the use case and example that suits better to Llama2 vs GPT models. Performace comparison and suitability.</dcterms:abstract>
+        <dc:date>2023-10-05T05:56:33.000Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Llama 2 Vs GPT-3.5 Vs GPT-4</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.labellerr.com/blog/llama2-vs-gpt-3-5-vs-gpt-4/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:50:17</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://arstechnica.com/information-technology/2023/05/googles-top-ai-model-palm-2-hopes-to-upstage-gpt-4-in-generative-mastery/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>The AI race heats up: Google announces PaLM 2, its answer to GPT-4 | Ars Technica</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://arstechnica.com/information-technology/2023/05/googles-top-ai-model-palm-2-hopes-to-upstage-gpt-4-in-generative-mastery/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:50:21</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://sh-tsang.medium.com/brief-review-llama-2-open-foundation-and-fine-tuned-chat-models-6666eb8b56b7">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Medium</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tsang</foaf:surname>
+                        <foaf:givenName>Sik-Ho</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_147"/>
+        <dc:title>Brief Review — Llama 2: Open Foundation and Fine-Tuned Chat Models</dc:title>
+        <dcterms:abstract>Llama 2, Open Source and Released</dcterms:abstract>
+        <dc:date>2023-08-05T04:52:45.216Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Brief Review — Llama 2</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://sh-tsang.medium.com/brief-review-llama-2-open-foundation-and-fine-tuned-chat-models-6666eb8b56b7</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:58:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_147">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/147/brief-review-llama-2-open-foundation-and-fine-tuned-chat-models-6666eb8b56b7.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://sh-tsang.medium.com/brief-review-llama-2-open-foundation-and-fine-tuned-chat-models-6666eb8b56b7</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 15:59:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.bytebase.com/blog/postgres-vs-mongodb/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Bytebase</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_149"/>
+        <dc:title>Postgres vs. MongoDB: a Complete Comparison in 2023</dc:title>
+        <dcterms:abstract>Why Comparing Postgres and MongoDB The 2023 Stack Overflow survey shows that Postgres has become the most admired, desired database. !stackoverflow ICYDK, Mongo...</dcterms:abstract>
+        <dc:date>2023-07-20</dc:date>
+        <z:shortTitle>Postgres vs. MongoDB</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.bytebase.com/blog/postgres-vs-mongodb/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:11:27</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_149">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/149/postgres-vs-mongodb.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.bytebase.com/blog/postgres-vs-mongodb/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:12:06</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://kinsta.com/blog/mongodb-vs-postgresql/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_151"/>
+        <dc:title>MongoDB vs PostgreSQL: 15 Critical Differences</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://kinsta.com/blog/mongodb-vs-postgresql/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:13:02</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_151">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/151/mongodb-vs-postgresql.html"/>
+        <dc:title>MongoDB vs PostgreSQL: 15 Critical Differences</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://kinsta.com/blog/mongodb-vs-postgresql/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:13:29</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.mongodb.com/compare/mongodb-postgresql">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>MongoDB</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_153"/>
+        <dc:title>MongoDB Vs PostgreSQL</dc:title>
+        <dcterms:abstract>Comparing PostgreSQL &amp; MongoDB's performance, speed, scalability, &amp; other benchmarks</dcterms:abstract>
+        <z:language>en-us</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.mongodb.com/compare/mongodb-postgresql</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:14:59</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_153">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/153/mongodb-postgresql.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.mongodb.com/compare/mongodb-postgresql</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:15:20</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.freecodecamp.org/espanol/news/visual-studio-vs-visual-studio-code-cual-es-la-diferencia-entre-estos-editores-de-codigo-ide/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>freeCodeCamp.org</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_155"/>
+        <dc:title>Visual Studio vs Visual Studio Code: ¿Cuál es la diferencia entre estos editores de código IDE?</dc:title>
+        <dcterms:abstract>La primera vez que escuché sobre &quot;Visual Studio&quot;, pensé que era lo mismo que &quot;Visual Studio Code&quot;. No sé por qué Microsoft decidió confundir a todos con los nombres de esas dos herramientas de desarrollo. Pero esa es una historia para otro día. “Visual Studio” y “Visual Studio Code” no</dcterms:abstract>
+        <dc:date>2023-03-03T02:06:11.000Z</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>Visual Studio vs Visual Studio Code</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.freecodecamp.org/espanol/news/visual-studio-vs-visual-studio-code-cual-es-la-diferencia-entre-estos-editores-de-codigo-ide/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:20:31</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_155">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/155/visual-studio-vs-visual-studio-code-cual-es-la-diferencia-entre-estos-editores-de-codigo-ide.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.freecodecamp.org/espanol/news/visual-studio-vs-visual-studio-code-cual-es-la-diferencia-entre-estos-editores-de-codigo-ide/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:20:59</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.atlassian.com/es/git/tutorials/what-is-git">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_157"/>
+        <dc:title>Qué es Git | Atlassian Git Tutorial</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.atlassian.com/es/git/tutorials/what-is-git</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:25:36</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_157">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/157/what-is-git.html"/>
+        <dc:title>Qué es Git | Atlassian Git Tutorial</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.atlassian.com/es/git/tutorials/what-is-git</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 16:25:51</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.scrum.org/resources/scrum-guide">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_159"/>
+        <dc:title>The Scrum Guide</dc:title>
+        <dcterms:abstract>Scrum is defined in the Scrum Guide by Ken Schwaber and Jeff Sutherland, the originators of Scrum and is translated and available in over 30 languages.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.scrum.org/resources/scrum-guide</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 17:58:03</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_159">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/159/scrum-guide.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.scrum.org/resources/scrum-guide</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-11-02 17:58:12</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://blog.comparasoftware.com/metodologia-xp/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Blog - ComparaSoftware</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Mancuzo</foaf:surname>
+                        <foaf:givenName>Gabriel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_162"/>
+        <dc:title>Metodología XP: La Mejor Vía para el Desarrollo de Software</dc:title>
+        <dcterms:abstract>La Metodología XP es un tipo de gestión de proyectos basado en Agile. Conoce por qué es el mejor camino para los desarrolladores de software.</dcterms:abstract>
+        <dc:date>2020-08-08T22:29:42+00:00</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>Metodología XP</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.comparasoftware.com/metodologia-xp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-05 13:14:05</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_162">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/162/metodologia-xp.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.comparasoftware.com/metodologia-xp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-05 13:14:20</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.sinnaps.com/blog-gestion-proyectos/metodologia-xp">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Gestor de proyectos online</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_163"/>
+        <dc:title>Metodología XP o Programación Extrema: ¿Qué es y cómo aplicarla?</dc:title>
+        <dcterms:abstract>¿En qué nos beneficia la Metodología XP? Conoce su funcionamiento, fases, roles del equipo y ritmo de trabajo. ¡Descúbre cómo aplicarla!</dcterms:abstract>
+        <z:language>es-ES</z:language>
+        <z:shortTitle>Metodología XP o Programación Extrema</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sinnaps.com/blog-gestion-proyectos/metodologia-xp</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-05 13:14:11</dcterms:dateSubmitted>
+        <dc:description>Section: Blog de gestión de proyectos</dc:description>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_163">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/163/metodologia-xp.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sinnaps.com/blog-gestion-proyectos/metodologia-xp</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-05 13:14:22</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://datavid.com/blog/named-entity-recognition-apis">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_165"/>
+        <dc:title>Top 5 named entity recognition APIs to use in your app</dc:title>
+        <dcterms:abstract>Named entity recognition can help you process massive amounts of data. Learn which named entity recognition APIs will help your business run efficiently.</dcterms:abstract>
+        <dc:date>2023-08-10</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://datavid.com/blog/named-entity-recognition-apis</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-11 23:54:54</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_165">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/165/named-entity-recognition-apis.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://datavid.com/blog/named-entity-recognition-apis</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-11 23:55:04</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="http://www.dandelion.eu">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Dandelion API</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>SpazioDati</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Dandelion API | Semantic Text Analytics as a service</dc:title>
+        <dcterms:abstract>Semantic Text Analytics API: From text to actionable data: extract meaning from unstructured text and put it in context with a simple API.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.dandelion.eu</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:01:54</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://medium.com/soldai/reconocimiento-de-entidades-nombradas-una-breve-introducci%C3%B3n-ad6e2a3f911a">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>SoldAI</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Viana</foaf:surname>
+                        <foaf:givenName>Rafael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Reconocimiento de entidades nombradas: Una breve introducción</dc:title>
+        <dcterms:abstract>NER. También conocido como extracción de entidades, consiste en localizar y clasificar partes del texto estudiado en categorías…</dcterms:abstract>
+        <dc:date>2020-06-16T23:44:18.440Z</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Reconocimiento de entidades nombradas</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://medium.com/soldai/reconocimiento-de-entidades-nombradas-una-breve-introducci%C3%B3n-ad6e2a3f911a</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:30:20</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://geekflare.com/es/named-entity-recognition/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Geekflare</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pathak</foaf:surname>
+                        <foaf:givenName>Amrita</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Reconocimiento de entidades nombradas (NER) explicado en términos sencillos</dc:title>
+        <dcterms:abstract>El reconocimiento de entidades nombradas (NER) ofrece una excelente manera de comprender una información textual determinada e identificar entidades o etiquetas específicas dentro de ella para varios</dcterms:abstract>
+        <dc:date>2023-10-11T04:15:00+00:00</dc:date>
+        <z:language>es</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://geekflare.com/es/named-entity-recognition/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:30:40</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.klippa.com/es/blog/informativo/reconocimento-entidades-nombradas/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Klippa</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Osorio</foaf:surname>
+                        <foaf:givenName>Valeria</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>¿Qué es el Reconocimiento de Entidades Nombradas?</dc:title>
+        <dcterms:abstract>Definición y Métodos de Reconocimiento de Entidades Nombradas ✓Cómo Construir un Modelo NER ✓Implementación con nltk &amp; spaCy ✓ Casos de Uso NER ✓Lee más &gt;&gt;</dcterms:abstract>
+        <dc:date>2023-06-01T10:17:44+00:00</dc:date>
+        <z:language>es-ES</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.klippa.com/es/blog/informativo/reconocimento-entidades-nombradas/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:33:31</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_170">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Dandelion API</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>SpazioDati</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_171"/>
+        <dc:title>Dandelion API | Semantic Text Analytics as a service</dc:title>
+        <dcterms:abstract>Semantic Text Analytics API: From text to actionable data: extract meaning from unstructured text and put it in context with a simple API.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.dandelion.eu</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:38:47</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_171">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/171/docs.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://dandelion.eu/docs/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:38:57</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.datacamp.com/blog/what-is-named-entity-recognition-ner">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>What is Named Entity Recognition (NER)? Methods, Use Cases, and Challenges | DataCamp</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.datacamp.com/blog/what-is-named-entity-recognition-ner</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:40:29</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.geeksforgeeks.org/named-entity-recognition-in-nlp/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>GeeksforGeeks</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_174"/>
+        <dc:title>Named Entity Recognition in NLP</dc:title>
+        <dcterms:abstract>A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes and practice/competitive programming/company interview Questions.</dcterms:abstract>
+        <dc:date>2023-07-31T15:40:22+00:00</dc:date>
+        <z:language>en-US</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.geeksforgeeks.org/named-entity-recognition-in-nlp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:41:30</dcterms:dateSubmitted>
+        <dc:description>Section: Machine Learning</dc:description>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_174">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/174/named-entity-recognition-in-nlp.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.geeksforgeeks.org/named-entity-recognition-in-nlp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:41:40</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.turing.com/kb/a-comprehensive-guide-to-named-entity-recognition">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_176"/>
+        <dc:title>A Comprehensive Guide to Named Entity Recognition (NER)</dc:title>
+        <dcterms:abstract>Learn how to use named entity recognition to extract and identify essential information from unstructured data - a vital task when dealing with large datasets.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.turing.com/kb/a-comprehensive-guide-to-named-entity-recognition</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:42:37</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_176">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/176/a-comprehensive-guide-to-named-entity-recognition.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.turing.com/kb/a-comprehensive-guide-to-named-entity-recognition</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:42:46</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://paperswithcode.com/task/named-entity-recognition-ner">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_178"/>
+        <dc:title>Papers with Code - Named Entity Recognition (NER)</dc:title>
+        <dcterms:abstract>**Named Entity Recognition (NER)** is a task of Natural Language Processing (NLP) that involves identifying and classifying named entities in a text into predefined categories such as person names, organizations, locations, and others. The goal of NER is to extract structured information from unstructured text data and represent it in a machine-readable format. Approaches typically use BIO notation, which differentiates the beginning (B) and the inside (I) of entities. O is used for non-entity tokens.
+
+Example:
+
+| Mark | Watney | visited | Mars |
+| --- | ---| --- | --- |
+| B-PER | I-PER | O | B-LOC |
+
+&lt;span style=&quot;color:grey; opacity: 0.6&quot;&gt;( Image credit: [Zalando](https://research.zalando.com/welcome/mission/research-projects/flair-nlp/) )&lt;/span&gt;</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://paperswithcode.com/task/named-entity-recognition-ner</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:43:07</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_178">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/178/named-entity-recognition-ner.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://paperswithcode.com/task/named-entity-recognition-ner</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:43:15</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://sourajit16-02-93.medium.com/zero-shot-named-entity-recognition-using-openai-chatgpt-api-46738191f375">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Medium</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>chowdhury</foaf:surname>
+                        <foaf:givenName>sourajit roy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Zero-Shot Named Entity Recognition using OpenAI ChatGPT API</dc:title>
+        <dcterms:abstract>This is a hands-on practical of Zero-Shot Named Entity Recognition system using OpenAI ChatGPT API, Python and Streamlit in Google Colab.</dcterms:abstract>
+        <dc:date>2023-03-11T18:44:17.505Z</dc:date>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://sourajit16-02-93.medium.com/zero-shot-named-entity-recognition-using-openai-chatgpt-api-46738191f375</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:44:48</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.ibm.com/products/natural-language-understanding">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>IBM Watson Natural Language Understanding</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.ibm.com/products/natural-language-understanding</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:47:15</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://docs.aws.amazon.com/comprehend/latest/dg/custom-entity-recognition.html">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_182"/>
+        <dc:title>Custom entity recognition - Amazon Comprehend</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://docs.aws.amazon.com/comprehend/latest/dg/custom-entity-recognition.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:47:54</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_182">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/182/custom-entity-recognition.html"/>
+        <dc:title>Custom entity recognition - Amazon Comprehend</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://docs.aws.amazon.com/comprehend/latest/dg/custom-entity-recognition.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 00:48:04</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://datos.gob.es/es/blog/probamos-spacy-mucho-mas-que-una-libreria-para-crear-proyectos-reales-de-procesamiento-del">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Probamos SpaCy: mucho más que una librería para crear proyectos reales de procesamiento del lenguaje natural | datos.gob.es</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://datos.gob.es/es/blog/probamos-spacy-mucho-mas-que-una-libreria-para-crear-proyectos-reales-de-procesamiento-del</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-12 22:25:39</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.phind.com/search?cache=v791xclr9ybutav6grwa5yz4">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_186"/>
+        <dc:title>Necesito que me escribas sobre el surgimiento, el desarrollo y evolucion de los sistemas de gestion, no te olvides de poner las referencias bibliográficas</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.phind.com/search?cache=v791xclr9ybutav6grwa5yz4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:07:01</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_186">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/186/search.html"/>
+        <dc:title>Necesito que me escribas sobre el surgimiento, el desarrollo y evolucion de los sistemas de gestion, no te olvides de poner las referencias bibliográficas</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.phind.com/search?cache=v791xclr9ybutav6grwa5yz4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:07:26</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dialnet.unirioja.es/servlet/articulo?codigo=7055130">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1390-9304"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Castro Ramírez</foaf:surname>
+                        <foaf:givenName>Raúl Xavier</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Macías Chuto</foaf:surname>
+                        <foaf:givenName>Elizabeth Marina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Salazar González</foaf:surname>
+                        <foaf:givenName>Janeth Doris</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Sistemas integrados de gestión: Evolución y desarrollo en América Latina</dc:title>
+        <dcterms:abstract>Los sistemas de gestión son todos aquellos elementos que se interrelacionan para mejorar la respuesta oportuna hacia un determinado número de personas, organismos, los cuales de alguna manera demandan de un servicio o un bien. Integrarlo representa hacerlos uno solo para concentrar la mayor cantidad de información posible y re direccionarlas mediante procesos automatizados a donde sea necesario y aquí es donde nacen los Sistemas Integrados de Gestión. La investigación es de tipo documental no experimental en vista de que se recurrió a elementos de medios electrónicos utilizados como referencias bibliográficas para reforzar el tema de estudio. Entre las conclusiones generales que se pueden mencionar es que se debe conocer realmente que es lo que se quiere integrar y definir objetivamente los elementos que intervienen en ese proceso integrador y que se relacionan entre sí para desarrollar un sistema de calidad que proporcione la información solicitada o genere el requerimiento deseado. Entre las recomendaciones generales el Estado debe ser garante en proporcionar sistemas integrados de gestión en cualquier tipo de área de calidad y que satisfaga las necesidades demandadas.</dcterms:abstract>
+        <dc:date>2018</dc:date>
+        <z:language>spa</z:language>
+        <z:shortTitle>Sistemas integrados de gestión</z:shortTitle>
+        <z:libraryCatalog>dialnet.unirioja.es</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dialnet.unirioja.es/servlet/articulo?codigo=7055130</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:07:11</dcterms:dateSubmitted>
+        <dc:description>Publisher: Revista Publicando, Inc.
+Section: Revista Publicando</dc:description>
+        <bib:pages>373-384</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1390-9304">
+        <prism:volume>5</prism:volume>
+        <dc:title>Revista Publicando</dc:title>
+        <prism:number>15</prism:number>
+        <dc:identifier>ISSN 1390-9304</dc:identifier>
+    </bib:Journal>
+    <bib:Document rdf:about="https://www.dqsglobal.com/es-sv/aprenda/centro-de-conocimiento-dqs/que-es-un-sistema-de-gestion">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>DQS</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>¿Qué es un sistema de gestión?</dc:title>
+        <dcterms:abstract>¿Qué es un sistema de gestión?</dcterms:abstract>
+        <z:language>es-SV</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.dqsglobal.com/es-sv/aprenda/centro-de-conocimiento-dqs/que-es-un-sistema-de-gestion</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:09:08</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://blog.hubspot.es/sales/que-es-software-de-gestion">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Software de gestión: qué es y cuáles son las mejores opciones en 2022</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.hubspot.es/sales/que-es-software-de-gestion</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:13:22</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_189">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Software de gestión: qué es y cuáles son las mejores opciones en 2022</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://blog.hubspot.es/sales/que-es-software-de-gestion</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:14:07</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://ccfprosario.com.ar/antecedentes-de-los-sistemas-de-gestion/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>Antecedentes de Sistemas de Gestión: Historia y Evolución - CCFProsario.com.ar</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ccfprosario.com.ar/antecedentes-de-los-sistemas-de-gestion/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:15:32</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.programagestioncomercial.es/la-historia-de-los-programas-de-gestion-empresarial/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>La historia de los programas de gestión empresarial</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.programagestioncomercial.es/la-historia-de-los-programas-de-gestion-empresarial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:15:35</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.sage.com/es-es/blog/erp-360-la-evolucion-en-software-de-gestion-empresarial/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>ERP 360: La evolución del software de gestión empresarial I Sage</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sage.com/es-es/blog/erp-360-la-evolucion-en-software-de-gestion-empresarial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:15:39</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_193">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>La historia de los programas de gestión empresarial</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.programagestioncomercial.es/la-historia-de-los-programas-de-gestion-empresarial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:16:04</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="#item_194">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>ERP 360: La evolución del software de gestión empresarial I Sage</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sage.com/es-es/blog/erp-360-la-evolucion-en-software-de-gestion-empresarial/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 00:16:07</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.iebschool.com/blog/que-es-para-que-sirve-sap-management/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_196"/>
+        <dc:title>GUÍA: ¿Qué es SAP y qué soluciones ofrece?</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.iebschool.com/blog/que-es-para-que-sirve-sap-management/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:19:15</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_196">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/196/que-es-para-que-sirve-sap-management.html"/>
+        <dc:title>GUÍA: ¿Qué es SAP y qué soluciones ofrece?</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.iebschool.com/blog/que-es-para-que-sirve-sap-management/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:19:36</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://tipalti.com/erp-integrations/oracle-erp/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:title>What is Oracle ERP Software? | System Integration Guide | Tipalti</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://tipalti.com/erp-integrations/oracle-erp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:21:02</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://www.oracle.com/mx/erp/what-is-erp/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_199"/>
+        <dc:title>¿Qué es ERP? | Oracle México</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.oracle.com/mx/erp/what-is-erp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:24:38</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_199">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/199/what-is-erp.html"/>
+        <dc:title>¿Qué es ERP? | Oracle México</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.oracle.com/mx/erp/what-is-erp/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:25:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://winfor.es/que-es-sage-y-que-tipos-hay/">
+        <z:itemType>blogPost</z:itemType>
+        <dcterms:isPartOf>
+           <z:Blog><dc:title>Winfor Consulting</dc:title></z:Blog>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Prat</foaf:surname>
+                        <foaf:givenName>Anna</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>¿Qué es Sage?, y ¿qué tipos hay?</dc:title>
+        <dcterms:abstract>SAGE es el paquete de software o suite más utilizado por autónomos y emprendedores, pequeñas empresas, medianas empresas, grandes empresas y asesorías y despachos para la gestión de su actividad en lo que respecta a contabilidad, facturación y gestión del personal.</dcterms:abstract>
+        <dc:date>2022-03-24T15:25:01+00:00</dc:date>
+        <z:language>es</z:language>
+        <z:shortTitle>¿Qué es Sage?</z:shortTitle>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://winfor.es/que-es-sage-y-que-tipos-hay/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-12-13 01:27:15</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_201">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/201/Redes_neuronales-libre.pdf"/>
+        <dc:title>Redes_neuronales-libre.pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://d1wqtxts1xzle7.cloudfront.net/36957207/Redes_neuronales-libre.pdf?1426217722=&amp;response-content-disposition=inline%3B+filename%3DRedes_Neuronales_Artificiales.pdf&amp;Expires=1712329757&amp;Signature=E~fdU9Gv0k2CWinPVOn0xi5y9fhNRSpoN3VqqGbJfUF6eVrh1IvBSflgxizuCn4H5j02Oj1NIU2AN-MO03J5~I0zU2WOrSmp0FVg5izmHRD8hlbHQlrx~EBE8DIUoLVzSd6HHyzAM-7sq4MgButgZbVznRuJXie2VHAtMHpgHwJ1867i5a6O2PINxwsZyuPCQ9o2qtVQnl-SWAU3oRh8ixwJDim7v~nxlIILd0akFIxydoVAM-cS~76bsOw0BZvIzd0PboNU9y9wPDsuhTHuZklCU3W5PhfxmwbaUpkvN6I2HrWsMpvm2Za4gtIqDksJDP7Be56hGoFzIAFeceMoKA__&amp;Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-04-05 14:09:43</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.academia.edu/download/36957207/Redes_neuronales.pdf">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:title>Departamento de Física, Universidad de Concepción Chile</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Izaurieta</foaf:surname>
+                        <foaf:givenName>Fernando</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Saavedra</foaf:surname>
+                        <foaf:givenName>Carlos</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_203"/>
+        <dc:title>Redes neuronales artificiales</dc:title>
+        <dc:date>2000</dc:date>
+        <z:libraryCatalog>Google Scholar</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.academia.edu/download/36957207/Redes_neuronales.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-04-05 14:10:45</dcterms:dateSubmitted>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_203">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/203/Izaurieta y Saavedra - 2000 - Redes neuronales artificiales.pdf"/>
+        <dc:title>Available Version (via Google Scholar)</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.academia.edu/download/36957207/Redes_neuronales.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-04-05 14:10:55</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Collection rdf:about="#collection_1">
+        <dc:title>Thesis</dc:title>
+        <dcterms:hasPart rdf:resource="#item_201"/>
+        <dcterms:hasPart rdf:resource="https://www.academia.edu/download/36957207/Redes_neuronales.pdf"/>
+    </z:Collection>
+</rdf:RDF>
