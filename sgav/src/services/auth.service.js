@@ -31,12 +31,32 @@ class AuthService {
         }
     }
 
+    async getAllUsers() {
+        try {
+            const response = await axios.get(`${API_URL}/auth/users/`);
+            return response.data;
+        } catch (error) {
+            console.error("Error al obtener todos los usuarios: ", error);
+            throw error;
+        }
+    }
+    
     async getUserIdByEmail(email) {
         try {
             const response = await axios.get(`${API_URL}/auth/user-id/?email=${email}`);
             return response.data;
         } catch (error) {
             console.error("Error al obtener el ID del usuario por correo electrónico: ", error);
+            throw error;
+        }
+    }
+
+    async isAdmin(userEmail) {
+        try {
+            const response = await axios.post(`${API_URL}/auth/admin/`, userEmail);
+            return response.data;
+        } catch (error) {
+            console.error("Error al verificar si el usuario es administrador: ", error);
             throw error;
         }
     }

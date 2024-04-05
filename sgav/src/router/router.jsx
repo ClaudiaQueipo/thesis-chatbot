@@ -91,6 +91,7 @@ const Login = lazy(() => import('../views/pages/Login'));
 const AssistantManagement = lazy(() => import('../views/pages/AssistantManagement'));
 const CreateAssistant = lazy(() => import('../views/pages/CreateAssistant'));
 const EditAssistant = lazy(() => import('../views/pages/EditAssistant'));
+const Admin = lazy(() => import('../views/pages/Admin'))
 
 export const router = createBrowserRouter([
   {
@@ -131,7 +132,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'admin',
-        element: <NotFound />
+        element: <Admin />
       },
       {
         path: '*',
