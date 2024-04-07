@@ -1,6 +1,8 @@
 from ruamel.yaml import YAML
 import os
 
+from utils.format_titles import format_title
+
 
 
 def  domYaml(ques, res, name):  # Recibe preguntas y respuestas
@@ -11,6 +13,8 @@ def  domYaml(ques, res, name):  # Recibe preguntas y respuestas
 
         auxutter = []
 
+
+        formatted_ques = [format_title(q) for q in ques]
         #######################################################
         # PLANTILLA para Archivo RASA
         saludo = ['saludar',
@@ -39,7 +43,7 @@ def  domYaml(ques, res, name):  # Recibe preguntas y respuestas
                        {'utter_fuera_contexto':
                         [{'text': "Lo siento, no puedo entender o manejar lo que acabas de decir."}]}]
         versionRasa= {'version': "3.1"}
-        intent= {'intents': saludo + ques}
+        intent= {'intents': saludo + formatted_ques}
         config= {'session_config': {
             'session_expiration_time': 60,
             'carry_over_slots_to_new_session': True, }
@@ -63,10 +67,11 @@ def  domYaml(ques, res, name):  # Recibe preguntas y respuestas
             yaml.dump(versionRasa, yaml_file)
             yaml.dump(intent, yaml_file)
             yaml=YAML()
-            for i in range(len(ques)):
+            for i in range(len(formatted_ques)):
                 # Guardando la info de repsonses
-                auxutter.append(
-                    {'utter_{}'.format(ques[i]): [{'text': res[i]}]})
+                if formatted_ques[i] != "":
+                    auxutter.append(
+                        {f'utter_{formatted_ques[i]}': [{'text': res[i]}]})
 
             toPrintYaml = dict()
             for element in utterSaludo:  # Poniendo informacion en un diccionario, clave = valor

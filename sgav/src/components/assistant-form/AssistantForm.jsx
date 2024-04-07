@@ -33,7 +33,7 @@ export default function AssistantForm({
       setQuestions(data);
       setAssistantInput({
         ...assistant,
-        questions: data.split('\n')
+        questions: data
       })
       setLoading(false)
 

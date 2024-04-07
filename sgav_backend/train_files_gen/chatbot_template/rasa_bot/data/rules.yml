@@ -1,44 +1,13 @@
-version: "3.0"
+version: "3.1"
 
 rules:
-  - rule: Saludar cada vez que el usuario salude
-    steps:
-      - intent: greet
-      - action: utter_greet
 
-  - rule: Say 'I am a bot' anytime the user challenges
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - rule: Diga 'no entiendo' si no reconoce una pregunta
-    steps:
-    - intent: fuera_contexto
-    - action: utter_fuera_contexto
-  - rule: Diga 'no entiendo' si una pregunta cae por debajo del umbral de confianza
-      configurado (0.7)
-    steps:
-    - intent: nlu_fallback
-    - action: utter_fuera_contexto
-
-  - rule: Despedirse cada vez que el usuario se despida
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
-
-  - rule: Activate form
-    steps:
-    - intent: request_names
-    - action: name_form
-    - active_loop: name_form
-
-  - rule: Submit form
-    condition:
-    - active_loop: name_form
-    steps:
-    - action: name_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - action: utter_submit
-    - action: utter_slots_values
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

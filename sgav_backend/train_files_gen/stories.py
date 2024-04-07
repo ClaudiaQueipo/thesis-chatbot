@@ -1,6 +1,9 @@
 from ruamel.yaml import YAML
 import os
 
+from utils.format_titles import format_title
+
+
 
 def storiesYaml(ques, res, name):  # Recibe preguntas y respuestas
     GENERATE_FILE = name
@@ -10,12 +13,13 @@ def storiesYaml(ques, res, name):  # Recibe preguntas y respuestas
 
         auxutter = []
         #######################################################
+        formatted_ques = [format_title(q) for q in ques]
 
         # PLANTILLA para Archivo RASA
-        for i in range(len(ques)):
+        for i in range(len(formatted_ques)):
             auxutter.append(
                 {"story": 'option ' + str(i + 1),
-                 'steps': [{"intent": ques[i]}, {"action": 'utter_{}'.format(ques[i])}]})
+                 'steps': [{"intent": formatted_ques[i]}, {"action": 'utter_{}'.format(formatted_ques[i])}]})
 
         stories = {
             'stories': [{'story': 'camino feliz',

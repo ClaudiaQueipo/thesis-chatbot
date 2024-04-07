@@ -1,0 +1,86 @@
+version: '3.1'
+intents:
+  - saludar
+  - despedir
+  - afirmar
+  - negar
+  - animo
+  - no_animo
+  - bot
+  - fuera_contexto
+  - 1_cual_es_la_composicion_aproximada_del_universo_
+  - 2_como_interactua_la_materia_oscura_con_la_gravedad_
+  - 3_por_que_no_podemos_ver_directamente_la_materia_oscura_
+  - 4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_
+  - 5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_
+  - 6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_
+  - 7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_
+  - 8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_
+  - 9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_
+  - 10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_
+  - 11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_
+  - 12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_
+  - 13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo
+responses:
+  utter_saludar:
+  - text: ¿Cómo estás?
+  utter_ayuda:
+  - text: ¿En qué puedo ayudarte?
+  utter_feliz:
+  - text: ¡Genial, continúa!
+  utter_adios:
+  - text: Adiós, puedes consultarme cuando quieras
+  utter_soybot:
+  - text: Soy un bot, creado por Rasa.
+  utter_fuera_contexto:
+  - text: Lo siento, no puedo entender o manejar lo que acabas de decir.
+  utter_1_cual_es_la_composicion_aproximada_del_universo_:
+  - text: '1 -  No puedo proporcionar una respuesta ya que soy una inteligencia artificial
+      y no tengo la capacidad de comprender o responder preguntas complejas sobre
+      el universo. Mi función es brindar información básica y no puedo hacer suposiciones
+      o inventar respuestas. '
+  utter_2_como_interactua_la_materia_oscura_con_la_gravedad_:
+  - text: 2 -  La composición aproximada del universo es 95% de energía oscura y materia
+      oscura, y 5% de materia visible.
+  utter_3_por_que_no_podemos_ver_directamente_la_materia_oscura_:
+  - text: 3 -  La materia oscura interactúa con la gravedad, pero no puede ser vista
+      directamente ya que sus partículas son incapaces de producir, reflejar o absorber
+      luz.
+  utter_4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_:
+  - text: 4 -  No podemos ver directamente la materia oscura porque sus partículas
+      son incapaces de producir, reflejar o absorber luz.
+  utter_5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_:
+  - text: 5 -  Materia oscura caliente, materia oscura templada y materia oscura fría.
+  utter_6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_:
+  - text: '6 -  Los neutrinos son partículas que viajan con velocidades relativistas
+      y se consideran un ejemplo de materia oscura caliente. Sin embargo, los límites
+      de los neutrinos indican que solo contribuyen en una pequeña cantidad a la densidad
+      de la materia oscura. Por lo tanto, aunque se relacionan con la materia oscura
+      caliente, no explican completamente su composición. '
+  utter_7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_:
+  - text: 7 -  Las partículas de materia oscura templada interactúan más débilmente
+      que los neutrinos, son menos abundantes y tienen una masa del orden de 1eV.
+  utter_8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_:
+  - text: 8 -  La expansión del universo continuaría para siempre.
+  utter_9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_:
+  - text: 9 -  La materia oscura es crucial para entender el comportamiento del universo
+      porque junto con la energía oscura, conforma el 95% de la composición del universo.
+      Sin la materia oscura, la expansión del universo continuaría para siempre, pero
+      si hay suficiente materia oscura, la expansión del universo podría ralentizarse,
+      detenerse o incluso invertirse. Además, la materia oscura juega un papel importante
+      en la formación de estructuras como galaxias y cúmulos de galaxias.
+  utter_10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_:
+  - text: 10 -  La materia oscura y la energía oscura juntas componen aproximadamente
+      el 95% del universo.
+  utter_11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_:
+  - text: 11 -  A través de su efecto gravitacional.
+  utter_12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_:
+  - text: 12 -  Muchos aspectos de la naturaleza de la materia oscura siguen siendo
+      un misterio, incluyendo su composición exacta y su distribución en el universo.
+  utter_13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo:
+  - text: 13 -  Las observaciones actuales del mapa de materia oscura difieren en
+      un pequeño porcentaje y muestran que la materia está extendida de forma un poco
+      demasiado uniforme.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

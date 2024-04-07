@@ -1,167 +1,91 @@
-version: "3.0"
+version: "3.1"
 
 nlu:
 - intent: greet
   examples: |
     - hey
-    - hola
+    - hello
     - hi
-    - buenos días
-    - buenas tardes
-    - buenas noches
-    - Holi
-    - oye
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
 
 - intent: goodbye
   examples: |
-    - luego te veo
-    - hasta pronto
-    - adiós
-    - hasta luego
-    - ciao ciao
-    - hasta la vista
-    - más tarde hablamos    
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
 
-- intent: fuera_contexto
+- intent: affirm
   examples: |
-    - tengo hambre
-    - ¿Elon Musk va a dominar el mundo?
-    - ¿cuantos kilometros hay de aqui a la luna?
-    - WTF
-    - de que color es el bigote de hittler?
-    - porque un cuervo es igual a un escritorio?
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
 
 - intent: mood_unhappy
   examples: |
-    - triste
-    - infeliz
-    - deprimido
-    - adolorido 
-    - obstinado
-    - ostinado
-    - furioso   
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
 
 - intent: bot_challenge
   examples: |
-    - eres un bot?
-    - eres humano?
-    - quien eres?
-    - que eres?
-
-- intent: pregunta_informacion
-  examples: |
-    - informacion
-    - info
-    - que temas tratas
-    - que informacion me puedes brindar
-    - que informacion tienes
-    - que sabes
-
-- intent: pregunta_fitib
-  examples: |
-    - que es la fitib
-    - fitib
-    - que hace la fitib
-    - que es fitib
-    - afip
-    - lafitil
-    - fiti
-
-- intent: pregunta_pdteFeu
-  examples: |
-    - quien es el presidente de la feu
-    - presidente de la feu
-    - presidente feu
-    - feu    
-
-- intent: pregunta_carreras
-  examples: |
-    - que carreras se estudian en la fitib
-    - que se estudia en la fitib
-    - cuales carreras se estudian en la fitib
-
-- intent: pregunta_IngI
-  examples: |
-    - que es la ingenieria informatica
-    - ingenieria informatica
-
-- intent: pregunta_LicI
-  examples: |
-    - que es la licenciatura informatica
-    - licenciatura informatica
-    - licenciatura en informatica
-
-- intent: pregunta_IngTele
-  examples: |
-    - que es la ingenieria ingenieria en telecomunicaciones
-    - ingenieria en telecomunicaciones
-    - tele
-    - telecomunicaciones
-
-- intent: pregunta_Biom
-  examples: |
-    - que es la biomedica
-    - biomedica
-
-- intent: pregunta_Decana
-  examples: |
-    - quien es la decana 
-    - cual es el nombre de la decana 
-    - como se llama la decana 
-    - decana 
-
-- intent: pregunta_proyectos
-  examples: |
-    - proyectos investigativos
-    - proyecto investigativo
-    - que proyectos tiene ?
-    - proyectos
-    - proyecto
-
-- intent: pregunta_creadores
-  examples: |
-    - creadores
-    - autores
-    - quienes te crearon?
-    - quienes te hicieron?
-    - quien te creo?
-    - quen te hizo?
-
-- intent: pregunta_ingenieros
-  examples: |
-    - ingenieros
-    - que hacen los ingenieros?
-    - cual es el trabajo de un ingeniero
-    - ingeniero
-
-- intent: pregunta_eva
-  examples: |
-    - eva
-    - Entorno virtual de aprendizaje
-    - enlace del eva
-    - link del eva
-
-- intent: ask_me_anything
-  examples: |
-    - guarda mi nombre
-    - conserva mi nombre
-    - quiero que sepas mi nombre
-    
-- intent: repite_nombre
-  examples: |
-    - Como me llamo
-    - Dime mi nombre 
-    - Sabes mi nombre?
-    - repite mi nombre
-
-    
-
-
-
-
-
-
-
-
-
-
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

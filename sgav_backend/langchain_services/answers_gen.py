@@ -5,8 +5,8 @@ from langchain_community.llms import LlamaCpp
 from core.config import settings
 
 
-# from langchain_openai import OpenAI
-# llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
+from langchain_openai import OpenAI
+llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
 
 
 async def answers_generation(docs_question_gen, questions):
@@ -36,6 +36,6 @@ async def answers_generation(docs_question_gen, questions):
 
     for idx, question in enumerate(question_list):
         answer = answer_gen_chain.run(question)
-        answers.append(f"{idx+1} - {answer}")
+        answers.append(answer+'\n')
 
     return answers

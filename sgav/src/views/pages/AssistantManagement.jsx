@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Table,
   TableHeader,
@@ -27,6 +27,9 @@ import { getUser } from "../../utils/auth";
 import useAnswersStore from "../../store/answersStore";
 import useQuestionsStore from "../../store/questionsStore";
 import DeleteModal from "../../components/DeleteModal";
+import { botService } from "../../services/test_bot.service";
+import LoadingFullPage from "./LoadingFullPage";
+import { setPort } from "../../utils/utils";
 
 const INITIAL_VISIBLE_COLUMNS = [
   "name",
@@ -58,10 +61,11 @@ function formatDate(dateString) {
 export default function App() {
   useFetchAssistants()
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
+  const navigate = useNavigate()
   const assistants = useAssistantsStore(state => state.assistants)
   const [filterValue, setFilterValue] = React.useState("");
   const [assistantToDelete, setAssistantToDelete] = React.useState(null);
+  const [assistantToTest, setAssistantToTest] = React.useState(null);
   const [selectedKeys, setSelectedKeys] = React.useState(new Set([]));
   const [visibleColumns, setVisibleColumns] = React.useState(
     new Set(INITIAL_VISIBLE_COLUMNS)
@@ -69,18 +73,26 @@ export default function App() {
   const setAnswers = useAnswersStore(state => state.setAnswers)
   const setQuestions = useQuestionsStore(state => state.setQuestions)
 
+  const [loadingTest, setLoadingTest] = React.useState(false);
   const [statusFilter, setStatusFilter] = React.useState("all");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [sortDescriptor, setSortDescriptor] = React.useState({
     column: "age",
     direction: "ascending",
   });
+
   const [page, setPage] = React.useState(1);
-
   const pages = Math.ceil(assistants.length / rowsPerPage);
-
   const hasSearchFilter = Boolean(filterValue);
 
+  const handleTest = async (a) => {
+    setLoadingTest(true)
+    const port = await botService.startBot(a.name)
+    setLoadingTest(false)
+    console.log("Puerto, ", port.port)
+    setPort(port.port)
+    navigate('/chat')
+  }
   const headerColumns = React.useMemo(() => {
     if (visibleColumns === "all") return columns;
 
@@ -151,10 +163,15 @@ export default function App() {
       case "actions":
         return (
           <div className="flex justify-start items-center gap-2">
-            <Button size="sm">
+            <Button size="sm" onClick={() => handleTest(assistant)} >
               <BugIcon className={iconClasses} />
             </Button>
-            <Button as={Link} size="sm" to="/gestion-asistentes/edit-assistant">
+            <Button size="sm" onClick={() => {
+              setAssistantInput(assistant)
+              setQuestions(assistant.questions)
+              setAnswers(assistant.answers)
+              navigate("/edit-assistant")
+            }}>
               <EditDoc className={iconClasses} />
             </Button>
             <Button size="sm" onClick={() => onOpen()} >
@@ -201,7 +218,7 @@ export default function App() {
             <div className="flex gap-3">
               <Button
                 as={Link}
-                to="/gestion-asistentes/create-assistant"
+                to="/create-assistant"
                 className="bg-secondary text-white"
                 endContent={<PlusIcon />}
                 size="md"
@@ -266,7 +283,7 @@ export default function App() {
   }, [selectedKeys, items.length, page, pages, hasSearchFilter]);
 
   const setAssistantInput = useAssistantStore(state => state.setAssistant)
-  
+
   useEffect(() => {
     const findAssistantById = (id) => {
       return assistants.find((assistant) => assistant._id === id);
@@ -311,63 +328,65 @@ export default function App() {
   );
 
   return (
-    <div>
-      <NavigationBar />
-      <div style={{ margin: "50px" }}>
-        <Table
-          isCompact
-          removeWrapper
-          aria-label="Example table with custom cells, pagination and sorting"
-          bottomContent={bottomContent}
-          bottomContentPlacement="outside"
-          checkboxesProps={{
-            classNames: {
-              wrapper:
-                "after:bg-foreground after:text-background text-background",
-            },
-          }}
-          //   classNames={classNames}
-          selectedKeys={selectedKeys}
-          selectionMode="single"
-          sortDescriptor={sortDescriptor}
-          topContent={topContent}
-          topContentPlacement="outside"
-          onSelectionChange={setSelectedKeys}
-          onSortChange={setSortDescriptor}
-        >
-          <TableHeader columns={headerColumns}>
-            {(column) => (
-              <TableColumn
-                key={column.uid}
-                align={column.uid === "actions" ? "center" : "start"}
-                allowsSorting={column.sortable}
-              >
-                {column.name}
-              </TableColumn>
-            )}
-          </TableHeader>
-          <TableBody emptyContent={"No tienes asistentes"} items={sortedItems}>
-            {(item) => (
-              <TableRow key={item._id}>
-                {(columnKey) => (
-                  <TableCell key={columnKey}>
-                    {columnKey === "questions" || columnKey === "answers"
-                      ? item.questions.map((q, index) => (
-                        <div key={index}>
-                          <strong>{`Q${index + 1}: `}</strong>
-                          {q}
-                        </div>
-                      ))
-                      : renderCell(item, columnKey)}
-                  </TableCell>
-                )}
-              </TableRow>
-            )}
-          </TableBody>
+    loadingTest === true ? <LoadingFullPage /> : (
+      <div>
+        <NavigationBar />
+        <div style={{ margin: "50px" }}>
+          <Table
+            isCompact
+            removeWrapper
+            aria-label="Example table with custom cells, pagination and sorting"
+            bottomContent={bottomContent}
+            bottomContentPlacement="outside"
+            checkboxesProps={{
+              classNames: {
+                wrapper:
+                  "after:bg-foreground after:text-background text-background",
+              },
+            }}
+            //   classNames={classNames}
+            selectedKeys={selectedKeys}
+            selectionMode="single"
+            sortDescriptor={sortDescriptor}
+            topContent={topContent}
+            topContentPlacement="outside"
+            onSelectionChange={setSelectedKeys}
+            onSortChange={setSortDescriptor}
+          >
+            <TableHeader columns={headerColumns}>
+              {(column) => (
+                <TableColumn
+                  key={column.uid}
+                  align={column.uid === "actions" ? "center" : "start"}
+                  allowsSorting={column.sortable}
+                >
+                  {column.name}
+                </TableColumn>
+              )}
+            </TableHeader>
+            <TableBody emptyContent={"No tienes asistentes"} items={sortedItems}>
+              {(item) => (
+                <TableRow key={item._id} >
+                  {(columnKey) => (
+                    <TableCell key={columnKey}>
+                      {columnKey === "questions" || columnKey === "answers"
+                        ? item.questions.map((q, index) => (
+                          <div key={index}>
+                            <strong>{`Q${index + 1}: `}</strong>
+                            {q}
+                          </div>
+                        ))
+                        : renderCell(item, columnKey)}
+                    </TableCell>
+                  )}
+                </TableRow>
+              )}
+            </TableBody>
 
-        </Table>
+          </Table>
+        </div>
+        <DeleteModal isOpen={isOpen} onOpenChange={onOpenChange} />
       </div>
-      <DeleteModal isOpen={isOpen} onOpenChange={onOpenChange} />
-    </div>
+    )
   );
 }

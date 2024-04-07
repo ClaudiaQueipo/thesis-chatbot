@@ -1,9 +1,13 @@
 version: '3'
+
 services:
  backend_sgav:
-    build: ./sgav_backend
+    restart: always
+    command: python3 main.py
+    build:
+      context: ./sgav_backend
     ports:
-      - "8000:8000"
+      - "8080:8080"
     env_file:
       - ./sgav_backend/.env
     depends_on:
@@ -13,13 +17,16 @@ services:
       MONGODB_PORT: 27017
       MONGODB_USER: root
       MONGODB_PASSWORD: root
+    volumes:
+      - shared-bots:/app/bots
     networks:
       - mynetwork
-
  sgav:
     restart: always
     build:
       context: ./sgav
+    depends_on:
+      - backend_sgav
     env_file:
       - ./sgav/.env    
     ports:
@@ -37,8 +44,22 @@ services:
     volumes:
       - mongodb_data_container:/data/db
 
+ test_bots:
+      restart: always
+      build:
+        context: ./test-bots-api
+      ports:
+        - "8085:8085"
+      depends_on:
+        - backend_sgav
+      volumes:
+        - shared-bots:/app/bots
+      networks:
+        - mynetwork
+
 volumes:
  mongodb_data_container:
+ shared-bots:
 
 networks:
   mynetwork:

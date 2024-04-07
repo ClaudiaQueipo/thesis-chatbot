@@ -11,7 +11,6 @@ export default function Admin() {
             <div style={{ margin: "50px" }}>
                 <div className="flex w-full flex-col">
                     <Tabs aria-label="Dynamic tabs" >
-
                         <Tab key="logs" title="Logs">
                             <Card>
                                 <CardBody>
@@ -28,7 +27,6 @@ export default function Admin() {
                         </Tab>
                     </Tabs>
                 </div>
-
             </div>
         </div>
     )

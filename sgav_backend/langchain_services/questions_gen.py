@@ -26,6 +26,7 @@ async def questions_generation(DATA_PATH: str):
         Tenemos la opción de refinar las preguntas existentes o agregar nuevas, (solo si es necesario) con algo más de contexto a continuación.
         {text}
         Dado el nuevo contexto, refina las preguntas originales en español. Si el contexto no es útil, por favor proporciona las preguntas originales.
+        No quiero que enumeres las preguntas
 
         PREGUNTAS: """
 
@@ -63,6 +64,7 @@ async def questions_generation(DATA_PATH: str):
                 verbose=True,
                 n_ctx=4096,
             ),
+            # llm=llm,
             chain_type="refine",
             verbose=True,
             question_prompt=PROMPT_QUESTIONS,
