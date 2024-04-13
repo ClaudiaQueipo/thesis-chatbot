@@ -21,6 +21,10 @@ CPU with 2 cores minimun
 GPU (this is optional but it helps a lot when you are using LLMs locally, they perform better with GPU)
 Storage 15 GB aproximately, can change according to the llm that you are using
 
+
+## Q&A generation algorithm
+You can try this algorithm in google collab using this [Notebook](https://github.com/ClaudiaQueipo/thesis-chatbot/blob/master/DOC/Generacion%20de%20preguntas%20y%20respuestas/QA_Generation.ipynb) have in count that you have to upload a pdf file and specify the location of the file in google collab
+
 ## 👷‍ Installation
 The installation process has 3 important steps
 1. Backend setup
@@ -119,3 +123,11 @@ if you are using npm:
 ```bash
 npm run dev
 ```
+
+## Created assistants
+
+> [!IMPORTANT]
+> A very important consideration is when you download a created assistant it comes with a docker-compose file that allows you to build an image an run all the services of the container in order to use it without worrying about installing deps and stuff.
+
+## Implementing a chatbot ui with audio and video in Angular
+In this [rar file](https://github.com/ClaudiaQueipo/thesis-chatbot/blob/master/DOC/angular%20video%20audio.rar) is an aproach to achieve it.

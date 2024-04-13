@@ -21,9 +21,10 @@ def findModel():
     
     return pt_file
 
-model_name = findModel()
-print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + model_name)
-model = whisper.load_model('WHISPER' + os.path.sep + model_name)
+# model_name = findModel()
+# print(' PATH TO WHISPER  = ' + 'WHISPER' + os.path.sep + model_name)
+model = whisper.load_model("base")
+# model = whisper.load_model('WHISPER' + os.path.sep + model_name)
 
 
 app = FastAPI(
