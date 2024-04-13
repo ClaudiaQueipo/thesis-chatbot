@@ -18,14 +18,14 @@ async def answers_generation(docs_question_gen, questions):
     vector_store = Chroma.from_documents(docs_question_gen, embeddings)
 
     answer_gen_chain = RetrievalQA.from_chain_type(
-        llm=LlamaCpp(
-            model_path=settings.LLM_PATH,
-            temperature=0.75,
-            top_p=1,
-            verbose=True,
-            n_ctx=4096,
-        ),
-        # llm=llm,
+        # llm=LlamaCpp(
+        #     model_path=settings.LLM_PATH,
+        #     temperature=0.75,
+        #     top_p=1,
+        #     verbose=True,
+        #     n_ctx=4096,
+        # ),
+        llm=llm,
         chain_type="stuff",
         retriever=vector_store.as_retriever(k=2),
     )

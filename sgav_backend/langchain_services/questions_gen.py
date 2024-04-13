@@ -6,8 +6,8 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain_community.llms import LlamaCpp
 from core.config import settings
 
-# from langchain_openai import OpenAI
-# llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
+from langchain_openai import OpenAI
+llm = OpenAI(model_name="gpt-3.5-turbo-instruct")
 
 
 async def questions_generation(DATA_PATH: str):
@@ -57,14 +57,14 @@ async def questions_generation(DATA_PATH: str):
         docs_question_gen = [Document(page_content=t) for t in text_chunks_question_gen]
 
         question_gen_chain = load_summarize_chain(
-            llm=LlamaCpp(
-                model_path=settings.LLM_PATH,
-                temperature=0.75,
-                top_p=1,
-                verbose=True,
-                n_ctx=4096,
-            ),
-            # llm=llm,
+            # llm=LlamaCpp(
+            #     model_path=settings.LLM_PATH,
+            #     temperature=0.75,
+            #     top_p=1,
+            #     verbose=True,
+            #     n_ctx=4096,
+            # ),
+            llm=llm,
             chain_type="refine",
             verbose=True,
             question_prompt=PROMPT_QUESTIONS,

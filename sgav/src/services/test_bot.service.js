@@ -32,8 +32,8 @@ class BotService {
         };
         try {
             const response = await fetch(
-                // `http://localhost:${5005}/webhooks/rest/webhook`,
-                `http://localhost:${getPort()}/webhooks/rest/webhook`,
+                `http://localhost:${5005}/webhooks/rest/webhook`,
+                // `http://localhost:${getPort()}/webhooks/rest/webhook`,
                 {
                     method: "POST",
                     headers: {
