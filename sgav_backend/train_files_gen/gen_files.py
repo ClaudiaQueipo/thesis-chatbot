@@ -5,7 +5,7 @@ def generarArchivos(preguntas, respuestas, nombre) -> str | None:
     try:
         
         if (
-            domYaml(preguntas, respuestas, nombre)
+            domYaml(preguntas, respuestas, nombre.replace('/data', ''))
             & nluYaml(preguntas, respuestas, nombre)
             & storiesYaml(preguntas, respuestas, nombre)
             & rulesYaml(preguntas, respuestas, nombre)

@@ -1,3 +1,4 @@
+
 class LogService {
     constructor() {
         this.base_path = "http://0.0.0.0:8080/logs/";
@@ -13,7 +14,8 @@ class LogService {
                 body: JSON.stringify(logData)
             });
             const data = await response.json();
-            return data;
+
+            return data
         } catch (error) {
             console.error('Error creating log:', error);
             throw error;

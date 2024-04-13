@@ -1,5 +1,7 @@
 from datetime import datetime
 import shutil
+from time import sleep
+import time
 import uuid
 from bson import ObjectId
 from core.config import settings
@@ -109,8 +111,10 @@ async def delete_assistant(assistant_id: str):
 @assistant.post("/gen-files")
 def generate_train_files(qa: QA):
 
-    folder_name = f"{qa.name}-{uuid.uuid4()}"
-
+    folder_name = qa.name
+    # folder_name = f"{qa.name}-{uuid.uuid4()}"
+    qa.questions = list(filter(lambda x: x != "", qa.questions))
+    qa.answers = list(filter(lambda x: x != "", qa.answers))
     bot_folder_path = f"./train_files_gen/{folder_name}"
 
     shutil.copytree("./train_files_gen/chatbot_template", bot_folder_path)
@@ -126,7 +130,7 @@ def generate_train_files(qa: QA):
     shutil.move(zip_file_name, zip_file_path)
 
     shutil.rmtree(bot_folder_path)
-
+    
     return JSONResponse(
         content={"download_link": f"{settings.API_URL}/bots/{folder_name}.zip"}
     )

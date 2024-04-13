@@ -2,6 +2,8 @@ import ruamel.yaml
 from ruamel.yaml.scalarstring import PreservedScalarString as literal_
 import os
 
+from utils.format_titles import format_title
+
 
 literal = literal_  # Forma literal Yaml multilinea  | ó |-
 
@@ -14,11 +16,12 @@ def nluYaml(ques, res, name):  # Recibe preguntas y respuestas
         auxutter = []
 
         #######################################################
+        formatted_ques = [format_title(q) for q in ques]
 
         # PLANTILLA para Archivo RASA
-        for i in range(len(ques)):
+        for i in range(len(formatted_ques)):
             auxutter.append(
-                {"intent": ques[i], 'examples': literal('- ' + ques[i])})
+                {"intent": formatted_ques[i], 'examples': literal('- ' + formatted_ques[i])})
 
         nlu = {
             'nlu':

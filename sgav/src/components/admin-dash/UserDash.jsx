@@ -1,9 +1,8 @@
-
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
+import { Table, Button, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, useDisclosure } from "@nextui-org/react";
 import useGetUsers from "../../hooks/useGetUsers";
 import useUsersStore from "../../store/usersStore";
 import { useState } from "react";
-
+import DeleteUserModal from "./DeleteUserModal";
 
 const columns = [
     {
@@ -32,15 +31,18 @@ export default function UserDash() {
     useGetUsers()
     const users = useUsersStore(state => state.users);
     const [selectedRow, setSelectedRow] = useState(null)
-    
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
     const handleRowClick = (item) => {
-        console.log("Fila seleccionada:", item);
+        setSelectedRow(item)
     };
 
     return (
-
         <div className="flex flex-col gap-4">
-
+            {selectedRow && <div className="flex justify-end items-center gap-4 "> {/* Flex container for aligning the button to the right */}
+                <p>Eliminar a <strong>{selectedRow.first_name}</strong></p>
+                <Button onClick={onOpen} color="danger">Eliminar</Button>
+            </div>}
             <div className="flex flex-col gap-3">
                 <Table
                     aria-label="Selection behavior table example with dynamic content"
@@ -59,7 +61,7 @@ export default function UserDash() {
                     </TableBody>
                 </Table>
             </div>
+            <DeleteUserModal user={selectedRow} isOpen={isOpen} onOpenChange={onOpenChange} />
         </div>
-
     );
 }

@@ -5,6 +5,7 @@ import {
     Textarea,
     Spinner,
     Button,
+    Link
 } from "@nextui-org/react";
 import useQuestionsStore from '../../store/questionsStore';
 import useAnswersStore from '../../store/answersStore';
@@ -23,15 +24,16 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     const setAnswers = useAnswersStore(state => state.setAnswers)
     const assistant = useAssistantStore(state => state.assistant)
     const setAssistantInput = useAssistantStore(state => state.setAssistant)
+
+    const [linkBot, setLinkBot] = useState('')
     const [loading, setLoading] = useState(false)
     const [loadingGenerate, setLoadingGenerate] = useState(false)
     const navigate = useNavigate()
     const [isEdit, setIsEdit] = useState(location.pathname.split("/").pop() === "edit-assistant")
-
     useEffect(() => {
         const fetchAnswers = async () => {
             setLoading(true)
-            const data = await assistantService.generateAnswers(questions.split("\n"))
+            const data = await assistantService.generateAnswers(questions)
             setAnswers(data)
             setAssistantInput({
                 ...assistant,
@@ -45,26 +47,35 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
     }, [questions]);
 
     const handleGenerateFiles = async () => {
-        setLoadingGenerate(true)
-        const response = await assistantService.generateFiles(
-            questions.split("\n"),
-            answers,
-            assistant.name
-        )
-        if (response && response.download_link) {
-            const downloadLink = response.download_link;
+        try {
+            setLoadingGenerate(true)
+            const response = await assistantService.generateFiles(
+                questions,
+                answers,
+                assistant.name
+            )
 
-            const fetchResponse = await fetch(downloadLink);
-            const blob = await fetchResponse.blob();
+            if (response && response.download_link) {
 
-            const url = window.URL.createObjectURL(blob);
+                console.log(response)
+                const downloadLink = response.download_link;
+                setLinkBot(downloadLink)
+                // const fetchResponse = await fetch(downloadLink);
+                // const blob = await fetchResponse.blob();
 
-            window.open(url, '_blank', 'download');
+                // const url = window.URL.createObjectURL(blob);
 
-        } else {
-            toast.error("Error al generar el archivo. Intente nuevamente.");
+                // window.open(url, '_blank', 'download');
+
+            } else {
+                toast.error("Error al generar el archivo. Intente nuevamente.");
+            }
+        } catch (e) {
+            console.log(`Error en handleGenerateFiles: ${e}`)
+        } finally {
+
+            setLoadingGenerate(false)
         }
-        setLoadingGenerate(false)
 
     }
 
@@ -72,6 +83,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
 
         let status;
         let reason;
+
         if (isEdit) {
             status = await assistantService.updateAssistant(assistant._id, assistant)
             reason = `${getUser()} HA ACTUALIZADO ${assistant.toString()}`
@@ -80,7 +92,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
             reason = `${getUser()} HA INSERTADO ${assistant.toString()}`
         }
         const user_id = authService.getUserIdByEmail(getUser())
-        
+
         const log = {
             "user_id": getUser(),
             "username": user_id,
@@ -119,7 +131,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                     variant='faded'
                     size="lg"
                     maxRows={6}
-                    value={questions.length > 0 ? questions.toString() : ""}
+                    value={questions.length > 0 ? questions.join('\n') : ""}
                     onChange={(event) => {
                         setQuestions(event.target.value.split("\n"));
                         setAssistantInput({
@@ -136,7 +148,7 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                         size="lg"
                         disabled={loading}
                         maxRows={6}
-                        value={answers.length > 0 ? answers.toString() : ''}
+                        value={answers.length > 0 ? answers.join('\n') : ""}
                         onChange={(event) => {
                             setAnswers(event.target.value.split("\n"));
                             setAssistantInput({
@@ -166,6 +178,10 @@ export default function GeneratedQA({ cardStyle, flexRowStyle }) {
                     <Button onClick={handleSaveResults} color="warning" variant="solid" fullWidth>
                         Guardar resultados
                     </Button>
+                </div>
+                <div style={{display: "flex", width: "100%", justifyContent: "center"}}>
+                    {/* {linkBot && <a href={linkBot}>Descargar el bot</a>} */}
+                    {linkBot && <Link color="primary" href={linkBot}>Desargar asistente {assistant.name}</Link>}
                 </div>
                 <Toaster richColors theme='dark' duration={3000} position='bottom-center' />
             </CardBody>

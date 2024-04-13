@@ -10,6 +10,10 @@ const columns = [
         label: "ID",
     },
     {
+        key: "created_at",
+        label: "Fecha de Creación",
+    },
+    {
         key: "user_id",
         label: "ID de Usuario",
     },

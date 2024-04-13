@@ -274,7 +274,7 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
+    - text: "Hola soy el asistente de Webind, estoy aquí para ayudarte en lo que necesites. Dime,  ¿Que necesitas hacer?"
 
   utter_cheer_up:
     - text: "Here is something to cheer you up:"
@@ -293,7 +293,7 @@ responses:
     - text: "I am a bot, powered by Rasa."
 
   utter_ask_nombre:
-    - text: "Escribe a continuación solamente tu nombre, por ejemplo: Miguel"
+    - text: "Escribe a continuación solamente tu nombre, por ejemplo: Rolando"
   
   utter_ask_nombre_paciente:
     - text: "Escribe a continuación tu nombre completo, por ejemplo: Claudia Pérez Hernández"

@@ -14,7 +14,7 @@ import { FacebookIcon } from "../../assets/Icons/FacebookIcon";
 import authService from "../../services/auth.service";
 import { Toaster, toast } from "sonner"
 import { useNavigate } from "react-router-dom"
-import { setUser } from "../../utils/auth";
+import { isAdmin, setIsAdmin, setUser } from "../../utils/auth";
 
 export default function Login() {
   const [selected, setSelected] = useState("login");
@@ -35,6 +35,9 @@ export default function Login() {
       formData.append('password', loginPassword);
       const response = await authService.login(formData);
       setUser(loginEmail)
+      const role = await authService.isAdmin({ email: loginEmail })
+      console.log(role)
+      setIsAdmin(role.isAdmin === true ? "SI" : "NO")
       if (response) navigate('/')
       toast.error(`Sus credenciales son incorrectas`)
     } catch (error) {

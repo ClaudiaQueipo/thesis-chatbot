@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { MainLogo } from "../../assets/Icons/Logo";
 import ThemeSwitcher from "../ThemeSwitcher";
-import { getUser } from "../../utils/auth";
+import { getUser, isAdmin } from "../../utils/auth";
 import authService from "../../services/auth.service";
 
 export default function DesktopMenu() {
@@ -37,6 +37,11 @@ export default function DesktopMenu() {
         {user && <NavbarItem isActive>
           <Link to="/gestion-asistentes">Gestión de asistentes</Link>
         </NavbarItem>}
+        {
+          user && isAdmin() && <NavbarItem isActive>
+            <Link to="/admin">Administración</Link>
+          </NavbarItem>
+        }
       </NavbarContent>
 
       <NavbarContent justify="end" style={{ maxWidth: "max-content" }}>

@@ -19,6 +19,9 @@ class AssistantService {
         throw new Error(`HTTP error! status: ${response.status}`);
       } else {
         const data = await response.json();
+        console.log(typeof data)
+        if (typeof data == "string") 
+          return data.split('\n')
         return data;
       }
     } catch (e) {
@@ -134,6 +137,7 @@ class AssistantService {
       }
     )
     if (!response.ok) {
+      console.log(response)
       throw new Error(`HTTP error! status: ${response.status}`)
     } else {
       return await response.json()

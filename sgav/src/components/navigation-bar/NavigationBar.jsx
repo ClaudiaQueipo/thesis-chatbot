@@ -5,10 +5,13 @@ import DesktopMenu from "./DesktopMenu";
 import MenuItem from "./MenuItem";
 import useWindowSize from "../../hooks/useWindowResize";
 import ThemeSwitcher from "../ThemeSwitcher";
+import { isAdmin } from "../../utils/auth";
+import { useEffect } from "react";
 
 export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const windowSize = useWindowSize();
+
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -16,7 +19,11 @@ export default function NavigationBar() {
     { name: "Iniciar Sesión", path: "/iniciar-sesion" },
     { name: "Registrarse", path: "/registrarse" },
     { name: "Log Out", path: "/logout" },
-  ];
+  ];  
+  
+  if (isAdmin) {
+    menuItems.splice(2, 0, { name: "Administración", path: "/admin" });
+  }
 
   return (
     <Navbar

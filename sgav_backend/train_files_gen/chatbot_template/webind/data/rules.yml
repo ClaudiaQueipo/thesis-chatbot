@@ -1,8 +1,0 @@
-
-rules:
-
-  - rule: Activar Formulario
-    steps:
-    - intent: agregar_paciente
-    - action: form_paciente
-    - active_loop: form_paciente

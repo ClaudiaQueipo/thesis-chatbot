@@ -1,0 +1,82 @@
+version: '3.1'
+stories:
+- story: camino feliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: animo
+  - action: utter_feliz
+- story: camino triste 1
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: no_animo
+  - action: utter_ayuda
+  - intent: afirmar
+  - action: utter_feliz
+- story: camino triste 2
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: no_animo
+  - action: utter_ayuda
+  - intent: negar
+  - action: utter_adios
+- story: option 1
+  steps:
+  - intent: 1_cual_es_la_composicion_aproximada_del_universo_
+  - action: utter_1_cual_es_la_composicion_aproximada_del_universo_
+- story: option 2
+  steps:
+  - intent: 2_como_interactua_la_materia_oscura_con_la_gravedad_
+  - action: utter_2_como_interactua_la_materia_oscura_con_la_gravedad_
+- story: option 3
+  steps:
+  - intent: 3_por_que_no_podemos_ver_directamente_la_materia_oscura_
+  - action: utter_3_por_que_no_podemos_ver_directamente_la_materia_oscura_
+- story: option 4
+  steps:
+  - intent: 4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_
+  - action: utter_4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_
+- story: option 5
+  steps:
+  - intent: 5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_
+  - action: 
+      utter_5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_
+- story: option 6
+  steps:
+  - intent: 6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_
+  - action: utter_6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_
+- story: option 7
+  steps:
+  - intent: 7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_
+  - action: utter_7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_
+- story: option 8
+  steps:
+  - intent: 
+      8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_
+  - action: 
+      utter_8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_
+- story: option 9
+  steps:
+  - intent: 9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_
+  - action: 
+      utter_9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_
+- story: option 10
+  steps:
+  - intent: 10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_
+  - action: utter_10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_
+- story: option 11
+  steps:
+  - intent: 11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_
+  - action: 
+      utter_11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_
+- story: option 12
+  steps:
+  - intent: 12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_
+  - action: utter_12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_
+- story: option 13
+  steps:
+  - intent: 13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo
+  - action: 
+      utter_13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo

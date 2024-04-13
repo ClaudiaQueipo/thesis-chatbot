@@ -76,8 +76,21 @@ async def get_user_by_id(user_id: str):
 
     return {"message": "Información del usuario mostrada por consola"}
 
+@auth_router.delete("/user/{user_id}")
+async def delete_user(user_id: str):
+    try:
+        user_id = ObjectId(user_id)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail="ID de usuario inválido")
 
-@auth_router.get("/user-id/")
+    result = users_collection.delete_one({"_id": user_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+
+    return {"message": "Usuario eliminado exitosamente"}
+
+
+@auth_router.post("/user-id/")
 async def get_user_id_by_email(user: UserEmail):
     user = users_collection.find_one({"email": user.email})
     if user is None:

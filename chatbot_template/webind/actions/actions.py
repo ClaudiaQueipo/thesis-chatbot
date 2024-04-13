@@ -28,8 +28,9 @@ class ActionSubmitFormPaciente(Action):
         area_salud = tracker.get_slot("area_salud")
         hospital = tracker.get_slot("hospital")
 
+        message = f"Formulario completado:\nNombre: {nombre}\nApellidos: {apellidos}\nHistoria Clínica: {historia_clinica}\nSexo: {sexo}\nFecha de Nacimiento: {fecha_nacimiento}\nTarjeta de Menor: {tarjeta_menor}\nProvincia: {provincia}\nMunicipio: {municipio}\nDirección: {direccion}\nRaza: {raza}\nÁrea de Salud: {area_salud}\nHospital: {hospital}"
         dispatcher.utter_message(
-            text=f"Formulario completado:\nNombre: {nombre}\nApellidos: {apellidos}\nHistoria Clínica: {historia_clinica}\nSexo: {sexo}\nFecha de Nacimiento: {fecha_nacimiento}\nTarjeta de Menor: {tarjeta_menor}\nProvincia: {provincia}\nMunicipio: {municipio}\nDirección: {direccion}\nRaza: {raza}\nÁrea de Salud: {area_salud}\nHospital: {hospital}"
+            text=message.replace("\n", "<br>")
         )
 
         patient = dict(

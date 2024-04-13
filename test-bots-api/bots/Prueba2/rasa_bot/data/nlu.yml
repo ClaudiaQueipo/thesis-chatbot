@@ -1,0 +1,101 @@
+version: '3.1'
+nlu:
+ - intent: saludar
+   examples: |
+     - Hola
+     - que tal
+     - buenos días
+     - buenas noches
+     - buenas tardes
+ - intent: despedir
+   examples: |
+     - adiós
+     - buenas noches
+     - hasta luego
+ - intent: afirmar
+   examples: |
+     - Sí
+     - por supuesto
+     - correcto
+ - intent: negar
+   examples: |
+     - no
+     - nunca
+     - de ninguna manera
+     - no realmente
+ - intent: animo
+   examples: |
+     - perfecto
+     - genial
+     - increíble
+     - Me siento muy bien
+     - Estoy genial
+     - Estoy increíble
+     - Estoy bien
+     - De acuerdo
+ - intent: no_animo
+   examples: |
+     - mi día fue horrible
+     - Estoy triste
+     - Estoy decepcionado
+     - súper triste
+     - necesito ayuda
+     - ayuda
+     - Estoy tan triste
+     - triste
+     - muy triste
+     - infeliz
+     - no es bueno
+ - intent: bot
+   examples: |
+     - ¿Eres un bot?
+     - ¿Eres un humano?
+     - ¿Estoy hablando con un bot?
+     - ¿Estoy hablando con un humano?
+ - intent: fuera_contexto
+   examples: |
+     - quiero comida
+     - puedes decirme que tengo basado en mi estado de salud
+     - que es un unicornio
+     - puedes tomar una decisión si te digo una situación
+     - cuanto es calcular 1+1
+ - intent: 1_cual_es_la_composicion_aproximada_del_universo_
+   examples: |-
+     - 1_cual_es_la_composicion_aproximada_del_universo_
+ - intent: 2_como_interactua_la_materia_oscura_con_la_gravedad_
+   examples: |-
+     - 2_como_interactua_la_materia_oscura_con_la_gravedad_
+ - intent: 3_por_que_no_podemos_ver_directamente_la_materia_oscura_
+   examples: |-
+     - 3_por_que_no_podemos_ver_directamente_la_materia_oscura_
+ - intent: 4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_
+   examples: |-
+     - 4_cuales_son_las_tres_categorias_de_materia_oscura_propuestas_
+ - intent: 5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_
+   examples: |-
+     - 5_que_son_los_neutrinos_y_como_se_relacionan_con_la_materia_oscura_caliente_
+ - intent: 6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_
+   examples: |-
+     - 6_que_caracteristicas_tienen_las_particulas_de_materia_oscura_templada_
+ - intent: 7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_
+   examples: |-
+     - 7_que_sucederia_si_no_existiera_la_materia_oscura_en_el_universo_
+ - intent: 
+     8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_
+   examples: |-
+     - 8_por_que_la_materia_oscura_es_crucial_para_entender_el_comportamiento_del_universo_
+ - intent: 9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_
+   examples: |-
+     - 9_que_porcentaje_del_universo_compone_la_materia_oscura_y_la_energia_oscura_
+ - intent: 10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_
+   examples: |-
+     - 10_como_se_ha_detectado_la_presencia_de_la_materia_oscura_
+ - intent: 11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_
+   examples: |-
+     - 11_que_aspectos_de_la_naturaleza_de_la_materia_oscura_siguen_siendo_un_misterio_
+ - intent: 12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_
+   examples: |-
+     - 12_que_discrepancias_han_sido_observadas_en_el_mapa_de_materia_oscura_
+ - intent: 13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo
+   examples: |-
+     - 13_que_podria_indicar_estas_discrepancias_en_nuestro_entendimiento_del_universo

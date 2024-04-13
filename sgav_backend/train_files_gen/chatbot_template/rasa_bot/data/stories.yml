@@ -1,93 +1,30 @@
-version: "3.0"
+version: "3.1"
 
 stories:
 
 - story: happy path
   steps:
-  - intent: pregunta_fitib
-  - action: utter_respuesta_fitib
-  - action: action_test
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
 
-- story: fitib_info_carreras
+- story: sad path 1
   steps:
-  - intent: pregunta_carreras
-  - action: utter_respuesta_carreras
-
-- story: ing informatica
-  steps:
-  - intent: pregunta_IngI
-  - action: utter_respuesta_IngI
-
-- story: licenciatura informatica
-  steps:
-  - intent: pregunta_LicI
-  - action: utter_respuesta_LicI
-
-- story: ingenieria tele
-  steps:
-  - intent: pregunta_IngTele
-  - action: utter_respuesta_IngTele
-
-- story: ing biomedica
-  steps:
-  - intent: pregunta_Biom
-  - action: utter_respuesta_Biom
-
-- story: pregunta decana
-  steps: 
-  - intent: pregunta_Decana
-  - action: utter_respuesta_Decana 
-
-- story: pregunta pdte FEU
-  steps: 
-  - intent: pregunta_pdteFeu
-  - action: utter_respuesta_PdteFeu
-
-- story: informacion sobre las preguntas
-  steps: 
-  - intent: pregunta_informacion
-  - action: utter_informacion
-
-- story: informacion sobre los proyectos investigativos
-  steps: 
-  - intent: pregunta_proyectos
-  - action: utter_proyectos
-
-- story: sad_path
-  steps:
+  - intent: greet
+  - action: utter_greet
   - intent: mood_unhappy
   - action: utter_cheer_up
-  
-- story: informacion sobre los creadores del bot
-  steps:
-  - intent: pregunta_creadores
-  - action: utter_creadores
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-- story: informacion sobre que hacen los ingenieros 
+- story: sad path 2
   steps:
-  - intent: pregunta_ingenieros
-  - action: utter_ingenieros
-
-- story: informacion link del eva 
-  steps:
-  - intent: pregunta_eva
-  - action: utter_eva
-
-- story: give name story 1
-  steps:
-  - intent: ask_me_anything
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: first_name
-  - slot_was_set:
-    - first_name: vincent
-  - slot_was_set:
-    - requested_slot: last_name
-  - slot_was_set:
-    - last_name: vincent-mcvincent
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_submit
-  - action: utter_slots_values
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

@@ -12,7 +12,7 @@ export default function DeleteModal({ isOpen, onOpenChange }) {
     const handleDelete = async () => {
         const deleted = await assistantService.deleteAssistant(assistant._id)
         
-        const user_id = authService.getUserIdByEmail(getUser())
+        const user_id = await authService.getUserIdByEmail(getUser())
         const reason = `${getUser()} HA ELIMINADO ${assistant.toString()}`
         
         const log = {
